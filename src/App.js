@@ -1,8 +1,12 @@
 import Manutencao from "./components/Manutencao";
+import NavBar from "./components/NavBar";
 
 function App() {
 	return (
-		<Manutencao />
+		<div>
+			<NavBar />
+			<Manutencao />
+		</div>
 	);
 }
 
