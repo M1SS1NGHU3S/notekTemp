@@ -13,7 +13,16 @@ body {
 }
 
 #nav--logo {
-    width: 200px;
+    width: 70%;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
 }
 
 .navbar-toggler-icon {
@@ -34,13 +43,28 @@ body {
     margin: 0 20px;
 }
 
-@media (max-width: 311px) {
+@media (max-width: 330px) {
     .navbar > .container {
         justify-content: center;
     }
 
     .navbar-toggler {
         margin-top: 10px;
+    }
+
+    .nav-link {
+        text-align: center;
+        line-height: 7px;
+    }
+
+    .navbar-collapse {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 1205px) {
+    #responsive-navbar-nav > div > a {
+        margin: 0 5px;
     }
 }
 
