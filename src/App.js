@@ -1,13 +1,13 @@
 import NavBar from "./components/NavBar";
 import {Outlet} from "react-router-dom";
-import Manutencao from "./components/Manutencao";
+// import Manutencao from "./pages/manutencao";
 
 function App() {
 	return (
 		<div>
 			<NavBar />
-			<Manutencao />
 			<Outlet />
+			{/* <Manutencao /> */}
 		</div>
 	);
 }
