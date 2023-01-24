@@ -1,6 +1,14 @@
+import sobreImg from "../img/mockup-sobre.png"
+import MockUp from "../components/MockUp";
+
 function Sobre() {
     return (
-        <h1>Sobre Notek</h1>
+            <MockUp
+                title="Sobre Nós"
+                text="Agora somos Notek Assessoria Empresarial!"
+                button={false}
+                bgImage={sobreImg}
+            />     
     );
 }
 

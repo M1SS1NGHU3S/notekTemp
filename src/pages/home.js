@@ -1,4 +1,5 @@
 import MockUp from "../components/MockUp";
+import homeImg from "../img/mockup-home.png"
 
 function Home() {
     return (
@@ -8,7 +9,7 @@ function Home() {
                 button={true}
                 buttonLink="#"
                 buttonText="Conhecer"
-                bgImage="img/mockup-home.png"
+                bgImage={homeImg}
             />     
         </div>
     );

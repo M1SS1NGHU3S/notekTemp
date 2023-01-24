@@ -1,6 +1,13 @@
+import contatoImg from "../img/mockup-contato.png"
+import MockUp from "../components/MockUp"
+
 function Contato() {
     return (
-        <h1>Página para Contato</h1>
+            <MockUp
+                title="Entre em contato conosco!"
+                button={false}
+                bgImage={contatoImg}
+            />     
     );
 }
 

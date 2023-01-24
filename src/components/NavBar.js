@@ -10,33 +10,21 @@ function NavBar() {
         <>
             <Navbar className="nav" expand="lg" sticky="top" variant="light">
                 <Container>
-                    <Link to={`/home`} className="nav-link"><img id="nav--logo" src={navLogo} alt="Notek Logo" /></Link>
+                    <Link to={`/`} className="nav-link"><img id="nav--logo" src={navLogo} alt="Notek Logo" /></Link>
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="nav--links">
-                            <Nav.Link href="#"><Link to={`/home`} className="nav-link">Serviços</Link></Nav.Link>
-                            <Nav.Link href="#"><Link to={`/sobre`} className="nav-link">Sobre</Link></Nav.Link>
-                            <Nav.Link href="#"><Link to={`/tabelas`} className="nav-link">Tabelas</Link></Nav.Link>
-                            <Nav.Link href="#"><Link to={`/links-uteis`} className="nav-link">Links Úteis</Link></Nav.Link>
-                            <Nav.Link href="#"><Link to={`/noticias`} className="nav-link">Notícias</Link></Nav.Link>
-                            <Nav.Link href="#"><Link to={`/contato`} className="nav-link">Contato</Link></Nav.Link>
+                            <Link to={`/`} data-rr-ui-event-key="#" role="button" className="nav-link active" tabIndex="0">Serviços</Link>
+                            <Link to={`/sobre`} data-rr-ui-event-key="#" role="button" className="nav-link active" tabIndex="0">Sobre</Link>
+                            <Link to={`/tabelas`} data-rr-ui-event-key="#" role="button" className="nav-link active" tabIndex="0">Tabelas</Link>
+                            <Link to={`/links-uteis`} data-rr-ui-event-key="#" role="button" className="nav-link active" tabIndex="0">Links Úteis</Link>
+                            <Link to={`/noticias`} data-rr-ui-event-key="#" role="button" className="nav-link active" tabIndex="0">Notícias</Link>
+                            <Link to={`/contato`} data-rr-ui-event-key="#" role="button" className="nav-link active" tabIndex="0">Contato</Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
             </Navbar>
         </>
-
-        // <nav>
-        //     <img id="nav--logo" src={navLogo} alt="Notek Logo" />
-        //     <ul id="nav--links">
-        //         <li><a href="index.html">Serviços</a></li>
-        //         <li><a href="index.html">Sobre</a></li>
-        //         <li><a href="index.html">Tabelas</a></li>
-        //         <li><a href="index.html">Links Úteis</a></li>
-        //         <li><a href="index.html">Notícias</a></li>
-        //         <li><a href="index.html">Contato</a></li>
-        //     </ul>
-        // </nav>
     );
 }
 
