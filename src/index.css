@@ -1,0 +1,31 @@
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Manutencao */
+#manutencao {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+    width: auto;
+}
+
+#manutencao img {
+    width: 150px;
+    height: auto;
+}
+
+#manutencao h3 {
+    max-width: 80vh;
+    padding: 10px 20px;
+}
+
+@media only screen and (max-width: 450px) {
+    #manutencao img {
+        width: 120px;
+        height: auto;
+    }
+}

@@ -1,5 +1,5 @@
 import contatoImg from "../img/mockup-contato.png"
-import MockUp from "../components/MockUp"
+import MockUp from "../components/MockUp.js";
 
 function Contato() {
     return (

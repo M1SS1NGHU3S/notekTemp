@@ -1,0 +1,63 @@
+.nav {
+    background-color: #E4EBEE;
+}
+
+#root > div > nav {
+    justify-content: space-around;
+}
+
+#nav--logo {
+    width: 70%;
+}
+
+.navbar-toggler {
+    border: none;
+}
+
+.navbar-toggler:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.navbar-toggler-icon {
+    background-image: url(
+"data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(1, 174, 240, 0.8)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+#root > div > nav > div {
+    padding: 0;
+    margin: 0;
+}
+
+#responsive-navbar-nav {
+    justify-content: end;
+}
+
+#responsive-navbar-nav > div > a {
+    margin: 10px 20px;
+}
+
+@media (max-width: 330px) {
+    .navbar > .container {
+        justify-content: center;
+    }
+
+    .navbar-toggler {
+        margin-top: 10px;
+    }
+
+    .nav-link {
+        text-align: center;
+        line-height: 7px;
+    }
+
+    .navbar-collapse {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width: 1205px) {
+    #responsive-navbar-nav > div > a {
+        margin: 5px 5px;
+    }
+}

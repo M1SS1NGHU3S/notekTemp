@@ -1,4 +1,4 @@
-import MockUp from "../components/MockUp";
+import MockUp from "../components/MockUp.js";
 import homeImg from "../img/mockup-home.png"
 
 function Home() {

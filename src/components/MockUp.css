@@ -1,0 +1,74 @@
+.mockup {
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    padding-left: 5vw;
+}
+
+.mockup--container {
+    display: inline-block;
+    width: 45vw;
+}
+
+.mockup--title {
+    font-size: 5.6vmin;
+    color: #000000;
+    line-height: 8vmin;
+    font-weight: 400;
+}
+
+.mockup--button {
+    background-color: #01AEF0;
+    padding: 7px 8%;
+    margin-top: 10px;
+    border-radius: 15px;
+    border: none;
+    color: #ffffff;
+    text-transform: uppercase;
+    font-size: 2.2vmin;
+}
+
+.mockup--text {
+    font-size: 3.5vmin;
+    line-height: 5vmin;
+    font-weight: 400;
+}
+
+.btn-info {
+    --bs-btn-hover-color: #ffffff;
+}
+
+@media (max-width: 700px) {
+    .mockup--title {
+        text-align: center;
+        font-size: 4.6vmax;
+        line-height: 6vmax;
+    }
+
+    .mockup--container {
+        position: initial;
+        width: 90%;
+    }
+
+    .mockup--button {
+        padding: 5px 30px;
+        border-radius: 8px;
+        font-size: 2vmax;
+    }
+
+    .mockup {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .mockup--text {
+        font-size: 3vmax;
+        line-height: 4.6vmax;
+    }
+}
