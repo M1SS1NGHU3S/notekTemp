@@ -18,7 +18,7 @@ function NavBar() {
                             <Link to={`/`} data-rr-ui-event-key="#" role="button" className="nav-link active" tabIndex="0">Serviços</Link>
                             <Link to={`/sobre`} data-rr-ui-event-key="#" role="button" className="nav-link active" tabIndex="0">Sobre</Link>
                             <Link to={`/tabelas`} data-rr-ui-event-key="#" role="button" className="nav-link active" tabIndex="0">Tabelas</Link>
-                            <Link to={`/links-uteis`} data-rr-ui-event-key="#" role="button" className="nav-link active" tabIndex="0">Links Úteis</Link>
+                            <Nav.Link href="#home" data-rr-ui-event-key="#" role="button" className="nav-link active" tabIndex="0">Links Úteis</Nav.Link>
                             <Link to={`/noticias`} data-rr-ui-event-key="#" role="button" className="nav-link active" tabIndex="0">Notícias</Link>
                             <Link to={`/contato`} data-rr-ui-event-key="#" role="button" className="nav-link active" tabIndex="0">Contato</Link>
                         </Nav>

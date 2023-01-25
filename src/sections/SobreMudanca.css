@@ -1,0 +1,49 @@
+.sobre-mudanca {
+    text-align: center;
+}
+
+.sobre-mudanca--container {
+    width: 80%;
+    display: inline-block;
+    border-color: #01AEF0;
+    border-width: 1px;
+    border-radius: 20px;
+    border-style: solid;
+    padding: 40px;
+}
+
+.sobre-mudanca--img {
+    width: 70%;
+}
+
+.sobre-mudanca--texto {
+    font-weight: 400;
+    font-size: 2.3vmin;
+    line-height: 4vmin;
+    margin: 0;
+}
+
+.column {
+    float: left;
+    height: fit-content;
+}
+
+.sobre-mudanca--column.column.left {
+    width: 60%;
+    text-align: left;
+    justify-content: center;
+}
+
+.sobre-mudanca--column.column.right {
+    width: 40%;
+}
+
+.sobre-mudanca--container:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.sobre-mudanca--btn {
+    margin-top: 20px;
+}

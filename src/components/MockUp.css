@@ -21,17 +21,6 @@
     font-weight: 400;
 }
 
-.mockup--button {
-    background-color: #01AEF0;
-    padding: 7px 8%;
-    margin-top: 10px;
-    border-radius: 15px;
-    border: none;
-    color: #ffffff;
-    text-transform: uppercase;
-    font-size: 2.2vmin;
-}
-
 .mockup--text {
     font-size: 3.5vmin;
     line-height: 5vmin;

@@ -1,4 +1,5 @@
 import MockUp from "../components/MockUp.js";
+import SobreMudanca from "../sections/SobreMudanca";
 import homeImg from "../img/mockup-home.png"
 
 function Home() {
@@ -11,6 +12,7 @@ function Home() {
                 buttonText="Conhecer"
                 bgImage={homeImg}
             />     
+            <SobreMudanca isHome={true} />
         </div>
     );
 }

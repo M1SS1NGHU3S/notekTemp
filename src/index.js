@@ -9,11 +9,11 @@ import './index.css';
 import App from './App';
 import Contato from "./pages/contato";
 import Home from "./pages/home";
-import LinksUteis from "./pages/linksuteis";
 import Noticias from "./pages/noticias";
 import Sobre from "./pages/sobre";
 import Tabelas from "./pages/tabelas";
 import ErrorPage from "./pages/error-page";
+import Servicos from "./pages/servicos";
 
 const router = createBrowserRouter([
     {
@@ -30,8 +30,8 @@ const router = createBrowserRouter([
                 element: <Home />
             },
             {
-                path: "/links-uteis",
-                element: <LinksUteis />
+                path: "/servicos",
+                element: <Servicos />
             },
             {
                 path: "noticias",

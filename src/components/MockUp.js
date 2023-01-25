@@ -10,7 +10,7 @@ function MockUp(props) {
             <div className="mockup--container">
                 <h1 className="mockup--title" style={fontStyle}>{props.title}</h1>
                 {props.text && <h3 className="mockup--text">{props.text}</h3>}
-                {props.button && <Button href={props.buttonLink} className="mockup--button" variant="info">{props.buttonText}</Button>}
+                {props.button && <Button href={props.buttonLink} className="blue-btn" variant="info">{props.buttonText}</Button>}
             </div>
             
         </div>
