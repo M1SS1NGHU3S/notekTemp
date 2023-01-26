@@ -1,24 +1,34 @@
 .sobre-mudanca {
     text-align: center;
+    padding-block: 10vh;
 }
 
 .sobre-mudanca--container {
-    width: 80%;
-    display: inline-block;
     border-color: #01AEF0;
     border-width: 1px;
     border-radius: 20px;
     border-style: solid;
-    padding: 40px;
+}
+
+.sobre-mudanca--container.desktop {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    padding: 70px;
+    margin: 0px 8%;
+}
+
+.sobre-mudanca--container.mobile {
+    display: none;
 }
 
 .sobre-mudanca--img {
-    width: 70%;
+    width: 20vmax;
 }
 
 .sobre-mudanca--texto {
     font-weight: 400;
-    font-size: 2.3vmin;
+    font-size: 2.5vmin;
     line-height: 4vmin;
     margin: 0;
 }
@@ -36,6 +46,7 @@
 
 .sobre-mudanca--column.column.right {
     width: 40%;
+    text-align: right;
 }
 
 .sobre-mudanca--container:after {
@@ -46,4 +57,46 @@
 
 .sobre-mudanca--btn {
     margin-top: 20px;
+}
+
+.sobre--quote {
+    font-weight: bold;
+    margin-top: 4vh;
+}
+
+@media (max-width: 750px) {
+    .sobre-mudanca--container.mobile {
+        display: inline-block;
+        padding: 40px 20px 40px 20px;
+    }
+
+    .sobre-mudanca--texto {
+        width: 90%;
+        margin: auto;
+        font-size: 3.4vmin;
+        line-height: 6vmin;
+    }
+
+    .sobre--quote {
+        margin-top: 4vh;
+    }
+
+    .sobre-mudanca--img {
+        margin-bottom: 10%;
+        width: 40%;
+    }
+
+    .sobre-mudanca--container.desktop {
+        display: none;
+    }
+
+    .sobre-mudanca--btn {
+        font-size: 3vmin;
+    }
+}
+
+@media (max-width: 1200px) {
+    .sobre-mudanca--container.mobile {
+        width: 90%;
+    }
 }

@@ -37,7 +37,7 @@
     margin: 10px 20px;
 }
 
-@media (max-width: 330px) {
+@media (max-width: 352px) {
     .navbar > .container {
         justify-content: center;
     }
