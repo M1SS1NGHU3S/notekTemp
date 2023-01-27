@@ -1,29 +1,28 @@
 .mockup {
-    position: relative;
     background-size: cover;
     background-repeat: no-repeat;
-    height: 80vh;
+    height: 700px;
     display: flex;
     align-items: center;
     justify-content: left;
-    padding-left: 5vw;
+    padding-left: 100px;
 }
 
 .mockup--container {
     display: inline-block;
-    width: 45vw;
+    max-width: 600px;
 }
 
 .mockup--title {
-    font-size: 5.6vmin;
+    font-size: 40px;
     color: #000000;
-    line-height: 8vmin;
+    line-height: 60px;
     font-weight: 400;
 }
 
 .mockup--text {
-    font-size: 3.5vmin;
-    line-height: 5vmin;
+    font-size: 24px;
+    line-height: 50px;
     font-weight: 400;
 }
 
@@ -31,16 +30,22 @@
     --bs-btn-hover-color: #ffffff;
 }
 
+@media (max-width: 800px) {
+    .mockup {
+        padding-left: 50px;
+    }
+}
+
 @media (max-width: 700px) {
     .mockup--title {
         text-align: center;
-        font-size: 8vmin;
-        line-height: 10vmin;
+        font-size: 30px;
+        line-height: 50px;
     }
 
     .mockup--container {
         position: initial;
-        width: 90%;
+        max-width: 500px;
     }
 
     .mockup {
@@ -48,10 +53,24 @@
         align-items: center;
         justify-content: center;
         text-align: center;
+        height: 600px;
+        padding: 0;
     }
 
     .mockup--text {
-        font-size: 5vmin;
-        line-height: 8vmin;
+        font-size: 20px;
+        line-height: 30px;
+    }
+}
+
+@media (max-width: 300px) {
+    .mockup--title {
+        font-size: 26px;
+        line-height: 35px;
+    }
+
+    .mockup--text {
+        font-size: 18px;
+        line-height: 25px;
     }
 }

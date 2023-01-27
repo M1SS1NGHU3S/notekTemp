@@ -55,9 +55,3 @@
         margin-top: 20px;
     }
 }
-
-@media (max-width: 1205px) {
-    #responsive-navbar-nav > div > a {
-        margin: 5px 5px;
-    }
-}
