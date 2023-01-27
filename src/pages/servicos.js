@@ -1,6 +1,6 @@
 function Servicos() {
     return (
-        <h1>Página para Tabelas</h1>
+        <h1>Página para Servicos</h1>
     );
 }
 

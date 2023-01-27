@@ -16,7 +16,7 @@ function NavBar() {
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="nav--links">
-                            <Link to={`/`} data-rr-ui-event-key="#" role="button" className="nav-link active" tabIndex="0">Serviços</Link>
+                            <Link to={`/servicos`} data-rr-ui-event-key="#" role="button" className="nav-link active" tabIndex="0">Serviços</Link>
                             <Link to={`/sobre`} data-rr-ui-event-key="#" role="button" className="nav-link active" tabIndex="0">Sobre</Link>
                             <Link to={`/tabelas`} data-rr-ui-event-key="#" role="button" className="nav-link active" tabIndex="0">Tabelas</Link>
                             <Nav.Link href="#home" data-rr-ui-event-key="#" role="button" className="nav-link active" tabIndex="0">Links Úteis</Nav.Link>
