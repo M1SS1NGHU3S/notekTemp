@@ -11,7 +11,8 @@ function NavBar() {
         <>
             <Navbar className="nav" expand="lg" sticky="top" variant="light">
                 <Container>
-                    <Link to={`/`} className="nav-link"><img id="nav--logo" src={navLogo} alt="Notek Logo" /></Link>
+                    <Link to={`/`}><img id="nav--logo" src={navLogo} alt="Notek Logo" /></Link>
+                    
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="nav--links">

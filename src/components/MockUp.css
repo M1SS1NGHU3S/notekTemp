@@ -30,13 +30,15 @@
     --bs-btn-hover-color: #ffffff;
 }
 
-@media (max-width: 800px) {
+
+
+/* @media (max-width: 800px) {
     .mockup {
         padding-left: 50px;
     }
-}
+} */
 
-@media (max-width: 700px) {
+/* @media (max-width: 700px) {
     .mockup--title {
         text-align: center;
         font-size: 30px;
@@ -61,8 +63,8 @@
         font-size: 20px;
         line-height: 30px;
     }
-}
-
+} */
+/* 
 @media (max-width: 300px) {
     .mockup--title {
         font-size: 26px;
@@ -73,4 +75,4 @@
         font-size: 18px;
         line-height: 25px;
     }
-}
+} */

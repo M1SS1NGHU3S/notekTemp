@@ -33,11 +33,6 @@
     margin: 0;
 }
 
-.column {
-    float: left;
-    height: fit-content;
-}
-
 .sobre-mudanca--column.column.left {
     width: 60%;
     text-align: left;
@@ -47,12 +42,6 @@
 .sobre-mudanca--column.column.right {
     width: 40%;
     text-align: right;
-}
-
-.sobre-mudanca--container:after {
-    content: "";
-    display: table;
-    clear: both;
 }
 
 .sobre-mudanca--btn {

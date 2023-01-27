@@ -18,6 +18,17 @@ body {
     font-size: 18px;
 }
 
+.column {
+    float: left;
+    height: fit-content;
+}
+
+.column:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
 /* Manutencao */
 #manutencao {
     display: flex;
