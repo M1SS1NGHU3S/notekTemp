@@ -2,7 +2,9 @@ import Button from "react-bootstrap/Button";
 import "./MockUp.css";
 
 function MockUp(props) {
-    const bgStyle = {backgroundImage: `linear-gradient(90.18deg, #E4EBEE 0.08%, rgba(217, 217, 217, 0) 99.77%), url(${props.bgImage})`};
+    const bgStyle = {
+        backgroundImage: `linear-gradient(90.18deg, #E4EBEE 0.08%, rgba(217, 217, 217, 0) 99.77%), url(${props.bgImage})`,
+    };
     const fontStyle = props.text && {fontWeight: "500"};
 
     return (

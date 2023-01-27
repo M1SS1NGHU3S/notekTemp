@@ -1,6 +1,6 @@
 .sobre-mudanca {
     text-align: center;
-    padding-block: 10vh;
+    padding-block: 100px;
 }
 
 .sobre-mudanca--container {
@@ -15,7 +15,7 @@
     justify-content: center;
     align-items: center;
     padding: 70px;
-    margin: 0px 8%;
+    max-width: 1300px;
 }
 
 .sobre-mudanca--container.mobile {
@@ -23,13 +23,13 @@
 }
 
 .sobre-mudanca--img {
-    width: 20vmax;
+    width: 70%;
 }
 
 .sobre-mudanca--texto {
     font-weight: 400;
-    font-size: 2.5vmin;
-    line-height: 4vmin;
+    font-size: 24px;
+    line-height: 40px;
     margin: 0;
 }
 
@@ -53,26 +53,46 @@
     margin-top: 4vh;
 }
 
+@media (max-width: 1350px) {
+    .sobre-mudanca--container.desktop {
+        max-width: 900px;
+    }
+
+    .sobre-mudanca--texto {
+        font-size: 18px;
+        line-height: 30px;
+        margin: 0;
+    }
+
+    .sobre-mudanca--btn {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 950px) {
+    .sobre-mudanca--container.desktop {
+        max-width: 90%;
+        padding: 40px;
+    }
+
+    .sobre-mudanca--img {
+        width: 80%;
+    }
+}
+
 @media (max-width: 750px) {
     .sobre-mudanca--container.mobile {
         display: inline-block;
         padding: 40px 20px 40px 20px;
     }
 
-    .sobre-mudanca--texto {
-        width: 90%;
-        margin: auto;
-        font-size: 3.4vmin;
-        line-height: 6vmin;
-    }
-
     .sobre--quote {
-        margin-top: 4vh;
+        margin-top: 40px;
     }
 
     .sobre-mudanca--img {
-        margin-bottom: 10%;
-        width: 40%;
+        margin-bottom: 60px;
+        width: 60%;
     }
 
     .sobre-mudanca--container.desktop {
@@ -80,7 +100,7 @@
     }
 
     .sobre-mudanca--btn {
-        font-size: 3vmin;
+        font-size: 16px;
     }
 }
 
