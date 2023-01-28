@@ -4,13 +4,25 @@ import Button from "react-bootstrap/Button";
 import "./SobreMudanca.css";
 
 function SobreMudanca(props) {
-    const additionalElement = props.isHome ? <Button href="/sobre" className="blue-btn btn btn-info sobre-mudanca--btn">Ler Mais</Button> : 
-        <p className="sobre-mudanca--texto sobre--quote">"A mudança nos leva a novos horizontes e um maior desenvolvimento profissional."</p>;
+    const additionalElement = props.isHome ? 
+        <Button href="/sobre" className="blue-btn btn btn-info sobre-mudanca--btn">
+            Ler Mais
+        </Button> : 
+        <h3 className="sobre-mudanca--texto sobre--quote">
+            "A mudança nos leva a novos horizontes e um maior desenvolvimento profissional."
+        </h3>;
+    const backgroundStyle = {
+        backgroundImage: `url(${bgImage})`, 
+        backgroundSize: 'cover', 
+        backgroundRepeat: "no-repeat"
+    }
+
+    
 
     return (
         <section className="sobre-mudanca">
-            <h1 className="section-title">Sobre</h1>
-            <div className="sobre-mudanca--container mobile" style={{backgroundImage: `url(${bgImage})`, backgroundSize: 'cover', backgroundRepeat: "no-repeat"}}>
+            <h2 className="section-title">Sobre</h2>
+            <div className="sobre-mudanca--container mobile" style={backgroundStyle}>
                 <img className="sobre-mudanca--img" src={logo} alt="Notek Logo" />
 
                 <p className="sobre-mudanca--texto">
@@ -23,7 +35,7 @@ function SobreMudanca(props) {
                 {additionalElement}
             </div>
 
-            <div className="sobre-mudanca--container desktop" style={{backgroundImage: `url(${bgImage})`, backgroundSize: 'cover', backgroundRepeat: "no-repeat"}}>
+            <div className="sobre-mudanca--container desktop" style={backgroundStyle}>
                 <div className="sobre-mudanca--column column left">
                     <p className="sobre-mudanca--texto">
                         Para registro de nossa marca, precisamos passar por uma pequena mudança, porém, ela agora é todinha nossa!

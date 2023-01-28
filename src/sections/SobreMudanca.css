@@ -26,13 +26,6 @@
     width: 70%;
 }
 
-.sobre-mudanca--texto {
-    font-weight: 400;
-    font-size: 24px;
-    line-height: 40px;
-    margin: 0;
-}
-
 .sobre-mudanca--column.column.left {
     width: 60%;
     text-align: left;
@@ -50,7 +43,7 @@
 
 .sobre--quote {
     font-weight: bold;
-    margin-top: 4vh;
+    margin-top: 25px;
 }
 
 @media (max-width: 1350px) {
@@ -58,10 +51,8 @@
         max-width: 900px;
     }
 
-    .sobre-mudanca--texto {
-        font-size: 18px;
-        line-height: 30px;
-        margin: 0;
+    .sobre--quote {
+        margin-top: 20px;
     }
 
     .sobre-mudanca--btn {
@@ -80,14 +71,10 @@
     }
 }
 
-@media (max-width: 750px) {
+@media (max-width: 700px) {
     .sobre-mudanca--container.mobile {
         display: inline-block;
         padding: 40px 20px 40px 20px;
-    }
-
-    .sobre--quote {
-        margin-top: 40px;
     }
 
     .sobre-mudanca--img {
@@ -97,10 +84,6 @@
 
     .sobre-mudanca--container.desktop {
         display: none;
-    }
-
-    .sobre-mudanca--btn {
-        font-size: 16px;
     }
 }
 

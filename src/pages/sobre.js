@@ -1,6 +1,7 @@
 import sobreImg from "../img/mockup-sobre.png"
 import MockUp from "../components/MockUp";
 import SobreMudanca from "../sections/SobreMudanca";
+import SobreRegiao from "../sections/SobreRegiao";
 
 function Sobre() {
     return (
@@ -12,6 +13,7 @@ function Sobre() {
                 bgImage={sobreImg}
                 />     
                 <SobreMudanca isHome={false} />
+                <SobreRegiao />
             </div>
             
     );

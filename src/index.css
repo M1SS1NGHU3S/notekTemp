@@ -2,9 +2,36 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
+p {
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 40px;
+    margin: 0;
+}
+
+h1 {
+    font-size: 44px;
+    color: #000000;
+    line-height: 56px;
+    font-weight: 500;
+}
+
+h2 {
+    font-size: 34px;
+    font-weight: 400;
+    color: #000000;
+    line-height: 50px;
+    margin: 0;
+}
+
+h3 {
+    font-size: 24px;
+    line-height: 36px;
+}
+
 .section-title {
-    font-size: 40px;
     margin-bottom: 40px;
+    font-weight: 500;
 }
 
 .blue-btn {
@@ -29,6 +56,58 @@ body {
     clear: both;
 }
 
+
+@media (max-width: 1350px) {
+    p {
+        font-size: 16px;
+        line-height: 30px;
+    }
+
+    h1 {
+        font-size: 44px;
+        line-height: 52px;
+    }
+
+    h2 {
+        font-size: 34px;
+        line-height: 52px;
+    }
+
+    h3 {
+        font-size: 20px;
+        line-height: 32px;
+    }
+}
+
+@media (max-width: 700px) {
+    .blue-btn {
+        font-size: 16px;
+    }
+
+    h1 {
+        font-size: 38px;
+        line-height: 40px;
+    }
+
+    h2 {
+        font-size: 28px;
+        line-height: 40px;
+    }
+}
+
+@media (max-width: 450px) {
+    #manutencao img {
+        width: 120px;
+        height: auto;
+    }
+}
+
+@media (max-width: 300px) {
+    .blue-btn {
+        padding: 6px 40px;
+    }
+}
+
 /* Manutencao */
 #manutencao {
     display: flex;
@@ -48,23 +127,4 @@ body {
 #manutencao h3 {
     max-width: 80vh;
     padding: 10px 20px;
-}
-
-@media (max-width: 700px) {
-    .blue-btn {
-        font-size: 14px;
-    }
-}
-
-@media (max-width: 450px) {
-    #manutencao img {
-        width: 120px;
-        height: auto;
-    }
-}
-
-@media (max-width: 300px) {
-    .blue-btn {
-        padding: 6px 40px;
-    }
 }

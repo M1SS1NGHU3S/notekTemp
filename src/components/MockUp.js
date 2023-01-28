@@ -5,14 +5,14 @@ function MockUp(props) {
     const bgStyle = {
         backgroundImage: `linear-gradient(90.18deg, #E4EBEE 0.08%, rgba(217, 217, 217, 0) 99.77%), url(${props.bgImage})`,
     };
-    const fontStyle = props.text && {fontWeight: "500"};
+    const mockupTitle = props.text ? <h1 className="mockup--title">{props.title}</h1> : <h2 className="mockup--title">{props.title}</h2>
 
     return (
         <div className="mockup" style={bgStyle}>
             <div className="mockup--container">
-                <h1 className="mockup--title" style={fontStyle}>{props.title}</h1>
-                {props.text && <h3 className="mockup--text">{props.text}</h3>}
-                {props.button && <Button href={props.buttonLink} className="blue-btn" variant="info">{props.buttonText}</Button>}
+                {mockupTitle}
+                {props.text && <h2 className="mockup--text">{props.text}</h2>}
+                {props.button && <Button href={props.buttonLink} className="blue-btn mockup--btn" variant="info">{props.buttonText}</Button>}
             </div>
             
         </div>
