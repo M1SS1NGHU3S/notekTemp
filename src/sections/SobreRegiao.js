@@ -6,7 +6,7 @@ function SobreRegiao() {
         backgroundImage: `linear-gradient(269.91deg, #01AEF0 32.37%, 
             rgba(217, 217, 217, 0) 99.92%), url(${mapaImg})`,
         backgroundRepeat: 'no-repeat',
-        backgroundSize: 'cover'
+        backgroundSize: 'cover, 70%'
     };
 
     return (
