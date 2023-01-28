@@ -1,5 +1,7 @@
 .sobre-regiao {
     height: 500px;
+    background-repeat: no-repeat;
+    background-size: cover;
     position: relative;
 }
 
@@ -8,4 +10,26 @@
     width: 600px;
     top: 45%;
     right: 5%;
+}
+
+@media (max-width: 1400px) {
+    .sobre-regiao {
+        background-size: cover;
+    }
+}
+
+@media (max-width: 800px) {
+    .sobre-regiao {
+        position: initial;
+        display: flex;
+        align-items: center;
+        align-content: center;
+    }
+
+    .sobre-regiao--text {
+        position: initial;
+        margin: auto;
+        text-align: center;
+        width: 80%;
+    }
 }
