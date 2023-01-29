@@ -9,6 +9,11 @@ p {
     margin: 0;
 }
 
+a {
+    font-weight: 400;
+    font-size: 16px;
+}
+
 h1 {
     font-size: 44px;
     color: #000000;
@@ -29,9 +34,20 @@ h3 {
     line-height: 36px;
 }
 
+.notek-container {
+    max-width: 1300px;
+}
+
 .section-title {
     margin-bottom: 40px;
     font-weight: 500;
+}
+
+.blue-border {
+    border-color: #01AEF0;
+    border-width: 1px;
+    border-radius: 20px;
+    border-style: solid;
 }
 
 .blue-btn {
@@ -56,6 +72,10 @@ h3 {
     clear: both;
 }
 
+.mobile {
+    display: none;
+}
+
 
 @media (max-width: 1350px) {
     p {
@@ -76,6 +96,16 @@ h3 {
     h3 {
         font-size: 20px;
         line-height: 32px;
+    }
+
+    .notek-container {
+        max-width: 900px;
+    }
+}
+
+@media (max-width: 900px) {
+    .notek-container {
+        max-width: 90%;
     }
 }
 

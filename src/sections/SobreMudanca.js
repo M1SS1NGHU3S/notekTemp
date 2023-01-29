@@ -22,7 +22,7 @@ function SobreMudanca(props) {
     return (
         <section className="sobre-mudanca">
             <h2 className="section-title">Sobre</h2>
-            <div className="sobre-mudanca--container mobile" style={backgroundStyle}>
+            <div className="sobre-mudanca--container notek-container blue-border mobile" style={backgroundStyle}>
                 <img className="sobre-mudanca--img" src={logo} alt="Notek Logo" />
 
                 <p className="sobre-mudanca--texto">
@@ -35,7 +35,7 @@ function SobreMudanca(props) {
                 {additionalElement}
             </div>
 
-            <div className="sobre-mudanca--container desktop" style={backgroundStyle}>
+            <div className="sobre-mudanca--container notek-container blue-border desktop" style={backgroundStyle}>
                 <div className="sobre-mudanca--column column left">
                     <p className="sobre-mudanca--texto">
                         Para registro de nossa marca, precisamos passar por uma pequena mudança, porém, ela agora é todinha nossa!

@@ -1,0 +1,14 @@
+.text-box {
+    padding: 20px;
+    width: inherit;
+    height: inherit;
+    display: inline-grid;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 800px) {
+    .text-box {
+        height: auto;
+    }
+}

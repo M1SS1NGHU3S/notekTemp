@@ -3,23 +3,11 @@
     padding-block: 100px;
 }
 
-.sobre-mudanca--container {
-    border-color: #01AEF0;
-    border-width: 1px;
-    border-radius: 20px;
-    border-style: solid;
-}
-
 .sobre-mudanca--container.desktop {
     display: inline-flex;
     justify-content: center;
     align-items: center;
     padding: 70px;
-    max-width: 1300px;
-}
-
-.sobre-mudanca--container.mobile {
-    display: none;
 }
 
 .sobre-mudanca--img {
@@ -47,10 +35,6 @@
 }
 
 @media (max-width: 1350px) {
-    .sobre-mudanca--container.desktop {
-        max-width: 900px;
-    }
-
     .sobre--quote {
         margin-top: 20px;
     }
@@ -62,7 +46,6 @@
 
 @media (max-width: 950px) {
     .sobre-mudanca--container.desktop {
-        max-width: 90%;
         padding: 40px;
     }
 
