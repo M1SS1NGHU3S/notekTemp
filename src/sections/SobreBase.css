@@ -16,7 +16,7 @@
 .sobre-base--item {
     margin: 20px 10px;
     height: 250px;
-    max-width: 650px;
+    width: 650px;
 }
 
 @media (max-width: 1350px) {
@@ -26,7 +26,7 @@
     }
 }
 
-@media (max-width: 800px) {
+@media (max-width: 850px) {
     .sobre-base--container.mobile {
         display: block;
         grid-template-columns: none;
@@ -36,8 +36,12 @@
         display: none;
     }
 
+    .sobre-base--item {
+        margin: 0 0 20px 0;
+    }
+
     .item-text {
-        margin-bottom: 40px;
         height: auto;
+        margin-bottom: 40px;
     }
 }
