@@ -17,12 +17,16 @@ function SobreBase() {
             "precisar."
         ]
     ]
+    const textboxStyle = {
+        width: "inherit",
+        height: "inherit"
+    };
 
     return (
         <section className="sobre-base">
             <div className="sobre-base--container notek-container desktop">
                 <div className="sobre-base--item">
-                    <TextBox paragraphs={textboxContent[0]} />
+                    <TextBox paragraphs={textboxContent[0]} style={textboxStyle} />
                 </div>
                 <div className="sobre-base--item">
                     <LargeImgBox bgImage={img1} />
@@ -31,7 +35,7 @@ function SobreBase() {
                     <LargeImgBox bgImage={img2} />
                 </div>
                 <div className="sobre-base--item">
-                    <TextBox paragraphs={textboxContent[1]} />
+                    <TextBox paragraphs={textboxContent[1]} style={textboxStyle} />
                 </div>
             </div>
             
@@ -40,13 +44,13 @@ function SobreBase() {
                     <LargeImgBox bgImage={img1} />  
                 </div>
                 <div className="sobre-base--item item-text">
-                    <TextBox paragraphs={textboxContent[0]} />
+                    <TextBox paragraphs={textboxContent[0]} style={textboxStyle} />
                 </div>
                 <div className="sobre-base--item item-img">
                     <LargeImgBox bgImage={img2} />
                 </div>
                 <div className="sobre-base--item item-text">
-                    <TextBox paragraphs={textboxContent[1]} />
+                    <TextBox paragraphs={textboxContent[1]} style={textboxStyle} />
                 </div>
             </div>
         </section>

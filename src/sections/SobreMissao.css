@@ -1,3 +1,46 @@
 .sobre-missao--container {
     margin: auto;
 }
+
+.sobre--img-box {
+    border-radius: 27px;
+    text-align: center;
+    padding-top: 40px;
+    height: inherit;
+}
+
+.missao1 > div:nth-child(1) {
+    margin-bottom: 40px;
+}
+
+.missao-left {
+    width: 35%;
+}
+
+.missao1 {
+    height: 420px;
+}
+
+.missao2 {
+    margin-block: 80px;
+    height: 200px;
+}
+
+.missao3 {
+    height: 250px;
+}
+
+.missao-right {
+    width: 65%;
+    padding-left: 80px;
+}
+
+@media (max-width: 1350px) {
+    .missao1 {
+        height: 450px;
+    }
+}
+
+@media (max-width: 800px) {
+    
+}
