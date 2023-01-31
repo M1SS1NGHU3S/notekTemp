@@ -19,6 +19,7 @@ h1 {
     color: #000000;
     line-height: 56px;
     font-weight: 500;
+    margin: 0;
 }
 
 h2 {
@@ -32,6 +33,7 @@ h2 {
 h3 {
     font-size: 24px;
     line-height: 36px;
+    margin: 0;
 }
 
 .notek-container {
@@ -60,15 +62,6 @@ h3 {
     color: #ffffff;
     text-transform: uppercase;
     font-size: 18px;
-}
-
-.text-box {
-    padding: 20px;
-    width: inherit;
-    height: inherit;
-    display: inline-grid;
-    justify-content: center;
-    align-items: center;
 }
 
 @media (max-width: 800px) {

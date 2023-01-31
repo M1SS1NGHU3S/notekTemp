@@ -3,6 +3,7 @@ import MockUp from "../components/MockUp";
 import SobreMudanca from "../sections/SobreMudanca";
 import SobreRegiao from "../sections/SobreRegiao";
 import SobreBase from "../sections/SobreBase";
+import SobreMissao from "../sections/SobreMissao";
 
 function Sobre() {
     return (
@@ -16,6 +17,7 @@ function Sobre() {
                 <SobreMudanca isHome={false} />
                 <SobreRegiao />
                 <SobreBase />
+                <SobreMissao />
             </div>
             
     );

@@ -21,6 +21,10 @@
     margin-top: 20px;
 }
 
+.mockup--text {
+    margin-top: 10px;
+}
+
 
 @media (max-width: 800px) {
     .mockup {

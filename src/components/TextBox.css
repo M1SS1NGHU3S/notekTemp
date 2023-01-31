@@ -1,0 +1,8 @@
+.text-box {
+    padding: 20px;
+    width: inherit;
+    height: inherit;
+    display: inline-grid;
+    justify-content: center;
+    align-items: center;
+}
