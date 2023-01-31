@@ -7,6 +7,8 @@
     grid-template-columns: auto auto;
     margin-left: auto;
     margin-right: auto;
+    column-gap: 20px;
+    row-gap: 40px;
 }
 
 .sobre-base--container.mobile {
@@ -14,15 +16,19 @@
 }
 
 .sobre-base--item {
-    margin: 20px 10px;
     height: 250px;
     width: 650px;
+}
+
+.img-box {
+    border-radius: 27px;
+    display: block;
 }
 
 @media (max-width: 1350px) {
     .sobre-base--item {
         height: 300px;
-        width: inherit;
+        width: auto;
     }
 }
 

@@ -1,11 +1,8 @@
 import "./SobreBase.css"
-import ImgBox from "../components/ImgBox";
 import img1 from "../img/sobre-base1.png";
 import img2 from "../img/sobre-base2.png";
 
 function SobreBase() {
-    const bgColorStyle = "rgba(1, 174, 240, 0.5)";
-
     return (
         <section className="sobre-base">
             <div className="sobre-base--container notek-container desktop">
@@ -16,10 +13,10 @@ function SobreBase() {
                     </h3>
                 </div>
                 <div className="sobre-base--item">
-                    <ImgBox bgColorStyle={bgColorStyle} bgImage={img1} />
+                    <LargeImgBox bgImage={img1} />
                 </div>
                 <div className="sobre-base--item">
-                    <ImgBox bgColorStyle={bgColorStyle} bgImage={img2} />
+                    <LargeImgBox bgImage={img2} />
                 </div>
                 <div className="sobre-base--item blue-border text-box">
                     <h3>
@@ -33,7 +30,7 @@ function SobreBase() {
             
             <div className="sobre-base--container notek-container mobile">
                 <div className="sobre-base--item item-img">
-                    <ImgBox bgColorStyle={bgColorStyle} bgImage={img1} />  
+                    <LargeImgBox bgImage={img1} />  
                 </div>
                 <div className="sobre-base--item item-text blue-border text-box">
                     <h3>
@@ -42,7 +39,7 @@ function SobreBase() {
                     </h3>
                 </div>
                 <div className="sobre-base--item item-img">
-                    <ImgBox bgColorStyle={bgColorStyle} bgImage={img2} />
+                    <LargeImgBox bgImage={img2} />
                 </div>
                 <div className="sobre-base--item item-text blue-border text-box">
                     <h3>
@@ -54,6 +51,22 @@ function SobreBase() {
                 </div>
             </div>
         </section>
+    );
+}
+
+function LargeImgBox(props) {
+    const bgStyle = {
+        height: "inherit",
+        width: "inherit",
+        background: `url(${props.bgImage}), rgba(1, 174, 240, 0.5)`,
+        backgroundBlendMode: "multiply",
+        backgroundRepeat: "no-repeat",
+        backgroundSize: "cover",
+        backgroundPosition: "center"
+    };
+
+    return (
+        <div className="img-box" style={bgStyle}></div>  
     );
 }
 
