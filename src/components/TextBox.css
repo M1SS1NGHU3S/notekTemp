@@ -1,7 +1,13 @@
 .text-box {
-    padding: 20px;
+    padding: 40px;
     display: inline-grid;
     justify-content: center;
     align-items: center;
     align-content: center;
+}
+
+@media (max-width: 900px) {
+    .text-box {
+        padding: 20px;
+    }
 }

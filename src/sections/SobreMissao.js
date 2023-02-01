@@ -29,35 +29,32 @@ function SobreMissao() {
         ]
     ];
     const textboxStyle = {
-        height: "inherit",
-        width: "initial"
+        height: "-webkit-fill-available",
+        width: "initial",
     }
 
     return (
         <section className="sobre-missao">
             <div className="sobre-missao--container notek-container">
                 <div className="missao--parent">
-                    <div className="missao-left missao1 column">
-                        <ImageBox bgImage={imgMissao} text="Missão" />
-                    </div>
-                    <div className="missao-right missao1 column">
-                        <TextBox paragraphs={textboxContent[0]} style={{height: "auto", width: "initial"}} />
-                        <TextBox paragraphs={textboxContent[1]} style={{height: "auto", width: "initial"}} />
+                    <ImageBox id="1" bgImage={imgMissao} text="Missão" />
+
+                    <div className="missao-right missao1">
+                        <TextBox paragraphs={textboxContent[0]} style={textboxStyle} />
+                        <TextBox paragraphs={textboxContent[1]} style={textboxStyle} />
                     </div>
                 </div>
-                <div>
-                    <div className="missao-left missao2 column">
-                        <ImageBox bgImage={imgVisao} text="Visão" />
-                    </div>
-                    <div className="missao-right missao2 column">
+                <div className="missao--parent" style={{height: "200px"}}>
+                    <ImageBox id="2" bgImage={imgVisao} text="Visão" />
+
+                    <div className="missao-right missao2">
                         <TextBox paragraphs={textboxContent[2]} style={textboxStyle} />
                     </div>
                 </div>
-                <div>
-                    <div className="missao-left missao3 column">
-                        <ImageBox bgImage={imgValores} text="Valores" />
-                    </div>
-                    <div className="missao-right missao3 column">
+                <div className="missao--parent">
+                    <ImageBox id="3" bgImage={imgValores} text="Valores" />
+
+                    <div className="missao-right missao3">
                         <TextBox paragraphs={textboxContent[3]} style={textboxStyle} />
                     </div>
                 </div>
@@ -76,7 +73,7 @@ function ImageBox(props) {
     }
 
     return (
-        <div className="sobre--img-box" style={bgStyle}>
+        <div className={`sobre--img-box sobre--img-box${props.id}`} style={bgStyle}>
             <h1>{props.text}</h1>
         </div>
     )
