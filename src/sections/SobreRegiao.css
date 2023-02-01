@@ -27,7 +27,6 @@
 
 .sobre-regiao--container {
     display: flex;
-    margin: auto;
     align-items: center;
     justify-content: flex-end;
 }

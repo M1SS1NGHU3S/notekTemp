@@ -1,0 +1,63 @@
+.sobre-formacao {
+    padding-block: 100px;
+}
+
+.sobre-formacao--container {
+    max-width: 1600px;
+    margin: auto;
+}
+
+.formacao--title {
+    margin: 0;
+}
+
+.formacao--subtitle {
+    text-align: center;
+    margin: 6px 0 40px 0;
+}
+
+.sobre-formacao--cards {
+    display: flex;
+    margin: auto;
+    justify-content: space-between;
+}
+
+.gestora-card {
+    width: 380px;
+}
+
+.gestora-card--content {
+    background-color: #E4EBEE;
+    height: 340px;
+    border-radius: 0 0px 27px 27px;
+    padding: 20px;
+    border-style: solid;
+    border-color: #01AEF0;
+    border-width: 0 1px 1px 1px;
+}
+
+.gestora-card--img {
+    width: inherit;
+}
+
+.gestora-card--nome {
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: 40px;
+    min-height: 73px;
+}
+
+.gestora-card--list {
+    color: #01AEF0;
+}
+
+li {
+    list-style: none;
+}
+
+.gestora-card--list > li > span {
+    color: #000000;
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 35px;
+}

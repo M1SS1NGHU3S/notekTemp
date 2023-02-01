@@ -4,6 +4,7 @@ import SobreMudanca from "../sections/SobreMudanca";
 import SobreRegiao from "../sections/SobreRegiao";
 import SobreBase from "../sections/SobreBase";
 import SobreMissao from "../sections/SobreMissao";
+import SobreFormacao from "../sections/SobreFormacao";
 
 function Sobre() {
     return (
@@ -18,6 +19,7 @@ function Sobre() {
                 <SobreRegiao />
                 <SobreBase />
                 <SobreMissao />
+                <SobreFormacao />
             </div>
             
     );
