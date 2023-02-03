@@ -35,9 +35,9 @@ function SobreMudanca(props) {
                 </div>
                 <div className="sobre-mudanca--column column right">
                     <img className="sobre-mudanca--img" src={logo} alt="Notek Logo" />
-                </div>
-
-                <div className="sobre-mudanca--container notek-container blue-border mobile" style={backgroundStyle}>
+                </div>    
+            </div>
+            <div className="sobre-mudanca--container notek-container blue-border mobile" style={backgroundStyle}>
                     <img className="sobre-mudanca--img" src={logo} alt="Notek Logo" />
 
                     <p className="sobre-mudanca--texto">
@@ -49,8 +49,6 @@ function SobreMudanca(props) {
                     </p>
                     {additionalElement}
                 </div>
-                
-            </div>
         </section>
     );
 }

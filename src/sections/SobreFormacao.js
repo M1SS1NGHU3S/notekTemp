@@ -48,7 +48,7 @@ function SobreFormacao() {
 }
 
 function GestoraCard(props) {
-    const habilidades = props.habilidades.map((value) => <li><span>{value}</span></li>)
+    const habilidades = props.habilidades.map((value) => <li><p>{value}</p></li>)
 
     return (
         <div className={`gestora-card gestora-card--${props.altText}`}>

@@ -14,10 +14,12 @@
 .formacao--subtitle {
     text-align: center;
     margin: 6px 0 40px 0;
+    padding: 0 20px;
 }
 
 .sobre-formacao--cards {
     display: flex;
+    flex-wrap: wrap;
     margin: auto;
     justify-content: space-between;
 }
@@ -49,15 +51,95 @@
 
 .gestora-card--list {
     color: #01AEF0;
+    margin-left: 10px;
+    padding: 0;
 }
 
 li {
     list-style: none;
 }
 
-.gestora-card--list > li > span {
+li::before {
+    content: "\2022";
+    font-size: 22px;
+    margin-right: 20px;
+}
+
+.gestora-card--list > li > p {
     color: #000000;
-    font-weight: 400;
-    font-size: 20px;
-    line-height: 35px;
+    display: inline;
+}
+
+@media (max-width: 1650px) {
+    .gestora-card {
+        width: 330px;
+    }
+
+    .gestora-card--content {
+        height: 380px;
+    }
+
+    .sobre-formacao--cards {
+        justify-content: center;
+    }
+
+    .gestora-card--vanessa {
+        margin: 0 20px 0px 20px
+    }
+
+    .gestora-card--gil {
+        margin: 0 20px 0 0;
+    }
+
+    .gestora-card--nome {
+        min-height: 64px;
+    }
+}
+
+@media (max-width: 1420px) {
+    .gestora-card {
+        width: 460px;
+        margin: 20px 20px;
+    }
+
+    .gestora-card--nome {
+        min-height: initial;
+    }
+
+    .gestora-card--content {
+        height: 320px;
+    }
+}
+
+@media (max-width: 1350px) {
+    .gestora-card--content {
+        height: 280px;
+    }
+}
+
+@media (max-width: 1000px) {
+    .gestora-card {
+        width: 350px;
+        margin: 10px 10px;
+    }
+}
+
+@media (max-width: 780px) {
+    .gestora-card {
+        width: 300px;
+    }
+
+    .gestora-card--nome {
+        min-height: 65px;
+    }
+
+    .gestora-card--content {
+        height: 320px;
+    }
+}
+
+@media (max-width: 450px) {
+    .gestora-card {
+        width: 290px;
+    }
 }
