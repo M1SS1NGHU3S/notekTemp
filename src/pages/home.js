@@ -1,6 +1,7 @@
 import MockUp from "../components/MockUp.js";
 import SobreMudanca from "../sections/SobreMudanca";
-import homeImg from "../img/mockup-home.png"
+import ServicosHome from "../sections/ServicosHome.js";
+import homeImg from "../img/mockup-home.png";
 
 function Home() {
     return (
@@ -13,6 +14,7 @@ function Home() {
                 bgImage={homeImg}
             />     
             <SobreMudanca isHome={true} />
+            <ServicosHome />
         </div>
     );
 }
