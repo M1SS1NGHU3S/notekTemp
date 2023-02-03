@@ -54,7 +54,7 @@ function GestoraCard(props) {
         <div className={`gestora-card gestora-card--${props.altText}`}>
             <img className="gestora-card--img" src={props.img} alt={`gestora ${props.altText}`} />
 
-            <div className="gestora-card--content">
+            <div className="gestora-card--content card-content">
                 <h3 className="gestora-card--nome">{props.nome}</h3>
                 <ul className="gestora-card--list">
                     {habilidades}

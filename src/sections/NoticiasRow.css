@@ -1,0 +1,39 @@
+.noticias-link {
+    margin-block: 20px;
+}
+
+.noticias-row--content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.noticias-link--date {
+    background-color: #01AEF0;
+    border-radius: 15px;
+    color: #ffffff;
+    display: inline;
+    padding: 5px 20px;
+}
+
+.noticias-link--title {
+    display: inline;
+    margin-left: 20px;
+}
+
+.blog-card {
+    width: 440px;
+}
+
+.blog-card--content {
+    height: 250px;
+}
+
+.blog-card--img {
+    width: inherit;
+}
+
+.blog-card--title {
+    text-align: center;
+    margin-bottom: 20px;
+}

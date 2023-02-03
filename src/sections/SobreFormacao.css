@@ -29,13 +29,7 @@
 }
 
 .gestora-card--content {
-    background-color: #E4EBEE;
     height: 340px;
-    border-radius: 0 0px 27px 27px;
-    padding: 20px;
-    border-style: solid;
-    border-color: #01AEF0;
-    border-width: 0 1px 1px 1px;
 }
 
 .gestora-card--img {
@@ -141,5 +135,13 @@ li::before {
 @media (max-width: 450px) {
     .gestora-card {
         width: 290px;
+    }
+
+    .gestora-card--nome {
+        min-height: initial;
+    }
+
+    .gestora-card--content {
+        height: 290px;
     }
 }

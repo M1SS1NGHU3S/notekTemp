@@ -81,6 +81,15 @@ h3 {
     display: none;
 }
 
+.card-content {
+    background-color: #E4EBEE;
+    border-radius: 0 0px 27px 27px;
+    padding: 20px;
+    border-style: solid;
+    border-color: #01AEF0;
+    border-width: 0 1px 1px 1px;
+}
+
 @media (max-width: 800px) {
     .text-box {
         height: auto;
