@@ -28,8 +28,9 @@ function ServicosHome() {
             classId: "item3"
         },
     ]
-    const allCards = cardsContent.map((value) =>
+    const allCards = cardsContent.map((value, index) =>
         <ServicoCard 
+            key={index}
             img={value.img} 
             titulo={value.titulo} 
             desc={value.desc} 
@@ -39,7 +40,7 @@ function ServicosHome() {
 
     return (
         <section className="servicos-home">
-            <div className="servicos-home--container">
+            <div className="servicos-home--container notek-container">
                 <h2 className="section-title">Serviços</h2>
 
                 <div className="servicos-home--cards">

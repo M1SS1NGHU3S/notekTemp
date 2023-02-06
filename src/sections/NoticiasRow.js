@@ -21,8 +21,9 @@ function NoticiasRow(props) {
             link: "#"
         },
     ]
-    const generateLinks = linksContent.map((value) =>
+    const generateLinks = linksContent.map((value, index) =>
         <NoticiaLink 
+            key={index}
             titulo={value.titulo} 
             data={value.data} 
             link={value.link} 
@@ -42,8 +43,9 @@ function NoticiasRow(props) {
             img: noticiaImg2
         }
     ]
-    const generateCards = cardsContent.map((value) => 
+    const generateCards = cardsContent.map((value, index) => 
         <BlogCard 
+            key={index}
             img={value.img} 
             titulo={value.titulo} 
             desc={value.desc} 
@@ -56,7 +58,7 @@ function NoticiasRow(props) {
 
     return (
         <div className="noticias-row" style={homeStyle}>
-            <div className="notek-container noticias-row--container">
+            <div className="container noticias-row--container">
                 <h2 className="section-title">Notícias</h2>
 
                 <div className="noticias-row--content">

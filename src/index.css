@@ -63,7 +63,7 @@ h3 {
     border: none;
     color: #ffffff;
     text-transform: uppercase;
-    font-size: 18px;
+    font-size: 22px;
 }
 
 .column {
@@ -90,32 +90,34 @@ h3 {
     border-width: 0 1px 1px 1px;
 }
 
-@media (max-width: 800px) {
-    .text-box {
-        height: auto;
-    }
-}
 
-
-@media (max-width: 1350px) {
+@media (max-width: 1400px) {
     p {
-        font-size: 16px;
+        font-size: 18px;
         line-height: 30px;
     }
 
+    a {
+        font-size: 14px;
+    }
+
     h1 {
-        font-size: 44px;
+        font-size: 42px;
         line-height: 52px;
     }
 
     h2 {
-        font-size: 34px;
+        font-size: 32px;
         line-height: 52px;
     }
 
     h3 {
-        font-size: 20px;
+        font-size: 22px;
         line-height: 32px;
+    }
+
+    .blue-btn {
+        font-size: 20px;
     }
 
     .notek-container {
@@ -126,6 +128,12 @@ h3 {
 @media (max-width: 900px) {
     .notek-container {
         max-width: 90%;
+    }
+}
+
+@media (max-width: 800px) {
+    .text-box {
+        height: auto;
     }
 }
 

@@ -1,11 +1,15 @@
+.entre-contato {
+    padding: 0 40px;
+}
+
 .entre-contato--container {
-    width: 1600px;
     display: grid;
     justify-content: center;
-    grid-template-columns: 40% 40%;
+    grid-template-columns: 50% 40%;
     column-gap: 80px;
     margin: auto;
     height: 700px;
+    padding: 40px;
 }
 
 .contato-form {
