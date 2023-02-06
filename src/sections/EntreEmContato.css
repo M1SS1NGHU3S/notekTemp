@@ -1,0 +1,46 @@
+.entre-contato--container {
+    width: 1600px;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 40% 40%;
+    column-gap: 80px;
+    margin: auto;
+    height: 700px;
+}
+
+.contato-form {
+    display: grid;
+    align-items: center;
+    align-content: center;
+}
+
+.contato-form--btn {
+    width: 100%;
+    border-radius: 50px;
+}
+
+.form-label {
+    margin-bottom: 5px;
+}
+
+.form-group {
+    margin-block: 20px;
+}
+
+.form-control {
+    border: none;
+    border-radius: 50px;
+    height: 50px;
+    padding: 20px;
+}
+
+textarea.form-control {
+    min-height: 200px;
+    border-radius: 25px;
+}
+
+.entre-contato--text-column {
+    display: flex;
+    align-items: center;
+    align-content: center;
+}

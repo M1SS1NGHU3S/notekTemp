@@ -2,11 +2,12 @@ import MockUp from "../components/MockUp.js";
 import SobreMudanca from "../sections/SobreMudanca";
 import ServicosHome from "../sections/ServicosHome.js";
 import NoticiasRow from "../sections/NoticiasRow.js";
+import EntreEmContato from "../sections/EntreEmContato.js";
 import homeImg from "../img/mockup-home.png";
 
 function Home() {
     return (
-        <div>
+        <>
             <MockUp
                 title="Agora somos Notek Acessoria Empresarial!"
                 button={true}
@@ -17,7 +18,8 @@ function Home() {
             <SobreMudanca isHome={true} />
             <ServicosHome />
             <NoticiasRow isHome={true} />
-        </div>
+            <EntreEmContato />
+        </>
     );
 }
 

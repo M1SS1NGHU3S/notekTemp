@@ -1,6 +1,10 @@
+import EntreEmContato from "../sections/EntreEmContato";
+
 function Tabelas() {
     return (
-        <h1>Página para Tabelas</h1>
+        <>
+            <EntreEmContato />
+        </>
     );
 }
 

@@ -66,7 +66,7 @@ function NoticiasRow(props) {
                         {generateLinks}
                     </div>
                 </div>
-                <Button href="/servicos" className="blue-btn noticias-row--btn">
+                <Button href="/noticias" className="blue-btn noticias-row--btn">
                     Veja Mais
                 </Button>
             </div>

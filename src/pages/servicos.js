@@ -1,6 +1,10 @@
+import EntreEmContato from "../sections/EntreEmContato";
+
 function Servicos() {
     return (
-        <h1>Página para Servicos</h1>
+        <>
+            <EntreEmContato />
+        </>
     );
 }
 
