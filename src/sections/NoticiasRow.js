@@ -1,6 +1,7 @@
 import "./NoticiasRow.css";
 import noticiaImg1 from "../img/noticia1.png";
 import noticiaImg2 from "../img/noticia2.png";
+import Button from "react-bootstrap/Button";
 
 function NoticiasRow(props) {
     const linksContent = [
@@ -65,6 +66,9 @@ function NoticiasRow(props) {
                         {generateLinks}
                     </div>
                 </div>
+                <Button href="/servicos" className="blue-btn noticias-row--btn">
+                    Veja Mais
+                </Button>
             </div>
         </div>
     );
