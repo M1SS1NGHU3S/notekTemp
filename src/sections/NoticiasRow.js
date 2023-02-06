@@ -61,7 +61,7 @@ function NoticiasRow(props) {
                 <div className="noticias-row--content">
                     {generateCards}
 
-                    <div className="noticias-row--links">
+                    <div className="noticias-row--links noticias-row--column">
                         {generateLinks}
                     </div>
                 </div>
@@ -72,7 +72,7 @@ function NoticiasRow(props) {
 
 function BlogCard(props) {
     return (
-        <div className="blog-card">
+        <div className="blog-card noticias-row--column">
             <img className="blog-card--img" src={props.img} alt={props.alt} />
             <div className="blog-card--content card-content">
                 <h3 className="blog-card--title">{props.titulo}</h3>
