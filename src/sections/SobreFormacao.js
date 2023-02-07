@@ -35,7 +35,7 @@ function SobreFormacao() {
 
     return (
         <section className="sobre-formacao">
-            <div className="sobre-formacao--container">
+            <div className="sobre-formacao--container container">
                 <h2 className="formacao--title section-title">Formação</h2>
                 <h3 className="formacao--subtitle">Habilidades das Gestoras e Diretoras</h3>
 

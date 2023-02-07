@@ -57,7 +57,7 @@ function NoticiasRow(props) {
     };
 
     return (
-        <div className="noticias-row" style={homeStyle}>
+        <section className="noticias-row" style={homeStyle}>
             <div className="container noticias-row--container">
                 <h2 className="section-title">Notícias</h2>
 
@@ -72,7 +72,7 @@ function NoticiasRow(props) {
                     Veja Mais
                 </Button>
             </div>
-        </div>
+        </section>
     );
 }
 

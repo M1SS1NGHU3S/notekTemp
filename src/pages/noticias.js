@@ -1,5 +1,5 @@
 import noticiasImg from "../img/mockup-noticias.png"
-import MockUp from "../components/MockUp";
+import MockUp from "../sections/MockUp";
 import EntreEmContato from "../sections/EntreEmContato";
 
 function Noticias() {

@@ -2,11 +2,6 @@
     padding-block: 100px;
 }
 
-.sobre-formacao--container {
-    max-width: 1600px;
-    margin: auto;
-}
-
 .formacao--title {
     margin: 0;
 }
@@ -25,11 +20,11 @@
 }
 
 .gestora-card {
-    width: 380px;
+    width: 310px;
 }
 
 .gestora-card--content {
-    height: 340px;
+    height: 400px;
 }
 
 .gestora-card--img {
@@ -64,7 +59,103 @@ li::before {
     display: inline;
 }
 
-@media (max-width: 1650px) {
+@media (max-width: 1400px) {
+    .gestora-card {
+        width: 330px;
+    }
+
+    .gestora-card--content {
+        height: 380px;
+    }
+
+    .sobre-formacao--cards {
+        justify-content: center;
+    }
+
+    .gestora-card--vanessa {
+        margin: 0 20px 0px 20px
+    }
+
+    .gestora-card--leda {
+        margin-top: 20px;
+    }
+
+    /* .gestora-card--gil {
+        margin: 0 20px 0 0;
+    } */
+
+    .gestora-card--nome {
+        min-height: 64px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .gestora-card {
+        margin: 0;
+        width: 400px;
+    }
+
+    .gestora-card--content {
+        height: 300px;
+    }
+
+    .gestora-card--nome {
+        min-height: initial;
+    }
+
+    .gestora-card--gil, .gestora-card--leda {
+        margin-top: 20px;
+    }
+
+    .gestora-card--vanessa, .gestora-card--leda {
+        margin-left: 20px;
+    }
+}
+
+@media (max-width: 992px) {
+    .gestora-card {
+        width: 320px;
+    }
+
+    .gestora-card--content {
+        height: 330px;
+    }
+
+    .gestora-card--nome {
+        min-height: 73px;
+    }
+}
+
+@media (max-width: 768px) {
+    .gestora-card {
+        width: 400px;
+        margin: 0;
+    }
+
+    .gestora-card--vanessa {
+        margin-block: 20px;
+    }
+
+    .gestora-card--gil {
+        margin-bottom: 20px;
+    }
+
+    .gestora-card--content {
+        height: 300px;
+    }
+
+    .gestora-card--nome {
+        min-height: initial;
+    }
+}
+
+@media (max-width: 576px) {
+    .gestora-card {
+        width: 300px;
+    }
+}
+
+/* @media (max-width: 1650px) {
     .gestora-card {
         width: 330px;
     }
@@ -144,4 +235,4 @@ li::before {
     .gestora-card--content {
         height: 290px;
     }
-}
+} */

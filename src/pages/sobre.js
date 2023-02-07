@@ -1,5 +1,5 @@
 import sobreImg from "../img/mockup-sobre.png"
-import MockUp from "../components/MockUp";
+import MockUp from "../sections/MockUp";
 import SobreMudanca from "../sections/SobreMudanca";
 import SobreRegiao from "../sections/SobreRegiao";
 import SobreBase from "../sections/SobreBase";

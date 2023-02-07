@@ -35,7 +35,7 @@ function SobreMissao() {
 
     return (
         <section className="sobre-missao">
-            <div className="sobre-missao--container notek-container">
+            <div className="sobre-missao--container container">
                 <div className="missao--parent">
                     <ImageBox id="1" bgImage={imgMissao} text="Missão" />
 

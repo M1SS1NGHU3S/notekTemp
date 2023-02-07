@@ -1,4 +1,4 @@
-import MockUp from "../components/MockUp.js";
+import MockUp from "../sections/MockUp.js";
 import SobreMudanca from "../sections/SobreMudanca";
 import ServicosHome from "../sections/ServicosHome.js";
 import NoticiasRow from "../sections/NoticiasRow.js";
