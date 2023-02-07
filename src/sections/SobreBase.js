@@ -24,7 +24,7 @@ function SobreBase() {
 
     return (
         <section className="sobre-base">
-            <div className="sobre-base--container notek-container desktop">
+            <div className="sobre-base--container container desktop">
                 <div className="sobre-base--item">
                     <TextBox paragraphs={textboxContent[0]} style={textboxStyle} />
                 </div>
@@ -39,7 +39,7 @@ function SobreBase() {
                 </div>
             </div>
             
-            <div className="sobre-base--container notek-container mobile">
+            <div className="sobre-base--container container mobile">
                 <div className="sobre-base--item item-img">
                     <LargeImgBox bgImage={img1} />  
                 </div>
