@@ -34,17 +34,7 @@
     margin-top: 25px;
 }
 
-@media (max-width: 1350px) {
-    .sobre--quote {
-        margin-top: 20px;
-    }
-
-    .sobre-mudanca--btn {
-        font-size: 16px;
-    }
-}
-
-@media (max-width: 950px) {
+@media (max-width: 992px) {
     .sobre-mudanca--container.desktop {
         padding: 40px;
     }
@@ -54,7 +44,7 @@
     }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 768px) {
     .sobre-mudanca--container.mobile {
         display: inline-block;
         padding: 40px 20px 40px 20px;
@@ -70,8 +60,8 @@
     }
 }
 
-@media (max-width: 1200px) {
-    .sobre-mudanca--container.mobile {
+@media (max-width: 576px) {
+    .sobre-mudanca--container.container {
         width: 90%;
     }
 }
