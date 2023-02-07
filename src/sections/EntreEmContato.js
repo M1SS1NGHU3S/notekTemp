@@ -16,7 +16,7 @@ function EntreEmContato() {
         <section className="entre-contato">
             <div className="entre-contato--container container blue-border" style={bgStyle}>
                 <div className="entre-contato--text-column">
-                    <h1>Entre em contato conosco agora mesmo!</h1>
+                    <h1 className="entre-contato--title">Entre em contato conosco agora mesmo!</h1>
                 </div>
                 <ContatoForm />
             </div>

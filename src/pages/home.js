@@ -18,7 +18,7 @@ function Home() {
             <SobreMudanca isHome={true} />
             <ServicosHome />
             <NoticiasRow isHome={true} />
-            {/* <EntreEmContato /> */}
+            <EntreEmContato />
         </>
     );
 }

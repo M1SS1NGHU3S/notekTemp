@@ -1,15 +1,10 @@
-.entre-contato {
-    padding: 0 40px;
-}
-
 .entre-contato--container {
     display: grid;
     justify-content: center;
     grid-template-columns: 50% 40%;
     column-gap: 80px;
     margin: auto;
-    height: 700px;
-    padding: 40px;
+    padding: 60px;
 }
 
 .contato-form {
@@ -47,4 +42,43 @@ textarea.form-control {
     display: flex;
     align-items: center;
     align-content: center;
+}
+
+@media (max-width: 1200px) {
+    .entre-contato--container {
+        padding: 40px;
+        grid-template-columns: 42% 46%;
+    }
+}
+
+@media (max-width: 992px) {
+    .entre-contato--container {
+        grid-template-columns: auto;
+        grid-template-rows: auto auto;
+        padding: 80px;
+    }
+
+    .entre-contato--title {
+        text-align: center;
+    }
+
+    .contato-form {
+        margin-top: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .entre-contato--container {
+        padding: 40px;
+    }
+}
+
+@media (max-width: 576px) {
+    .entre-contato--container {
+        padding: 40px 20px;
+    }
+
+    .entre-contato--container.container {
+        max-width: 90%;
+    }
 }
