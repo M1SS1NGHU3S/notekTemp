@@ -1,10 +1,5 @@
 .sobre-regiao {
     height: 500px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: relative;
-    align-items: center;
-    align-content: center;
 }
 
 .sobre-regiao--text {
@@ -23,6 +18,7 @@
     background-image: linear-gradient(269.91deg, #01AEF0 32.37%, 
     rgba(217, 217, 217, 0) 99.92%);
     height: inherit;
+    display: grid;
 }
 
 .sobre-regiao--container {
@@ -31,24 +27,25 @@
     justify-content: flex-end;
 }
 
-@media (max-width: 1400px) {
-    .sobre-regiao {
-        background-size: cover;
+@media (max-width: 992px) {
+    .sobre-regiao--text {
+        width: 400px;
     }
 }
 
-@media (max-width: 800px) {
-    .sobre-regiao {
-        position: initial;
-        display: flex;
-        align-items: center;
-        align-content: center;
+@media (max-width: 768px) {
+    .sobre-regiao--text {
+        width: 350px;
+    }
+}
+
+@media (max-width: 576px) {
+    .sobre-regiao--text {
+        width: 90%;
+        text-align: center;
     }
 
-    .sobre-regiao--text {
-        position: initial;
-        margin: auto;
-        text-align: center;
-        width: 80%;
+    .sobre-regiao--container {
+        justify-content: center;
     }
 }

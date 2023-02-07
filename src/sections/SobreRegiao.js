@@ -13,7 +13,7 @@ function SobreRegiao() {
             />
 
             <div className="sobre-regiao--bg">
-                <div className="notek-container sobre-regiao--container">
+                <div className="sobre-regiao--container container">
                     <h3 className="sobre-regiao--text">
                         Atuamos desde 1999 no ramo de contabilidade e assessoria 
                         empresarial na cidade de Ribeirão Pires e região.
