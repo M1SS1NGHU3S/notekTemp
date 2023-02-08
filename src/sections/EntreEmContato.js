@@ -40,7 +40,7 @@ function ContatoForm() {
                     <Form.Label><h3>Mensagem</h3></Form.Label>
                     <Form.Control as="textarea" rows={5} />
                 </Form.Group>
-                <Button className="blue-btn contato-form--btn" type="submit">
+                <Button variant="info" className="blue-btn contato-form--btn" type="submit">
                     Enviar
                 </Button>
             </Form>

@@ -1,0 +1,51 @@
+footer {
+    background-color: #E4EBEE;
+    padding-block: 40px;
+    margin-top: 100px;
+}
+
+.footer--container {
+    display: grid;
+    grid-template-columns: 20% 15% 25% 20% 20%;
+    column-gap: 20px;
+}
+
+.footer--column {
+    display: grid;
+    padding: 0 20px;
+    align-items: center;
+    justify-content: center;
+    align-content: space-evenly;
+}
+
+.footer--logo {
+    width: 150px;
+}
+
+.footer--social {
+    width: 50px;
+}
+
+.footer--trabalhe-title {
+    font-weight: 500;
+}
+
+.footer--link {
+    display: block;
+    padding-block: 5px;
+}
+
+.footer--nav-link {
+    text-decoration: none;
+}
+
+.footer--link-title {
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 5px;
+}
+
+.footer--hr {
+    margin: 5px 0 16px;
+    opacity: .60;
+}

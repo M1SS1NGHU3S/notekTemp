@@ -46,7 +46,7 @@ function ServicosHome() {
                 <div className="servicos-home--cards">
                     {allCards}
                 </div>
-                <Button href="/servicos" className="blue-btn servicos-home--btn">
+                <Button variant="info" href="/servicos" className="blue-btn servicos-home--btn">
                     Mais Informações
                 </Button>
             </div>

@@ -3,7 +3,6 @@ import "./NavBar.css"
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
-import {Link} from "react-router-dom"
 
 
 function NavBar() {
@@ -11,17 +10,17 @@ function NavBar() {
         <>
             <Navbar className="nav" expand="lg" sticky="top" variant="light">
                 <Container>
-                    <Link to={`/`}><img id="nav--logo" src={navLogo} alt="Notek Logo" /></Link>
+                    <Navbar.Brand href="#home"><img id="nav--logo" src={navLogo} alt="Notek Logo" /></Navbar.Brand>
                     
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
-                        <Nav className="nav--links">
-                            <Link to={`/servicos`} data-rr-ui-event-key="#" role="button" className="nav-link active" tabIndex="0">Serviços</Link>
-                            <Link to={`/sobre`} data-rr-ui-event-key="#" role="button" className="nav-link active" tabIndex="0">Sobre</Link>
-                            <Link to={`/tabelas`} data-rr-ui-event-key="#" role="button" className="nav-link active" tabIndex="0">Tabelas</Link>
-                            <Nav.Link href="#home" data-rr-ui-event-key="#" role="button" className="nav-link active" tabIndex="0">Links Úteis</Nav.Link>
-                            <Link to={`/noticias`} data-rr-ui-event-key="#" role="button" className="nav-link active" tabIndex="0">Notícias</Link>
-                            <Link to={`/contato`} data-rr-ui-event-key="#" role="button" className="nav-link active" tabIndex="0">Contato</Link>
+                        <Nav className="nav--Nav.Links">
+                            <Nav.Link href="" className="active" >Serviços</Nav.Link>
+                            <Nav.Link to={`/sobre`} className="active" >Sobre</Nav.Link>
+                            <Nav.Link to={`/tabelas`} className="active" >Tabelas</Nav.Link>
+                            <Nav.Link href="#home" className="active" >Links Úteis</Nav.Link>
+                            <Nav.Link to={`/noticias`} className="active" >Notícias</Nav.Link>
+                            <Nav.Link to={`/contato`} className="active" >Contato</Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

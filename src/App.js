@@ -1,4 +1,5 @@
 import NavBar from "./components/NavBar";
+import FooterNotek from "./components/FooterNotek";
 import {Outlet} from "react-router-dom";
 // import Manutencao from "./pages/manutencao";
 
@@ -8,6 +9,7 @@ function App() {
 			<NavBar />
 			<Outlet />
 			{/* <Manutencao /> */}
+			<FooterNotek />
 		</div>
 	);
 }
