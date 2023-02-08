@@ -1,0 +1,36 @@
+.contato-social {
+    margin-block: 100px;
+}
+
+.contato-social--container {
+    display: grid;
+    grid-template-columns: 628px 628px;
+    column-gap: 40px;
+}
+
+.contato-social--row, .contato-social--column.contato-social--column2 {
+    background-color: #E4EBEE;
+    padding: 30px 60px;
+}
+
+.contato-social--column {
+    display: grid;
+    row-gap: 20px;
+    align-content: space-between;
+}
+
+.contato-info {
+    display: flex;
+    align-items: center;
+    align-content: center;
+}
+
+.contato-info--icon {
+    width: 50px;
+    margin-right: 20px;
+}
+
+.contato-info--text {
+    display: inline-block;
+    text-decoration: none;
+}

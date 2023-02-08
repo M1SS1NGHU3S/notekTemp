@@ -33,6 +33,7 @@ footer {
 .footer--link {
     display: block;
     padding-block: 5px;
+    text-decoration: underline;
 }
 
 .footer--nav-link {
