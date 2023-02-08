@@ -100,7 +100,7 @@ const socialIconsContent = [
     },
 ];
 const generateSocialIcons = socialIconsContent.map((value, index) => 
-    <a className="footer--link" key={index} href={value.link}>
+    <a className="footer--link footer--link-social" key={index} href={value.link}>
         <img className="footer--social" alt={value.alt} src={value.image} />
     </a>
 )

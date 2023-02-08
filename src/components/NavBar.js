@@ -10,17 +10,17 @@ function NavBar() {
         <>
             <Navbar className="nav" expand="lg" sticky="top" variant="light">
                 <Container>
-                    <Navbar.Brand href="#home"><img id="nav--logo" src={navLogo} alt="Notek Logo" /></Navbar.Brand>
+                    <Navbar.Brand href="/"><img id="nav--logo" src={navLogo} alt="Notek Logo" /></Navbar.Brand>
                     
                     <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                     <Navbar.Collapse id="responsive-navbar-nav">
                         <Nav className="nav--Nav.Links">
-                            <Nav.Link href="" className="active" >Serviços</Nav.Link>
-                            <Nav.Link to={`/sobre`} className="active" >Sobre</Nav.Link>
-                            <Nav.Link to={`/tabelas`} className="active" >Tabelas</Nav.Link>
+                            <Nav.Link href="/servicos" className="active" >Serviços</Nav.Link>
+                            <Nav.Link href="/sobre" className="active" >Sobre</Nav.Link>
+                            <Nav.Link href="/tabelas" className="active" >Tabelas</Nav.Link>
                             <Nav.Link href="#home" className="active" >Links Úteis</Nav.Link>
-                            <Nav.Link to={`/noticias`} className="active" >Notícias</Nav.Link>
-                            <Nav.Link to={`/contato`} className="active" >Contato</Nav.Link>
+                            <Nav.Link href="/noticias" className="active" >Notícias</Nav.Link>
+                            <Nav.Link href="/contato" className="active" >Contato</Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>

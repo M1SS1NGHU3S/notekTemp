@@ -11,10 +11,10 @@ function Sobre() {
     return (
             <div>
                 <MockUp
-                title="Sobre Nós"
-                text="Agora somos Notek Assessoria Empresarial!"
-                button={false}
-                bgImage={sobreImg}
+                    title="Sobre Nós"
+                    text="Agora somos Notek Assessoria Empresarial!"
+                    button={false}
+                    bgImage={sobreImg}
                 />     
                 <SobreMudanca isHome={false} />
                 <SobreRegiao />
