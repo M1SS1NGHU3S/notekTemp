@@ -41,9 +41,15 @@
 }
 
 @media (max-width: 576px) {
+    .mockup--container {
+        display: grid;
+        justify-content: center;
+    }
+
     .mockup--title {
         margin: 0 20px;
         width: initial;
+        text-align: center;
     }
 
     .mockup--text {
@@ -52,6 +58,6 @@
     }
 
     .mockup--btn {
-        margin: 20px 20px 0 20px;
+        margin: 20px auto 0 auto;
     }
 }

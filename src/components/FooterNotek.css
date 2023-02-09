@@ -47,7 +47,7 @@ footer {
 }
 
 .footer--hr {
-    margin: 5px 0 16px;
+    margin-top: 5px;
     opacity: .60;
 }
 
@@ -121,12 +121,33 @@ footer {
 @media (max-width: 576px) {
     .footer--container {
         justify-content: space-evenly;
+        row-gap: 30px;
+    }
+
+    .footer--nav-link {
         text-align: center;
-        row-gap: 20px;
     }
 
     .footer--column {
         width: 300px;
+        height: auto;
         padding: 0;
+        margin: 0;
+    }
+
+    .footer--column1, .footer--column2 {
+        width: 140px;
+    }
+
+    .footer--links {
+        margin-top: 10px;
+    }
+
+    .footer--trabalhe-title {
+        text-align: center;
+    }
+
+    .footer--logo {
+        width: 100px;
     }
 }

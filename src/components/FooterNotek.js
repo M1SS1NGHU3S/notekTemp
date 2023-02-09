@@ -22,15 +22,19 @@ function FooterNotek() {
                 <div className="footer--column footer--column3">
                     <p className="footer--trabalhe-title">
                         Trabalhe conosco!
-                    </p>
-                    {generateTrabalheLinks}
+                    </p> <hr className="footer--hr" />
+                    <div className="footer--links">
+                        {generateTrabalheLinks}
+                    </div>
                 </div>
 
                 <div className="footer--column footer--column4">
                     <p className="footer--trabalhe-title">
                         Links úteis
                     </p> <hr className="footer--hr" />
-                    {generateLinksUteis}
+                    <div className="footer--links">
+                        {generateLinksUteis}
+                    </div>
                 </div>
                 
                 <div className="footer--column footer--column5">
