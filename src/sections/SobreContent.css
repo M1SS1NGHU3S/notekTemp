@@ -1,3 +1,71 @@
+/* SobreBase */
+.sobre-content {
+    padding-block: 100px;
+}
+
+.sobre-base {
+    margin-bottom: 100px;
+}
+
+.sobre-base--container {
+    display: grid;
+    grid-template-columns: 638px 638px;
+    column-gap: 20px;
+    row-gap: 40px;
+}
+
+.sobre-base--container.mobile {
+    display: none;
+}
+
+.sobre-base--item {
+    height: 250px;
+    width: auto;
+}
+
+.img-box {
+    border-radius: 27px;
+    display: block;
+}
+
+@media (max-width: 1399px) {
+    .sobre-base--container {
+        grid-template-columns: 548px 548px;
+    }
+
+    .sobre-base--item {
+        height: 300px;
+        width: auto;
+    }
+}
+
+@media (max-width: 1199px) {
+    .sobre-base--container {
+        grid-template-columns: 458px 458px;
+    }
+}
+
+@media (max-width: 991px) {
+    .sobre-base--container.mobile {
+        display: block;
+        grid-template-columns: none;
+    }
+
+    .sobre-base--container.desktop {
+        display: none;
+    }
+
+    .sobre-base--item {
+        margin: 0 0 20px 0;
+    }
+
+    .item-text {
+        height: auto;
+        margin-bottom: 40px;
+    }
+}
+
+/* SobreMissao */
 .sobre--img-box {
     border-radius: 27px;
     text-align: center;
@@ -38,6 +106,10 @@
 }
 
 @media (max-width: 992px) {
+    .missao--parent {
+        height: auto!important;
+    }
+
     .missao-right {
         padding-left: 40px;
     }

@@ -3,10 +3,9 @@ import {
     MockUp,
     SobreMudanca,
     SobreRegiao,
-    SobreBase,
+    SobreContent,
     SobreMissao,
     SobreFormacao,
-    EntreEmContato
 } from "../sections/Imports";
 
 function Sobre() {
@@ -20,10 +19,8 @@ function Sobre() {
                 />     
                 <SobreMudanca isHome={false} />
                 <SobreRegiao />
-                <SobreBase />
-                <SobreMissao />
+                <SobreContent />
                 <SobreFormacao />
-                <EntreEmContato />
             </div>
             
     );

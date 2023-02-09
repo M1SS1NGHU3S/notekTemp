@@ -1,6 +1,7 @@
 import {
+	EntreEmContato,
+	FooterNotek,
 	NavBar,
-	FooterNotek
 } from "./components/Imports"
 import {Outlet} from "react-router-dom";
 // import { Manutencao } from "./pages/Imports";
@@ -12,6 +13,7 @@ function App() {
 			
 			<Outlet />
 			{/* <Manutencao /> */}
+			<EntreEmContato />
 			<FooterNotek />
 		</div>
 	);

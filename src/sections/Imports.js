@@ -1,23 +1,21 @@
 import ContatoSocial from "./ContatoSocial";
-import EntreEmContato from "./EntreEmContato";
 import MockUp from "./MockUp";
+import NoticiasNovidades from "./NoticiasNovidades";
 import NoticiasRow from "./NoticiasRow";
 import ServicosHome from "./ServicosHome";
-import SobreBase from "./SobreBase";
+import SobreContent from "./SobreContent";
 import SobreFormacao from "./SobreFormacao";
-import SobreMissao from "./SobreMissao";
 import SobreMudanca from "./SobreMudanca";
 import SobreRegiao from "./SobreRegiao";
 
 export {
     ContatoSocial,
-    EntreEmContato,
     MockUp,
+    NoticiasNovidades,
     NoticiasRow,
     ServicosHome,
-    SobreBase,
+    SobreContent,
     SobreFormacao,
-    SobreMissao,
     SobreMudanca,
     SobreRegiao
 };

@@ -1,7 +1,6 @@
 import { mockupContatoImg } from "../img/Imports";
 import {
     MockUp, 
-    EntreEmContato, 
     ContatoSocial
 } from "../sections/Imports";
 
@@ -14,7 +13,6 @@ function Contato() {
                 bgImage={mockupContatoImg}
             />  
             <ContatoSocial />
-            <EntreEmContato />
         </>
     );
 }

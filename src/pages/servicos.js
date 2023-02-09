@@ -1,9 +1,7 @@
-import { EntreEmContato } from "../sections/Imports";
-
 function Servicos() {
     return (
         <>
-            <EntreEmContato />
+            <h1>Hi</h1>
         </>
     );
 }
