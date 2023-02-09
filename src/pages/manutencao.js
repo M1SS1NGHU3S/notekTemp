@@ -1,5 +1,4 @@
-import manutencaoImg from "../assets/img/em-manutencao.png";
-import "../assets/css/style.css"
+import {manutencaoImg} from "../img/Imports"
 
 function Manutencao() {
     return (

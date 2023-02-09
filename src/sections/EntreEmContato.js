@@ -1,12 +1,12 @@
 import "./EntreEmContato.css";
-import formImg from "../img/contato-form.png";
+import { contatoFormImg } from "../img/Imports";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button"
 
 function EntreEmContato() {
     const bgStyle = {
         backgroundImage: `linear-gradient(rgba(228, 235, 238, 0.8), 
-            rgba(228, 235, 238, 0.8)), url(${formImg})`,
+            rgba(228, 235, 238, 0.8)), url(${contatoFormImg})`,
         backgroundRepeat: 'no-repeat',
         backgroundPosition: 'center',
         backgroundSize: 'cover',

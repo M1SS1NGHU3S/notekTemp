@@ -1,11 +1,13 @@
-import sobreImg from "../img/mockup-sobre.png"
-import MockUp from "../sections/MockUp";
-import SobreMudanca from "../sections/SobreMudanca";
-import SobreRegiao from "../sections/SobreRegiao";
-import SobreBase from "../sections/SobreBase";
-import SobreMissao from "../sections/SobreMissao";
-import SobreFormacao from "../sections/SobreFormacao";
-import EntreEmContato from "../sections/EntreEmContato";
+import { mockupSobreImg } from "../img/Imports"
+import {
+    MockUp,
+    SobreMudanca,
+    SobreRegiao,
+    SobreBase,
+    SobreMissao,
+    SobreFormacao,
+    EntreEmContato
+} from "../sections/Imports";
 
 function Sobre() {
     return (
@@ -14,7 +16,7 @@ function Sobre() {
                     title="Sobre Nós"
                     text="Agora somos Notek Assessoria Empresarial!"
                     button={false}
-                    bgImage={sobreImg}
+                    bgImage={mockupSobreImg}
                 />     
                 <SobreMudanca isHome={false} />
                 <SobreRegiao />

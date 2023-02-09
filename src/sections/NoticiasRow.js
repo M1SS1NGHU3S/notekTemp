@@ -1,6 +1,8 @@
 import "./NoticiasRow.css";
-import noticiaImg1 from "../img/noticia1.png";
-import noticiaImg2 from "../img/noticia2.png";
+import {
+    officeCalcImg,
+    cleanOfficeImg
+} from "../img/Imports";
 import Button from "react-bootstrap/Button";
 
 function NoticiasRow(props) {
@@ -34,13 +36,13 @@ function NoticiasRow(props) {
             titulo: "Título",
             desc: "Breve resumo sobre a notícia que apareceria aqui",
             altText: "Exemplo",
-            img: noticiaImg1
+            img: officeCalcImg
         },
         {
             titulo: "Título",
             desc: "Breve resumo sobre a notícia que apareceria aqui",
             altText: "Exemplo",
-            img: noticiaImg2
+            img: cleanOfficeImg
         }
     ]
     const generateCards = cardsContent.map((value, index) => 

@@ -1,27 +1,29 @@
 import "./ServicosHome.css";
-import calcImg from "../img/servico-calc.png";
-import papelImg from "../img/servico-papel.png";
-import maosImg from "../img/servico-maos.png";
+import {
+    servicoCalcImg,
+    servicoPapelImg,
+    servicoMaosImg
+} from "../img/Imports"
 import Button from "react-bootstrap/Button";
 
 function ServicosHome() {
     const cardsContent = [
         {
-            img: calcImg,
+            img: servicoCalcImg,
             titulo: "Contabilidade",
             desc: "Descrição do serviço ofertado",
             alt: "Ícone de calculadora",
             classId: "contabil"
         },
         {
-            img: maosImg,
+            img: servicoPapelImg,
             titulo: "Assessoria Empresarial",
             desc: "Descrição do serviço ofertado",
             alt: "Ícone de duas mãos se cumprimentando",
             classId: "assessoria"
         },
         {
-            img: papelImg,
+            img: servicoMaosImg,
             titulo: "Item 3",
             desc: "Descrição do serviço ofertado",
             alt: "Ícone de jornal",

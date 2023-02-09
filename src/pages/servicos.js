@@ -1,4 +1,4 @@
-import EntreEmContato from "../sections/EntreEmContato";
+import { EntreEmContato } from "../sections/Imports";
 
 function Servicos() {
     return (

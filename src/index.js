@@ -7,43 +7,37 @@ import {
 import "bootstrap/dist/css/bootstrap.min.css";
 import './index.css';
 import App from './App';
-import Contato from "./pages/contato";
-import Home from "./pages/home";
-import Noticias from "./pages/noticias";
-import Sobre from "./pages/sobre";
-import Tabelas from "./pages/tabelas";
-import ErrorPage from "./pages/error-page";
-import Servicos from "./pages/servicos";
+import * as pages from "./pages/Imports";
 
 const router = createBrowserRouter([
     {
         path: "/",
         element: <App />,
-        errorElement: <ErrorPage />,
+        errorElement: <pages.ErrorPage />,
         children: [
             {
                 path: "/contato",
-                element: <Contato />
+                element: <pages.Contato />
             },
             {
                 index: true,
-                element: <Home />
+                element: <pages.Home />
             },
             {
                 path: "/servicos",
-                element: <Servicos />
+                element: <pages.Servicos />
             },
             {
                 path: "noticias",
-                element: <Noticias />
+                element: <pages.Noticias />
             },
             {
                 path: "sobre",
-                element: <Sobre />
+                element: <pages.Sobre />
             },
             {
                 path: "tabelas",
-                element: <Tabelas />
+                element: <pages.Tabelas />
             },
         ]
     }

@@ -1,9 +1,11 @@
-import MockUp from "../sections/MockUp.js";
-import SobreMudanca from "../sections/SobreMudanca";
-import ServicosHome from "../sections/ServicosHome.js";
-import NoticiasRow from "../sections/NoticiasRow.js";
-import EntreEmContato from "../sections/EntreEmContato.js";
-import homeImg from "../img/mockup-home.png";
+import { mockupHomeImg } from "../img/Imports"
+import {
+    MockUp,
+    SobreMudanca,
+    ServicosHome,
+    NoticiasRow,
+    EntreEmContato
+} from "../sections/Imports"
 
 function Home() {
     return (
@@ -13,7 +15,7 @@ function Home() {
                 button={true}
                 buttonLink="/sobre"
                 buttonText="Conhecer"
-                bgImage={homeImg}
+                bgImage={mockupHomeImg}
             />     
             <SobreMudanca isHome={true} />
             <ServicosHome />

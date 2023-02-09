@@ -1,8 +1,10 @@
 import "./SobreMissao.css";
-import TextBox from "../components/TextBox";
-import imgValores from "../img/sobre-missao1.png";
-import imgVisao from "../img/sobre-missao2.png";
-import imgMissao from "../img/sobre-missao3.png";
+import {TextBox} from "../components/Imports";
+import {
+    intertwinedImg,
+    openEyeImg,
+    targetImg
+} from "../img/Imports"
 
 function SobreMissao() {
     const textboxContent = [
@@ -37,7 +39,7 @@ function SobreMissao() {
         <section className="sobre-missao">
             <div className="sobre-missao--container container">
                 <div className="missao--parent">
-                    <ImageBox id="1" bgImage={imgMissao} text="Missão" />
+                    <ImageBox id="1" bgImage={targetImg} text="Missão" />
 
                     <div className="missao-right missao1">
                         <TextBox paragraphs={textboxContent[0]} style={textboxStyle} />
@@ -45,14 +47,14 @@ function SobreMissao() {
                     </div>
                 </div>
                 <div className="missao--parent" style={{height: "200px"}}>
-                    <ImageBox id="2" bgImage={imgVisao} text="Visão" />
+                    <ImageBox id="2" bgImage={openEyeImg} text="Visão" />
 
                     <div className="missao-right missao2">
                         <TextBox paragraphs={textboxContent[2]} style={textboxStyle} />
                     </div>
                 </div>
                 <div className="missao--parent">
-                    <ImageBox id="3" bgImage={imgValores} text="Valores" />
+                    <ImageBox id="3" bgImage={intertwinedImg} text="Valores" />
 
                     <div className="missao-right missao3">
                         <TextBox paragraphs={textboxContent[3]} style={textboxStyle} />

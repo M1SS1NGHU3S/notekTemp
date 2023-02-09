@@ -1,7 +1,9 @@
 import "./SobreBase.css"
-import img1 from "../img/sobre-base1.png";
-import img2 from "../img/sobre-base2.png";
-import TextBox from "../components/TextBox";
+import {
+    womanTalkingImg,
+    officeWritingImg
+} from "../img/Imports"
+import {TextBox} from "../components/Imports"
 
 function SobreBase() {
     const textboxContent = [
@@ -29,10 +31,10 @@ function SobreBase() {
                     <TextBox paragraphs={textboxContent[0]} style={textboxStyle} />
                 </div>
                 <div className="sobre-base--item">
-                    <LargeImgBox bgImage={img1} />
+                    <LargeImgBox bgImage={officeWritingImg} />
                 </div>
                 <div className="sobre-base--item">
-                    <LargeImgBox bgImage={img2} />
+                    <LargeImgBox bgImage={womanTalkingImg} />
                 </div>
                 <div className="sobre-base--item">
                     <TextBox paragraphs={textboxContent[1]} style={textboxStyle} />
@@ -41,13 +43,13 @@ function SobreBase() {
             
             <div className="sobre-base--container container mobile">
                 <div className="sobre-base--item item-img">
-                    <LargeImgBox bgImage={img1} />  
+                    <LargeImgBox bgImage={officeWritingImg} />  
                 </div>
                 <div className="sobre-base--item item-text">
                     <TextBox paragraphs={textboxContent[0]} style={textboxStyle} />
                 </div>
                 <div className="sobre-base--item item-img">
-                    <LargeImgBox bgImage={img2} />
+                    <LargeImgBox bgImage={womanTalkingImg} />
                 </div>
                 <div className="sobre-base--item item-text">
                     <TextBox paragraphs={textboxContent[1]} style={textboxStyle} />

@@ -1,9 +1,11 @@
 import "./ContatoSocial.css";
-import phoneIcon from "../img/phone-icon.png";
-import pinIcon from "../img/pin-icon.png";
-import whatsappIcon from "../img/whatsapp-icon.png";
-import instagramIcon from "../img/instagram-icon.png";
-import facebookIcon from "../img/facebook-icon.png";
+import {
+    phoneIcon,
+    pinIcon,
+    whatsappIcon,
+    instagramIcon,
+    facebookIcon
+} from "../img/Imports"
 
 function ContatoSocial() {
     const contatoInfoContent = [

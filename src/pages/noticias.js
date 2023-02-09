@@ -1,6 +1,8 @@
-import noticiasImg from "../img/mockup-noticias.png"
-import MockUp from "../sections/MockUp";
-import EntreEmContato from "../sections/EntreEmContato";
+import { mockupNoticiasImg } from "../img/Imports"
+import {
+    MockUp,
+    EntreEmContato
+} from "../sections/Imports";
 
 function Noticias() {
     return (
@@ -10,7 +12,7 @@ function Noticias() {
                 button={true}
                 buttonLink="#"
                 buttonText="Leia Mais"
-                bgImage={noticiasImg}
+                bgImage={mockupNoticiasImg}
             /> 
             <EntreEmContato />   
         </>

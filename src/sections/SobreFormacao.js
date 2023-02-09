@@ -1,8 +1,10 @@
 import "./SobreFormacao.css";
-import crisImg from "../img/formacao-cris.png";
-import vanessaImg from "../img/formacao-vanessa.png";
-import gilImg from "../img/formacao-gil.png";
-import ledaImg from "../img/formacao-leda.png";
+import {
+    crisImg,
+    vanessaImg,
+    gilImg,
+    ledaImg
+} from "../img/Imports"
 
 function SobreFormacao() {
     const gestoras = [

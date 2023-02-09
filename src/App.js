@@ -1,12 +1,15 @@
-import NavBar from "./components/NavBar";
-import FooterNotek from "./components/FooterNotek";
+import {
+	NavBar,
+	FooterNotek
+} from "./components/Imports"
 import {Outlet} from "react-router-dom";
-// import Manutencao from "./pages/manutencao";
+// import { Manutencao } from "./pages/Imports";
 
 function App() {
 	return (
 		<div>
 			<NavBar />
+			
 			<Outlet />
 			{/* <Manutencao /> */}
 			<FooterNotek />

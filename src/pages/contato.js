@@ -1,7 +1,9 @@
-import contatoImg from "../img/mockup-contato.png"
-import MockUp from "../sections/MockUp.js";
-import EntreEmContato from "../sections/EntreEmContato";
-import ContatoSocial from "../sections/ContatoSocial";
+import { mockupContatoImg } from "../img/Imports";
+import {
+    MockUp, 
+    EntreEmContato, 
+    ContatoSocial
+} from "../sections/Imports";
 
 function Contato() {
     return (
@@ -9,7 +11,7 @@ function Contato() {
             <MockUp
                 title="Entre em contato conosco!"
                 button={false}
-                bgImage={contatoImg}
+                bgImage={mockupContatoImg}
             />  
             <ContatoSocial />
             <EntreEmContato />

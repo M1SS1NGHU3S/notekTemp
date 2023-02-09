@@ -1,5 +1,5 @@
 import bgImage from "../img/sobre-mudanca-bg.png";
-import logo from "../img/big-logo.png";
+import { bigLogo } from "../img/Imports"
 import Button from "react-bootstrap/Button";
 import "./SobreMudanca.css";
 
@@ -34,11 +34,11 @@ function SobreMudanca(props) {
                     {additionalElement}
                 </div>
                 <div className="sobre-mudanca--column column right">
-                    <img className="sobre-mudanca--img" src={logo} alt="Notek Logo" />
+                    <img className="sobre-mudanca--img" src={bigLogo} alt="Notek Logo" />
                 </div>    
             </div>
             <div className="sobre-mudanca--container container blue-border mobile" style={backgroundStyle}>
-                    <img className="sobre-mudanca--img" src={logo} alt="Notek Logo" />
+                    <img className="sobre-mudanca--img" src={bigLogo} alt="Notek Logo" />
 
                     <p className="sobre-mudanca--texto">
                         Para registro de nossa marca, precisamos passar por uma pequena mudança, porém, ela agora é todinha nossa!
