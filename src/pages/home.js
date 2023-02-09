@@ -10,7 +10,7 @@ function Home() {
     return (
         <>
             <MockUp
-                title="Agora somos Notek Acessoria Empresarial!"
+                title="Agora somos Notek Assessoria Empresarial!"
                 button={true}
                 buttonLink="/sobre"
                 buttonText="Conhecer"
