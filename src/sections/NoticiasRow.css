@@ -1,3 +1,7 @@
+.noticias-row {
+    margin-block: 100px;
+}
+
 .noticias-row--content {
     display: flex;
     flex-wrap: wrap;

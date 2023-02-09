@@ -1,28 +1,12 @@
 import "./NoticiasRow.css";
 import {
-    officeCalcImg,
-    cleanOfficeImg
-} from "../img/Imports";
+    linksContent,
+    cardsContent
+} from "./NoticiasRowContent.js"
 import Button from "react-bootstrap/Button";
 
 function NoticiasRow(props) {
-    const linksContent = [
-        {
-            titulo: "Texto da Notícia",
-            data: "25/01",
-            link: "#"
-        },
-        {
-            titulo: "Texto da Notícia",
-            data: "25/01",
-            link: "#"
-        },
-        {
-            titulo: "Texto da Notícia",
-            data: "25/01",
-            link: "#"
-        },
-    ]
+
     const generateLinks = linksContent.map((value, index) =>
         <NoticiaLink 
             key={index}
@@ -31,20 +15,6 @@ function NoticiasRow(props) {
             link={value.link} 
         />
     )
-    const cardsContent = [
-        {
-            titulo: "Título",
-            desc: "Breve resumo sobre a notícia que apareceria aqui",
-            altText: "Exemplo",
-            img: officeCalcImg
-        },
-        {
-            titulo: "Título",
-            desc: "Breve resumo sobre a notícia que apareceria aqui",
-            altText: "Exemplo",
-            img: cleanOfficeImg
-        }
-    ]
     const generateCards = cardsContent.map((value, index) => 
         <BlogCard 
             key={index}
@@ -54,12 +24,9 @@ function NoticiasRow(props) {
             altText={value.altText} 
         />
     )
-    const homeStyle = props.isHome && {
-        marginBlock: "100px"
-    };
 
     return (
-        <section className="noticias-row" style={homeStyle}>
+        <section className="noticias-row">
             <div className="container noticias-row--container">
                 <h2 className="section-title">Notícias</h2>
 
@@ -70,9 +37,16 @@ function NoticiasRow(props) {
                         {generateLinks}
                     </div>
                 </div>
-                <Button variant="info" href="/noticias" className="blue-btn noticias-row--btn">
-                    Veja Mais
-                </Button>
+                {
+                    props.isHome && 
+                    <Button 
+                        variant="info" 
+                        href="/noticias" 
+                        className="blue-btn noticias-row--btn"
+                    >
+                        Veja Mais
+                    </Button>
+                }
             </div>
         </section>
     );
@@ -83,7 +57,9 @@ function BlogCard(props) {
         <div className="blog-card noticias-row--column">
             <img className="blog-card--img" src={props.img} alt={props.alt} />
             <div className="blog-card--content card-content">
-                <h3 className="blog-card--title">{props.titulo}</h3>
+                <a href="/" className="blog-card--link">
+                    <h3 className="blog-card--title">{props.titulo}</h3>
+                </a>
                 <p className="blog-card--desc">{props.desc}</p>
             </div>
         </div>
@@ -93,8 +69,10 @@ function BlogCard(props) {
 function NoticiaLink(props) {
     return (
         <div className="noticias-link">
-            <p className="noticias-link--date">{props.data}</p>
-            <h3 className="noticias-link--title">{props.titulo}</h3>
+            <a href="/" className="noticias-link--a">
+                <p className="noticias-link--date">{props.data}</p>
+                <h3 className="noticias-link--title">{props.titulo}</h3>
+            </a>
         </div>
     );
 }

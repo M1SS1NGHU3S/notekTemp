@@ -1,6 +1,7 @@
 import { mockupNoticiasImg } from "../img/Imports"
 import {
     MockUp,
+    NoticiasRow,
     NoticiasNovidades
 } from "../sections/Imports";
 
@@ -14,7 +15,10 @@ function Noticias() {
                 buttonText="Leia Mais"
                 bgImage={mockupNoticiasImg}
             /> 
+            <NoticiasRow />
             <NoticiasNovidades />  
+            <NoticiasRow />
+            <NoticiasRow />
         </>
     );
 }
