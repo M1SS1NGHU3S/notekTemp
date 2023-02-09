@@ -34,3 +34,79 @@
     display: inline-block;
     text-decoration: none;
 }
+
+@media (max-width: 1400px) {
+    .contato-social--container {
+        grid-template-columns: 538px 538px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .contato-social--container {
+        grid-template-columns: 448px 448px;
+    }
+
+    .contato-social--column2 > .contato-info {
+        word-break: break-all;
+    }
+
+    .contato-social--row, .contato-social--column.contato-social--column2 {
+        padding: 20px 50px;
+    }
+
+    .contato-info--icon {
+        width: 40px;
+    }
+}
+
+@media (max-width: 992px) {
+    .contato-social--container {
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 20px;
+    }
+
+    .contato-social--column1 {
+        display: flex;
+        column-gap: 40px;
+    }
+
+    .contato-social--column2 {
+        width: 100%;
+    }
+
+    .contato-social--row {
+        width: 328px;
+        display: grid;
+        align-content: center;
+        padding: 20px 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .contato-social--container {
+        row-gap: 0;
+    }
+
+    .contato-social--column1 {
+        display: initial;
+    }
+
+    .contato-social--row {
+        width: 100%;
+    }
+
+    .contato-social--row, .contato-social--column.contato-social--column2 {
+        padding: 30px 60px;
+    }
+
+    .contato-social--column1 > div:nth-child(2) {
+        margin-block: 20px;
+    }
+}
+
+@media (max-width: 576px) {
+    .contato-social--row, .contato-social--column.contato-social--column2 {
+        padding: 20px 20px;
+    }
+}
