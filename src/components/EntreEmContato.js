@@ -30,11 +30,11 @@ function ContatoForm() {
             form.current, 
             process.env.REACT_APP_EMAILJS_PUBLIC_KEY).then
         (
-            (result) => {
-                console.log(result.text);
+            () => {
+                alert("Email enviado com sucesso");
             }, 
-            (error) => {
-                console.log(error.text);
+            () => {
+                alert("Oops, ocorreu algum erro para enviar o email.")
             }
         );
 
