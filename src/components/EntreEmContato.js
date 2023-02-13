@@ -25,10 +25,10 @@ function ContatoForm() {
         e.preventDefault();
 
         emailjs.sendForm(
-            "service_0nbblwk", 
-            "template_88vzmzl", 
+            process.env.REACT_APP_EMAILJS_SERVICE_ID, 
+            process.env.REACT_APP_EMAILJS_TEMPLATE_ID, 
             form.current, 
-            "hFtKDxgjdYsIBxtnR").then
+            process.env.REACT_APP_EMAILJS_PUBLIC_KEY).then
         (
             (result) => {
                 console.log(result.text);
