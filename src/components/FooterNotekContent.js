@@ -77,7 +77,7 @@ const navLinksContent = [
     },
 ];
 const generateNavLinks = navLinksContent.map((value, index) => 
-    <a className="footer--nav-link footer--link" key={value.key} href={value.link} >
+    <a className="footer--nav-link footer--link" key={index} href={value.link} >
         {value.nome}
     </a>
 )
