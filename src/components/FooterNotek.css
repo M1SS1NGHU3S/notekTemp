@@ -40,6 +40,10 @@ footer {
     text-decoration: none;
 }
 
+.footer--links-uteis {
+    max-height: 150px;
+}
+
 .footer--link-title {
     text-decoration: none;
     display: inline-block;
@@ -53,7 +57,17 @@ footer {
 
 @media (max-width: 1400px) {
     .footer--container {
-        grid-template-columns: 171px 128px 214px 214px 128px;
+        grid-template-columns: 207px 103px 310px 310px 103px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .footer--container {
+        grid-template-columns: 171px 85px 250px 250px 85px;
+    }
+
+    .footer--links-uteis {
+        max-height: 170px;
     }
 }
 
@@ -129,14 +143,18 @@ footer {
     }
 
     .footer--column {
-        width: 300px;
         height: auto;
+        width: 300px;
         padding: 0;
         margin: 0;
     }
 
     .footer--column1, .footer--column2 {
         width: 140px;
+    }
+
+    .footer--column3, .footer--column4 {
+        display: block;
     }
 
     .footer--links {

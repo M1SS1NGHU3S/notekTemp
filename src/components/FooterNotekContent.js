@@ -5,23 +5,47 @@ import whatsappIcon from "../img/whatsapp-icon.png";
 const linksUteisContent = [
     {
         title: "Receita Federal",
-        link: "#"
+        link: "https://www.gov.br/receitafederal/pt-br"
     },
     {
         title: "Caixa Econômica Federal",
-        link: "#"
+        link: "https://www.caixa.gov.br/Paginas/home-caixa.aspx"
     },
     {
-        title: "Tributal Regional Eleitoral",
-        link: "#"
+        title: "Portal do Empreendedor",
+        link: "https://www.gov.br/empresas-e-negocios/pt-br/empreendedor"
     },
     {
-        title: "Instituto Nacional da Propriedade Industrial",
-        link: "#"
+        title: "Procuradoria da União e Fazenda",
+        link: "https://www.gov.br/pgfn/pt-br"
+    },
+    {
+        title: "Superior Tribunal de Justiça",
+        link: "https://www.stj.jus.br/sites/portalp/Inicio"
+    },
+    {
+        title: "Tribunal Superior do Trabalho",
+        link: "https://www.tst.jus.br/"
+    },
+    {
+        title: "Sebrae",
+        link: "https://sebrae.com.br/sites/PortalSebrae"
+    },
+    {
+        title: "Cartório 24H",
+        link: "https://cartorios24horas.com.br/"
+    },
+    {
+        title: "Jucesp",
+        link: "http://www.institucional.jucesp.sp.gov.br/"
+    },
+    {
+        title: "Cadastro Pessoa Física",
+        link: "http://www.receita.fazenda.gov.br/Aplicacoes/ATCTA/CPF/default.htm"
     },
 ];
 const generateLinksUteis = linksUteisContent.map((value, index) => 
-    <a key={index} href={value.link} className="footer--link">
+    <a target="_blank" rel="noreferrer" key={index} href={value.link} className="footer--link">
         {value.title}
     </a>
 );

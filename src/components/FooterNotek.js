@@ -32,7 +32,7 @@ function FooterNotek() {
                     <p className="footer--trabalhe-title">
                         Links úteis
                     </p> <hr className="footer--hr" />
-                    <div className="footer--links">
+                    <div className="footer--links footer--links-uteis overflow-auto">
                         {generateLinksUteis}
                     </div>
                 </div>
