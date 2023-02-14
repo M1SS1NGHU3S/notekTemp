@@ -12,6 +12,7 @@ import instagramIcon from "./instagram-icon.png";
 import mockupContatoImg from "./mockup-contato.png";
 import mockupHomeImg from "./mockup-home.png";
 import mockupNoticiasImg from "./mockup-noticias.png";
+import mockupServicosImg from "./mockup-servico.png";
 import mockupSobreImg from "./mockup-sobre.png";
 import navLogo from "./nav-logo.png";
 import officeCalcImg from "./office-calculator.png";
@@ -20,7 +21,12 @@ import openEyeImg from "./open-eye.png";
 import phoneIcon from "./phone-icon.png";
 import pinIcon from "./pin-icon.png";
 import servicoCalcImg from "./servico-calc.png";
+import servicoEmpresarioImg from "./servico-empresario.png";
+import servicoLojaImg from "./servico-loja.png";
+import servicoMaletaImg from "./servico-maleta.png";
 import servicoMaosImg from "./servico-maos.png";
+import servicoOculosImg from "./servico-oculos.png";
+import servicoPapelPretoImg from "./servico-papel-preto.png";
 import servicoPapelImg from "./servico-papel.png";
 import smallLogo from "./small-logo.png";
 import mudancaBg from "./sobre-mudanca-bg.png";
@@ -44,12 +50,18 @@ export {
     mockupHomeImg,
     mockupNoticiasImg,
     mockupSobreImg,
+    mockupServicosImg,
     navLogo,
     officeCalcImg,
     officeWritingImg,
     openEyeImg,
     phoneIcon,
     pinIcon,
+    servicoEmpresarioImg,
+    servicoLojaImg,
+    servicoMaletaImg,
+    servicoOculosImg,
+    servicoPapelPretoImg,
     servicoCalcImg,
     servicoMaosImg,
     servicoPapelImg,

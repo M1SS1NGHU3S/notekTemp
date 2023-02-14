@@ -4,13 +4,12 @@ import {
     SobreMudanca,
     SobreRegiao,
     SobreContent,
-    SobreMissao,
     SobreFormacao,
 } from "../sections/Imports";
 
 function Sobre() {
     return (
-            <div>
+            <>
                 <MockUp
                     title="Sobre Nós"
                     text="Agora somos Notek Assessoria Empresarial!"
@@ -21,7 +20,7 @@ function Sobre() {
                 <SobreRegiao />
                 <SobreContent />
                 <SobreFormacao />
-            </div>
+            </>
             
     );
 }

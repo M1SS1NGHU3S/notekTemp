@@ -1,7 +1,14 @@
+import {mockupServicosImg} from "../img/Imports";
+import {MockUp} from "../sections/Imports";
+
 function Servicos() {
     return (
         <>
-            <h1>Hi</h1>
+            <MockUp
+                title="O escritório NOTEK Assessoria Empresarial em Contabilidade, 
+                    presta serviços nas seguintes áreas:"
+                bgImage={mockupServicosImg}
+            />    
         </>
     );
 }

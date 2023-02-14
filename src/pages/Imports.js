@@ -5,7 +5,6 @@ import Manutencao from "./manutencao";
 import Noticias from "./noticias";
 import Servicos from "./servicos";
 import Sobre from "./sobre";
-import Tabelas from "./tabelas";
 
 export {
     Home, 
@@ -15,5 +14,4 @@ export {
     Noticias,
     Servicos,
     Sobre,
-    Tabelas
 };

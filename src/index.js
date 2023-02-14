@@ -35,10 +35,6 @@ const router = createBrowserRouter([
                 path: "sobre",
                 element: <pages.Sobre />
             },
-            {
-                path: "tabelas",
-                element: <pages.Tabelas />
-            },
         ]
     }
 ])
