@@ -9,9 +9,8 @@ import {
     targetImg
 } from "../img/Imports"
 import { 
-    sobreBaseText,
-    sobreMissaoText
-} from "./SobreContentData";
+    sobre
+} from "../sections-data/Imports";
 import {TextBox} from "../components/Imports"
 
 function SobreContent() {
@@ -35,7 +34,7 @@ function SobreBase() {
         <div className="sobre-base">
             <div className="sobre-base--container desktop">
                 <div className="sobre-base--item">
-                    <TextBox paragraphs={sobreBaseText[0]} style={textboxStyle} />
+                    <TextBox paragraphs={sobre.sobreBaseText[0]} style={textboxStyle} />
                 </div>
                 <div className="sobre-base--item">
                     <LargeImgBox bgImage={officeWritingImg} />
@@ -44,7 +43,7 @@ function SobreBase() {
                     <LargeImgBox bgImage={womanTalkingImg} />
                 </div>
                 <div className="sobre-base--item">
-                    <TextBox paragraphs={sobreBaseText[1]} style={textboxStyle} />
+                    <TextBox paragraphs={sobre.sobreBaseText[1]} style={textboxStyle} />
                 </div>
             </div>
             
@@ -53,13 +52,13 @@ function SobreBase() {
                     <LargeImgBox bgImage={officeWritingImg} />  
                 </div>
                 <div className="sobre-base--item item-text">
-                    <TextBox paragraphs={sobreBaseText[0]} style={textboxStyle} />
+                    <TextBox paragraphs={sobre.sobreBaseText[0]} style={textboxStyle} />
                 </div>
                 <div className="sobre-base--item item-img">
                     <LargeImgBox bgImage={womanTalkingImg} />
                 </div>
                 <div className="sobre-base--item item-text">
-                    <TextBox paragraphs={sobreBaseText[1]} style={textboxStyle} />
+                    <TextBox paragraphs={sobre.sobreBaseText[1]} style={textboxStyle} />
                 </div>
             </div>
         </div>
@@ -80,22 +79,22 @@ function SobreMissao() {
                     <ImageBox id="1" bgImage={targetImg} text="Missão" />
 
                     <div className="missao-right missao1">
-                        <TextBox paragraphs={sobreMissaoText[0]} style={textboxStyle} />
-                        <TextBox paragraphs={sobreMissaoText[1]} style={textboxStyle} />
+                        <TextBox paragraphs={sobre.sobreMissaoText[0]} style={textboxStyle} />
+                        <TextBox paragraphs={sobre.sobreMissaoText[1]} style={textboxStyle} />
                     </div>
                 </div>
                 <div className="missao--parent" style={{height: "200px"}}>
                     <ImageBox id="2" bgImage={openEyeImg} text="Visão" />
 
                     <div className="missao-right missao2">
-                        <TextBox paragraphs={sobreMissaoText[2]} style={textboxStyle} />
+                        <TextBox paragraphs={sobre.sobreMissaoText[2]} style={textboxStyle} />
                     </div>
                 </div>
                 <div className="missao--parent">
                     <ImageBox id="3" bgImage={intertwinedImg} text="Valores" />
 
                     <div className="missao-right missao3">
-                        <TextBox paragraphs={sobreMissaoText[3]} style={textboxStyle} />
+                        <TextBox paragraphs={sobre.sobreMissaoText[3]} style={textboxStyle} />
                     </div>
                 </div>
             </div>

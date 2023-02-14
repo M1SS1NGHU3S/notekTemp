@@ -1,4 +1,5 @@
 import bigLogo from "./big-logo.png";
+import blogPostImg1 from "./blog-post1.png"
 import cleanOfficeImg from "./clean-office.png";
 import contatoFormImg from "./contato-form.png";
 import manutencaoImg from "./em-manutencao.png";
@@ -36,6 +37,7 @@ import womanTalkingImg from "./woman-talking.png";
 
 export {
     bigLogo,
+    blogPostImg1,
     cleanOfficeImg,
     contatoFormImg,
     manutencaoImg,

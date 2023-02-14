@@ -1,0 +1,9 @@
+.blog-post--container {
+    display: grid;
+    padding-block: 100px;
+    grid-template-columns: 60% 40%;
+}
+
+.blog-post--img {
+    width: 100%;
+}

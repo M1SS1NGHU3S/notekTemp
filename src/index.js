@@ -28,13 +28,17 @@ const router = createBrowserRouter([
                 element: <pages.Servicos />
             },
             {
-                path: "noticias",
+                path: "/noticias",
                 element: <pages.Noticias />
             },
             {
-                path: "sobre",
+                path: "/sobre",
                 element: <pages.Sobre />
             },
+            {
+                path: "/noticias/:id",
+                element: <pages.NoticiasBlogPost />
+            }
         ]
     }
 ])
