@@ -105,6 +105,6 @@ const generateCardsHome = servicoCardContent.map((value, index) =>
         titulo={value.titulo} 
         alt={value.alt}
     />
-);
+)
 
 export {generateCardsHome};
