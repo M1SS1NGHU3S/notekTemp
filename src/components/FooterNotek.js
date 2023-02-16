@@ -1,15 +1,13 @@
 import "./FooterNotek.css";
-import { 
-    footer
-} from "../sections-data/Imports";
-import logo from "../img/small-logo.png"
+import {footer} from "../sections-data/Imports";
+import {smallLogo} from "../img/Imports";
 
 function FooterNotek() {
     return (
         <footer>
             <div className="container footer--container">
                 <div className="footer--column footer--column1">
-                    <img className="footer--logo" src={logo} alt="Notek logo" />
+                    <img className="footer--logo" src={smallLogo} alt="Notek logo" />
                 </div>
 
                 <div className="footer--column footer--column2">
@@ -39,7 +37,7 @@ function FooterNotek() {
                 </div>
             </div> 
         </footer>
-    )
+    );
 }
 
 export default FooterNotek;
