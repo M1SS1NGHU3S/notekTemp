@@ -1,7 +1,10 @@
 import "./FooterNotek.css";
 import { 
-    footer
-} from "../sections-data/Imports";
+    generateLinksUteis, 
+    generateTrabalheLinks, 
+    generateSocialIcons ,
+    generateNavLinks
+} from "./FooterNotekContent";
 import logo from "../img/small-logo.png"
 
 function FooterNotek() {
@@ -13,7 +16,7 @@ function FooterNotek() {
                 </div>
 
                 <div className="footer--column footer--column2">
-                    {footer.generateNavLinks}
+                    {generateNavLinks}
                 </div>
 
                 <div className="footer--column footer--column3">
@@ -21,7 +24,7 @@ function FooterNotek() {
                         Trabalhe conosco!
                     </p> <hr className="footer--hr" />
                     <div className="footer--links">
-                        {footer.generateTrabalheLinks}
+                        {generateTrabalheLinks}
                     </div>
                 </div>
 
@@ -30,12 +33,12 @@ function FooterNotek() {
                         Links úteis
                     </p> <hr className="footer--hr" />
                     <div className="footer--links footer--links-uteis overflow-auto">
-                        {footer.generateLinksUteis}
+                        {generateLinksUteis}
                     </div>
                 </div>
                 
                 <div className="footer--column footer--column5">
-                    {footer.generateSocialIcons}
+                    {generateSocialIcons}
                 </div>
             </div> 
         </footer>

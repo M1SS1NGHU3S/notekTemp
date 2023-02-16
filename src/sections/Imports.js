@@ -1,4 +1,3 @@
-import BlogPost from "./BlogPost";
 import ContatoSocial from "./ContatoSocial";
 import MockUp from "./MockUp";
 import NoticiasNovidades from "./NoticiasNovidades";
@@ -10,7 +9,6 @@ import SobreMudanca from "./SobreMudanca";
 import SobreRegiao from "./SobreRegiao";
 
 export {
-    BlogPost,
     ContatoSocial,
     MockUp,
     NoticiasNovidades,

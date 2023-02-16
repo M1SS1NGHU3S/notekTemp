@@ -1,19 +1,11 @@
 import "./EntreEmContato.css";
-import { contatoFormImg } from "../img/Imports";
+import {bgStyle} from "./EntreEmContatoContent";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import {useRef} from "react";
 import emailjs from "@emailjs/browser";
 
 function EntreEmContato() {
-    const bgStyle = {
-        backgroundImage: `linear-gradient(rgba(228, 235, 238, 0.8), 
-            rgba(228, 235, 238, 0.8)), url(${contatoFormImg})`,
-        backgroundRepeat: 'no-repeat',
-        backgroundPosition: 'center',
-        backgroundSize: 'cover',
-    };
-
     return (
         <section className="entre-contato">
             <div className="entre-contato--container container blue-border" style={bgStyle}>
