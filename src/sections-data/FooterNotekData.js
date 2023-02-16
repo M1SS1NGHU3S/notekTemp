@@ -1,6 +1,8 @@
-import instagramIcon from "../img/instagram-icon.png";
-import facebookIcon from "../img/facebook-icon.png";
-import whatsappIcon from "../img/whatsapp-icon.png";
+import {
+    instagramIcon,
+    facebookIcon,
+    whatsappIcon
+} from "../img/Imports";
 
 const linksUteisContent = [
     {

@@ -2,7 +2,7 @@ import "./NoticiasRow.css";
 import {
     linksContent,
     cardsContent
-} from "./NoticiasRowContent.js"
+} from "./NoticiasRowData.js"
 import Button from "react-bootstrap/Button";
 
 function NoticiasRow(props) {
