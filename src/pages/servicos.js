@@ -5,11 +5,16 @@ import {
 } from "../sections/Imports";
 
 function Servicos() {
+    const titleText = ["O escritório ", 
+        <strong key="mockup-bold">
+            NOTEK Acessoria Empresarial em Contabilidade
+        </strong>, 
+        ", presta serviços nas seguintes áreas:"]
+
     return (
         <>
             <MockUp
-                title="O escritório NOTEK Assessoria Empresarial em Contabilidade, 
-                    presta serviços nas seguintes áreas:"
+                title={titleText}
                 bgImage={mockupServicosImg}
             />    
             <ServicosFull />

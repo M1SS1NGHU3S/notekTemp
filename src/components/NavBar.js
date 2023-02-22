@@ -5,9 +5,8 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from "react-bootstrap/NavDropdown";
 import {
-    generateNavLinks,
-    generateDropdownLinks
-} from "./NavBarContent";
+    navbar
+} from "../sections-data/Imports";
 
 function NavBar() {
     return (
@@ -18,9 +17,9 @@ function NavBar() {
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="nav--Nav.Links">
-                        {generateNavLinks}
+                        {navbar.generateNavLinks}
                         <NavDropdown title="Links Úteis" id="basic-nav-dropdown">
-                            {generateDropdownLinks}
+                            {navbar.generateDropdownLinks}
                         </NavDropdown>
                     </Nav>
                 </Navbar.Collapse>

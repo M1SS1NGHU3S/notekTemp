@@ -1,5 +1,5 @@
 import "./EntreEmContato.css";
-import {bgStyle} from "./EntreEmContatoContent";
+import {entreContato} from "../sections-data/Imports";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import {useRef} from "react";
@@ -8,7 +8,7 @@ import emailjs from "@emailjs/browser";
 function EntreEmContato() {
     return (
         <section className="entre-contato">
-            <div className="entre-contato--container container blue-border" style={bgStyle}>
+            <div className="entre-contato--container container blue-border" style={entreContato.bgStyle}>
                 <div className="entre-contato--text-column">
                     <h1 className="entre-contato--title">Entre em contato conosco agora mesmo!</h1>
                 </div>
