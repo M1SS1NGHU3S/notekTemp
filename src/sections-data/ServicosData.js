@@ -20,6 +20,7 @@ const servicoCardContent = [
             " conforme necessidade da empresa; Elaboração das Demonstrações" +
             " Contábeis no encerramento do Exercício, de acordo com as normas" +
             " e legislação vigente.",
+        classId: "calc"
     },
     {
         img: servicoOculosImg,
@@ -31,6 +32,7 @@ const servicoCardContent = [
             " de informação e de recolhimento dos tributos devidos;" +
             " Atendimento das demais exigências previstas em atos normativos," +
             " bem como de eventuais procedimentos de fiscalização tributária.",
+        classId: "oculos"
     },
     {
         img: servicoEmpresarioImg,
@@ -42,6 +44,7 @@ const servicoCardContent = [
             " própria. Este profissional tem inscrição apenas na Prefeitura." +
             " (médicos, dentista, psicólogo, veterinário, jornalista, advogados," +
             " corretor de seguros...etc.).",
+        classId: "empresario"
     },
     {
         img: servicoPapelImg,
@@ -52,6 +55,7 @@ const servicoCardContent = [
             " e documentos correlatos; Atendimento das demais exigências" +
             " previstas em atos normativos, bem como de eventuais" +
             " procedimentos de fiscalização.",
+        classId: "papel"
     },
     {
         img: servicoPapelPretoImg,
@@ -60,6 +64,7 @@ const servicoCardContent = [
         descricao: "Orientação, elaboração de imposto de renda pessoa física," +
             " assim como atendimento a Malha Fina, ganhos e capital, carne" +
             " leão e livro caixa.",
+        classId: "papel-dark"
     },
     {
         img: servicoLojaImg,
@@ -68,6 +73,7 @@ const servicoCardContent = [
         descricao: "Orientação, constituição e assessoria especializada para" +
             " o público que está iniciando sua jornada como micro" +
             " empreendedor Individual.",
+        classId: "loja"
     },
     {
         img: servicoMaletaImg,
@@ -82,6 +88,7 @@ const servicoCardContent = [
             " recolhimento dos encargos sociais e tributos afins; Atendimento" +
             " das demais exigências previstas na legislação, bem como de" +
             " eventuais procedimentos de fiscalização.",
+        classId: "maleta"
     },
     {
         img: servicoMaosImg,
@@ -95,6 +102,7 @@ const servicoCardContent = [
             " Federal, Municipal, INSS, FGTS, Procuradoria da Fazenda;" +
             " Registro do órgão de classe CORCESP, CREA, CRM, CRBM, CRC, CRA," +
             " CRECI e outros;",
+        classId: "maos"
     },
 ];
 
@@ -104,6 +112,8 @@ const generateCardsHome = servicoCardContent.map((value, index) =>
             img={value.img} 
             titulo={value.titulo} 
             alt={value.alt}
+            isHome={true}
+            classId={value.classId}
         />
     );
 
