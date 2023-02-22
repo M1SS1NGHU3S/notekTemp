@@ -1,4 +1,4 @@
-const sobreBaseText = [
+const baseText = [
     [
         "Sempre atenta as necessidades de seus clientes e do mercado a " +
         "Notek se destaca pelo diferencial no atendimento e pelas " +
@@ -12,7 +12,7 @@ const sobreBaseText = [
     ]
 ];
 
-const sobreMissaoText = [
+const missaoText = [
     [
         "Executar serviços contábeis com qualidade, visando à geração " + 
         "de resultados e satisfação das necessidades de nossos parceiros " +
@@ -36,6 +36,19 @@ const sobreMissaoText = [
     ]
 ];
 
+const textboxStyleBase = {
+    width: "inherit",
+    height: "inherit"
+};
 
+const textboxStyleMissao = {
+    height: "-webkit-fill-available",
+    width: "initial",
+}
 
-export { sobreBaseText, sobreMissaoText };
+export { 
+    baseText,
+    missaoText,
+    textboxStyleBase,
+    textboxStyleMissao
+};

@@ -33,7 +33,16 @@ function SobreFormacao() {
             altText: "leda"
         },
     ]
-    const gestoraCards = gestoras.map((value) => <GestoraCard img={value.img} altText={value.altText} nome={value.nome} habilidades={value.habilidades} />)
+    const gestoraCards = gestoras.map((value, index) => 
+        <GestoraCard 
+            key={index} 
+            img={value.img} 
+            altText={value.altText} 
+            nome={value.nome} 
+            habilidades={value.habilidades} 
+        />
+    );
+
 
     return (
         <section className="sobre-formacao">

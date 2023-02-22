@@ -1,17 +1,14 @@
-import "./SobreContent.css"
+import "./SobreContent.css";
 import {
     womanTalkingImg,
-    officeWritingImg
-} from "../img/Imports"
-import {
+    officeWritingImg,
     intertwinedImg,
     openEyeImg,
     targetImg
-} from "../img/Imports"
+} from "../img/Imports";
 import { 
-    sobreBaseText,
-    sobreMissaoText
-} from "./SobreContentData";
+    sobre
+} from "../sections-data/Imports";
 import {TextBox} from "../components/Imports"
 
 function SobreContent() {
@@ -26,40 +23,35 @@ function SobreContent() {
 }
 
 function SobreBase() {
-    const textboxStyle = {
-        width: "inherit",
-        height: "inherit"
-    };
-
     return (
         <div className="sobre-base">
             <div className="sobre-base--container desktop">
                 <div className="sobre-base--item">
-                    <TextBox paragraphs={sobreBaseText[0]} style={textboxStyle} />
+                    <TextBox key={1} paragraphs={sobre.baseText[0]} style={sobre.textboxStyleBase} />
                 </div>
                 <div className="sobre-base--item">
-                    <LargeImgBox bgImage={officeWritingImg} />
+                    <LargeImgBox key={1} bgImage={officeWritingImg} />
                 </div>
                 <div className="sobre-base--item">
-                    <LargeImgBox bgImage={womanTalkingImg} />
+                    <LargeImgBox key={2} bgImage={womanTalkingImg} />
                 </div>
                 <div className="sobre-base--item">
-                    <TextBox paragraphs={sobreBaseText[1]} style={textboxStyle} />
+                    <TextBox key={2} paragraphs={sobre.baseText[1]} style={sobre.textboxStyleBase} />
                 </div>
             </div>
             
             <div className="sobre-base--container mobile">
                 <div className="sobre-base--item item-img">
-                    <LargeImgBox bgImage={officeWritingImg} />  
+                    <LargeImgBox key={3} bgImage={officeWritingImg} />  
                 </div>
                 <div className="sobre-base--item item-text">
-                    <TextBox paragraphs={sobreBaseText[0]} style={textboxStyle} />
+                    <TextBox key={3} paragraphs={sobre.baseText[0]} style={sobre.textboxStyleBase} />
                 </div>
                 <div className="sobre-base--item item-img">
-                    <LargeImgBox bgImage={womanTalkingImg} />
+                    <LargeImgBox key={4} bgImage={womanTalkingImg} />
                 </div>
                 <div className="sobre-base--item item-text">
-                    <TextBox paragraphs={sobreBaseText[1]} style={textboxStyle} />
+                    <TextBox key={4} paragraphs={sobre.baseText[1]} style={sobre.textboxStyleBase} />
                 </div>
             </div>
         </div>
@@ -67,35 +59,29 @@ function SobreBase() {
 }
 
 function SobreMissao() {
-
-    const textboxStyle = {
-        height: "-webkit-fill-available",
-        width: "initial",
-    }
-
     return (
         <div className="sobre-missao">
             <div className="sobre-missao--container">
                 <div className="missao--parent">
-                    <ImageBox id="1" bgImage={targetImg} text="Missão" />
+                    <ImageBox key={1} id="1" bgImage={targetImg} text="Missão" />
 
                     <div className="missao-right missao1">
-                        <TextBox paragraphs={sobreMissaoText[0]} style={textboxStyle} />
-                        <TextBox paragraphs={sobreMissaoText[1]} style={textboxStyle} />
+                        <TextBox key={5} paragraphs={sobre.missaoText[0]} style={sobre.textboxStyleMissao} />
+                        <TextBox key={6} paragraphs={sobre.missaoText[1]} style={sobre.textboxStyleMissao} />
                     </div>
                 </div>
                 <div className="missao--parent" style={{height: "200px"}}>
-                    <ImageBox id="2" bgImage={openEyeImg} text="Visão" />
+                    <ImageBox key={2} id="2" bgImage={openEyeImg} text="Visão" />
 
                     <div className="missao-right missao2">
-                        <TextBox paragraphs={sobreMissaoText[2]} style={textboxStyle} />
+                        <TextBox key={3} paragraphs={sobre.missaoText[2]} style={sobre.textboxStyleMissao} />
                     </div>
                 </div>
                 <div className="missao--parent">
-                    <ImageBox id="3" bgImage={intertwinedImg} text="Valores" />
+                    <ImageBox key={3} id="3" bgImage={intertwinedImg} text="Valores" />
 
                     <div className="missao-right missao3">
-                        <TextBox paragraphs={sobreMissaoText[3]} style={textboxStyle} />
+                        <TextBox key={7} paragraphs={sobre.missaoText[3]} style={sobre.textboxStyleMissao} />
                     </div>
                 </div>
             </div>
