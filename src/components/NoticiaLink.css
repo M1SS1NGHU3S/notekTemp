@@ -1,0 +1,23 @@
+.noticias-link {
+    margin-block: 20px;
+}
+
+.noticias-link--date {
+    background-color: #01AEF0;
+    border-radius: 15px;
+    color: #ffffff;
+    display: inline;
+    padding: 5px 20px;
+}
+
+@media (max-width: 992px) {
+    .noticias-link {
+        margin: 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .noticias-link--title {
+        margin-left: 15px;
+    }
+}
