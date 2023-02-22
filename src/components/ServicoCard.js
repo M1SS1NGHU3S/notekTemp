@@ -8,7 +8,7 @@ function ServicoCard(props) {
         <div className={`servico-card servico-card-${props.classId} ${homeClass} ${servicosClass} blue-border`}>
             <img className="servico-card--img" src={props.img} alt={props.alt} />
             <p className="servico-card--title">{props.titulo}</p>
-            <p className="servico-card--desc">{props.desc}</p>
+            <p className="servico-card--desc">{props.descricao}</p>
         </div>
     )
 }

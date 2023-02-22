@@ -1,5 +1,8 @@
 import {mockupServicosImg} from "../img/Imports";
-import {MockUp} from "../sections/Imports";
+import {
+    MockUp,
+    ServicosFull
+} from "../sections/Imports";
 
 function Servicos() {
     return (
@@ -9,6 +12,7 @@ function Servicos() {
                     presta serviços nas seguintes áreas:"
                 bgImage={mockupServicosImg}
             />    
+            <ServicosFull />
         </>
     );
 }

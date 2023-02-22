@@ -107,14 +107,29 @@ const servicoCardContent = [
 ];
 
 const generateCardsHome = servicoCardContent.map((value, index) =>
-        <ServicoCard 
-            key={index}
-            img={value.img} 
-            titulo={value.titulo} 
-            alt={value.alt}
-            isHome={true}
-            classId={value.classId}
-        />
-    );
+    <ServicoCard 
+        key={index}
+        img={value.img} 
+        titulo={value.titulo} 
+        alt={value.alt}
+        isHome={true}
+        classId={value.classId}
+    />
+);
 
-export {generateCardsHome};
+const generateCardsServicos = servicoCardContent.map((value, index) =>
+    <ServicoCard
+        key={index}
+        img={value.img}
+        titulo={value.titulo}
+        descricao={value.descricao}
+        alt={value.alt}
+        isHome={false}
+        classId={value.classId}
+    />
+);
+
+export {
+    generateCardsHome,
+    generateCardsServicos
+};
