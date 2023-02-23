@@ -1,3 +1,11 @@
+import {
+    womanTalkingImg,
+    officeWritingImg,
+    intertwinedImg,
+    openEyeImg,
+    targetImg
+} from "../img/Imports";
+
 const baseText = [
     [
         "Sempre atenta as necessidades de seus clientes e do mercado a " +
@@ -17,7 +25,7 @@ const missaoText = [
     "de resultados e satisfação das necessidades de nossos parceiros " +
     "e clientes, seja na área de prestação de serviços, indústrias, " +
     "comercio e também um olhar cuidadoso com o MEI.",
-    
+
     "Respeitar às políticas públicas, nas esferas estaduais, " +
     "municipais e federais, elaborando e executando os objetivos " +
     "de nossos clientes de forma clara e concisa.",
@@ -31,7 +39,29 @@ const missaoText = [
     "ambiental."
 ];
 
+const sobreMissaoImageContent = [
+    {
+        img: targetImg,
+        text: "Missão"
+    },
+    {
+        img: openEyeImg,
+        text: "Visão"
+    },
+    {
+        img: intertwinedImg,
+        text: "Valores"
+    }
+];
+
+const sobreBaseImages = [
+    womanTalkingImg,
+    officeWritingImg
+]
+
 export { 
     baseText,
     missaoText,
+    sobreBaseImages,
+    sobreMissaoImageContent
 };

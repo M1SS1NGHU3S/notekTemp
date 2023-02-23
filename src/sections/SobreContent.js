@@ -1,11 +1,4 @@
 import "./SobreContent.css";
-import {
-    womanTalkingImg,
-    officeWritingImg,
-    intertwinedImg,
-    openEyeImg,
-    targetImg
-} from "../img/Imports";
 import { 
     sobre
 } from "../sections-data/Imports";
@@ -22,13 +15,12 @@ function SobreContent() {
 }
 
 function SobreBase() {
-    const allImgBox = [
-        <SobreBaseImgBox key={1} bgImage={womanTalkingImg} />,
-        <SobreBaseImgBox key={2} bgImage={officeWritingImg} />
-    ];
+    const allImgBox = sobre.sobreBaseImages.map((value, index) =>
+        <SobreBaseImgBox key={index} bgImage={value} />,
+    )
     const allTextBox = sobre.baseText.map((value, index) =>
         <TextBoxBase key={index} paragraphs={value} />
-    );
+    )
 
     return (
         <div className="sobre-base">
@@ -43,7 +35,7 @@ function SobreBase() {
                     {allImgBox[1]}
                 </div>
                 <div className="sobre-base--item">
-                    {allTextBox[1]}
+                {allTextBox[1]}
                 </div>
             </div>
             
@@ -66,11 +58,9 @@ function SobreBase() {
 }
 
 function SobreMissao() {
-    const allImgBox = [
-        <SobreMissaoImgBox key={1} id={1} bgImage={targetImg} text="Missão" />,
-        <SobreMissaoImgBox key={2} id={2} bgImage={openEyeImg} text="Visão" />,
-        <SobreMissaoImgBox key={3} id={3} bgImage={intertwinedImg} text="Valores" />
-    ]
+    const allImgBox = sobre.sobreMissaoImageContent.map((value, index) =>
+        <SobreMissaoImgBox key={index} id={index} bgImage={value.img} text={value.text} />,
+    );
     const allTextBox = sobre.missaoText.map((value, index) =>
         <TextBoxMissao key={index} text={value} />
     );
@@ -106,7 +96,9 @@ function SobreMissao() {
 }
 
 function TextBoxBase(props) {
-    const paragraphs = props.paragraphs.map((value) => <h3>{value}</h3>);
+    const paragraphs = props.paragraphs.map(
+        (value, index) => <h3 key={index}>{value}</h3>
+    );
 
     return (
         <div className="blue-border text-box text-box-base">
