@@ -1,3 +1,11 @@
+.text-box {
+    padding: 40px;
+    display: inline-grid;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
 /* SobreBase */
 .sobre-content {
     padding-block: 100px;
@@ -34,12 +42,9 @@
     background-position: center!important;
 }
 
-.text-box {
-    padding: 40px;
-    display: inline-grid;
-    justify-content: center;
-    align-items: center;
-    align-content: center;
+.text-box-base {
+    width: inherit;
+    height: inherit;
 }
 
 @media (max-width: 1399px) {
@@ -110,6 +115,11 @@
 
 .sobre-missao--container > div:nth-child(2) {
     margin-block: 80px;
+}
+
+.text-box-missao {
+    height: -webkit-fill-available;
+    width: initial;
 }
 
 @media (max-width: 1400px) {

@@ -22,40 +22,43 @@ function SobreContent() {
 }
 
 function SobreBase() {
-    const allBaseImgBox = [
+    const allImgBox = [
         <SobreBaseImgBox key={1} bgImage={womanTalkingImg} />,
         <SobreBaseImgBox key={2} bgImage={officeWritingImg} />
     ];
+    const allTextBox = sobre.baseText.map((value, index) =>
+        <TextBoxBase key={index} paragraphs={value} />
+    );
 
     return (
         <div className="sobre-base">
             <div className="sobre-base--container desktop">
                 <div className="sobre-base--item">
-                    <TextBox key={1} paragraphs={sobre.baseText[0]} style={sobre.textboxStyleBase} />
+                    {allTextBox[0]}
                 </div>
                 <div className="sobre-base--item">
-                    {allBaseImgBox[0]}
+                    {allImgBox[0]}
                 </div>
                 <div className="sobre-base--item">
-                    {allBaseImgBox[1]}
+                    {allImgBox[1]}
                 </div>
                 <div className="sobre-base--item">
-                    <TextBox key={2} paragraphs={sobre.baseText[1]} style={sobre.textboxStyleBase} />
+                    {allTextBox[1]}
                 </div>
             </div>
             
             <div className="sobre-base--container mobile">
                 <div className="sobre-base--item item-img">
-                    {allBaseImgBox[0]} 
+                    {allImgBox[0]} 
                 </div>
                 <div className="sobre-base--item item-text">
-                    <TextBox key={3} paragraphs={sobre.baseText[0]} style={sobre.textboxStyleBase} />
+                    {allTextBox[0]}
                 </div>
                 <div className="sobre-base--item item-img">
-                    {allBaseImgBox[1]}
+                    {allImgBox[1]}
                 </div>
                 <div className="sobre-base--item item-text">
-                    <TextBox key={4} paragraphs={sobre.baseText[1]} style={sobre.textboxStyleBase} />
+                    {allTextBox[1]}
                 </div>
             </div>
         </div>
@@ -63,29 +66,38 @@ function SobreBase() {
 }
 
 function SobreMissao() {
+    const allImgBox = [
+        <SobreMissaoImgBox key={1} id={1} bgImage={targetImg} text="Missão" />,
+        <SobreMissaoImgBox key={2} id={2} bgImage={openEyeImg} text="Visão" />,
+        <SobreMissaoImgBox key={3} id={3} bgImage={intertwinedImg} text="Valores" />
+    ]
+    const allTextBox = sobre.missaoText.map((value, index) =>
+        <TextBoxMissao key={index} text={value} />
+    );
+
     return (
         <div className="sobre-missao">
             <div className="sobre-missao--container">
                 <div className="missao--parent">
-                    <ImageBox key={1} id="1" bgImage={targetImg} text="Missão" />
+                    {allImgBox[0]}
 
                     <div className="missao-right missao1">
-                        <TextBox key={5} paragraphs={sobre.missaoText[0]} style={sobre.textboxStyleMissao} />
-                        <TextBox key={6} paragraphs={sobre.missaoText[1]} style={sobre.textboxStyleMissao} />
+                        {allTextBox[0]}
+                        {allTextBox[1]}
                     </div>
                 </div>
                 <div className="missao--parent" style={{height: "200px"}}>
-                    <ImageBox key={2} id="2" bgImage={openEyeImg} text="Visão" />
+                    {allImgBox[1]}
 
                     <div className="missao-right missao2">
-                        <TextBox key={3} paragraphs={sobre.missaoText[2]} style={sobre.textboxStyleMissao} />
+                        {allTextBox[2]}
                     </div>
                 </div>
                 <div className="missao--parent">
-                    <ImageBox key={3} id="3" bgImage={intertwinedImg} text="Valores" />
+                    {allImgBox[2]}
 
                     <div className="missao-right missao3">
-                        <TextBox key={7} paragraphs={sobre.missaoText[3]} style={sobre.textboxStyleMissao} />
+                        {allTextBox[3]}
                     </div>
                 </div>
             </div>
@@ -93,18 +105,22 @@ function SobreMissao() {
     )
 }
 
-function TextBox(props) {
-    const boxSize = {
-        height: props.style.height,
-        width: props.style.width
-    }
+function TextBoxBase(props) {
     const paragraphs = props.paragraphs.map((value) => <h3>{value}</h3>);
 
     return (
-        <div className="blue-border text-box" style={boxSize}>
+        <div className="blue-border text-box text-box-base">
             {paragraphs}
         </div>
-    )
+    );
+}
+
+function TextBoxMissao(props) {
+    return (
+    <div className="blue-border text-box text-box-missao">
+        <h3>{props.text}</h3>
+    </div>
+    );
 }
 
 function SobreBaseImgBox(props) {
@@ -117,10 +133,9 @@ function SobreBaseImgBox(props) {
     );
 }
 
-function ImageBox(props) {
+function SobreMissaoImgBox(props) {
     const bgStyle = {
-        backgroundImage: `linear-gradient(180.03deg, #01AEF0 11.42%, 
-            rgba(1, 174, 240, 0) 99.97%), url(${props.bgImage})`,
+        backgroundImage: `linear-gradient(180.03deg, #01AEF0 11.42%, rgba(1, 174, 240, 0) 99.97%), url(${props.bgImage})`,
     }
 
     return (
