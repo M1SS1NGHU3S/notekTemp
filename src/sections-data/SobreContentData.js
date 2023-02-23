@@ -50,5 +50,5 @@ export {
     baseText,
     missaoText,
     textboxStyleBase,
-    textboxStyleMissao
+    textboxStyleMissao,
 };

@@ -9,7 +9,6 @@ import {
 import { 
     sobre
 } from "../sections-data/Imports";
-import {TextBox} from "../components/Imports"
 
 function SobreContent() {
     return (
@@ -23,6 +22,11 @@ function SobreContent() {
 }
 
 function SobreBase() {
+    const allBaseImgBox = [
+        <SobreBaseImgBox key={1} bgImage={womanTalkingImg} />,
+        <SobreBaseImgBox key={2} bgImage={officeWritingImg} />
+    ];
+
     return (
         <div className="sobre-base">
             <div className="sobre-base--container desktop">
@@ -30,10 +34,10 @@ function SobreBase() {
                     <TextBox key={1} paragraphs={sobre.baseText[0]} style={sobre.textboxStyleBase} />
                 </div>
                 <div className="sobre-base--item">
-                    <LargeImgBox key={1} bgImage={officeWritingImg} />
+                    {allBaseImgBox[0]}
                 </div>
                 <div className="sobre-base--item">
-                    <LargeImgBox key={2} bgImage={womanTalkingImg} />
+                    {allBaseImgBox[1]}
                 </div>
                 <div className="sobre-base--item">
                     <TextBox key={2} paragraphs={sobre.baseText[1]} style={sobre.textboxStyleBase} />
@@ -42,13 +46,13 @@ function SobreBase() {
             
             <div className="sobre-base--container mobile">
                 <div className="sobre-base--item item-img">
-                    <LargeImgBox key={3} bgImage={officeWritingImg} />  
+                    {allBaseImgBox[0]} 
                 </div>
                 <div className="sobre-base--item item-text">
                     <TextBox key={3} paragraphs={sobre.baseText[0]} style={sobre.textboxStyleBase} />
                 </div>
                 <div className="sobre-base--item item-img">
-                    <LargeImgBox key={4} bgImage={womanTalkingImg} />
+                    {allBaseImgBox[1]}
                 </div>
                 <div className="sobre-base--item item-text">
                     <TextBox key={4} paragraphs={sobre.baseText[1]} style={sobre.textboxStyleBase} />
@@ -89,19 +93,27 @@ function SobreMissao() {
     )
 }
 
-function LargeImgBox(props) {
-    const bgStyle = {
-        height: "inherit",
-        width: "inherit",
-        background: `url(${props.bgImage}), rgba(1, 174, 240, 0.5)`,
-        backgroundBlendMode: "multiply",
-        backgroundRepeat: "no-repeat",
-        backgroundSize: "cover",
-        backgroundPosition: "center"
-    };
+function TextBox(props) {
+    const boxSize = {
+        height: props.style.height,
+        width: props.style.width
+    }
+    const paragraphs = props.paragraphs.map((value) => <h3>{value}</h3>);
 
     return (
-        <div className="img-box" style={bgStyle}></div>  
+        <div className="blue-border text-box" style={boxSize}>
+            {paragraphs}
+        </div>
+    )
+}
+
+function SobreBaseImgBox(props) {
+    const bgStyle = {
+        background: `url(${props.bgImage}), rgba(1, 174, 240, 0.5)`,
+    }
+
+    return (
+        <div className="sobre-base-img-box" style={bgStyle}></div>  
     );
 }
 
@@ -109,13 +121,10 @@ function ImageBox(props) {
     const bgStyle = {
         backgroundImage: `linear-gradient(180.03deg, #01AEF0 11.42%, 
             rgba(1, 174, 240, 0) 99.97%), url(${props.bgImage})`,
-        backgroundRepeat: "no-repeat",
-        backgroundSize: "cover",
-        backgroundPosition: "center",
     }
 
     return (
-        <div className={`sobre--img-box sobre--img-box${props.id}`} style={bgStyle}>
+        <div className={`missao-img-box missao-img-box${props.id}`} style={bgStyle}>
             <h1>{props.text}</h1>
         </div>
     )
