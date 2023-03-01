@@ -1,3 +1,7 @@
+.servicos-home {
+    margin-bottom: 100px;
+}
+
 .servicos-home--container {
     display: grid;
     justify-content: center;
