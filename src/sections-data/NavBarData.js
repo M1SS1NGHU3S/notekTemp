@@ -10,10 +10,10 @@ const linksContent = [
         title: "Sobre",
         link: "/sobre"
     },
-    {
-        title: "Notícias",
-        link: "/noticias"
-    },
+    // {
+    //     title: "Notícias",
+    //     link: "/noticias"
+    // },
     {
         title: "Contato",
         link: "/contato"

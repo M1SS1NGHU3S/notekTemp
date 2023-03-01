@@ -56,22 +56,22 @@ const trabalheLinksContent = [
     {
         title: false,
         texto: "Veja vagas disponíveis",
-        link: "#"
+        link: "https://www.linkedin.com/in/nortec-adm-contabilidade-401595248/"
     },
     {
         title: "Tel:",
         texto: "(11) 4828-5250",
-        link: "#"
+        link: "https://api.whatsapp.com/send/?phone=551148285250&text&type=phone_number&app_absent=0"
     },
     {
         title: "Endereço:",
         texto: "R. Domingos Benvenuto, 89 - Centro, Ribeirão Pires -" +
             "SP, 09400-070",
-        link: "#"
+        link: "https://www.google.com/maps/place/Notek+Contábil/@-23.7106197,-46.41806,17z/data=!3m1!4b1!4m6!3m5!1s0x94ce6cedfaac2359:0x508e368408d24400!8m2!3d-23.7106246!4d-46.415866!16s%2Fg%2F1ptyn_rmj"
     },
 ];
 const generateTrabalheLinks = trabalheLinksContent.map((value, index) =>
-    <a key={index} href={value.link} className="footer--link">
+    <a key={index} target="_blank" rel="noreferrer" href={value.link} className="footer--link">
         {
             value.title && 
             <span className="footer--link-title">{value.title}</span>
@@ -111,22 +111,22 @@ const generateNavLinks = navLinksContent.map((value, index) =>
 const socialIconsContent = [
     {
         alt: "Instagram icon",
-        link: "#",
+        link: "https://www.instagram.com/notekcontabilidade/?hl=pt-br",
         image: instagramIcon
     },
     {
         alt: "Facebook icon",
-        link: "#",
+        link: "https://www.facebook.com/nortekcontabil.com.br/",
         image: facebookIcon
     },
     {
         alt: "Whatsapp icon",
-        link: "#",
+        link: "https://api.whatsapp.com/send/?phone=551148285250&text&type=phone_number&app_absent=0",
         image: whatsappIcon
     },
 ];
 const generateSocialIcons = socialIconsContent.map((value, index) => 
-    <a className="footer--link footer--link-social" key={index} href={value.link}>
+    <a className="footer--link footer--link-social" target="_blank" rel="noreferrer" key={index} href={value.link}>
         <img className="footer--social" alt={value.alt} src={value.image} />
     </a>
 )
