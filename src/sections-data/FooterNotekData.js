@@ -61,7 +61,7 @@ const trabalheLinksContent = [
     {
         title: "Tel:",
         texto: "(11) 4828-5250",
-        link: "https://api.whatsapp.com/send/?phone=551148285250&text&type=phone_number&app_absent=0"
+        link: null
     },
     {
         title: "Endereço:",

@@ -1,42 +1,8 @@
 import "./ContatoSocial.css";
-import {
-    phoneIcon,
-    pinIcon,
-    whatsappIcon,
-    instagramIcon,
-    facebookIcon
-} from "../img/Imports"
+import {contato} from "../sections-data/Imports";
 
 function ContatoSocial() {
-    const contatoInfoContent = [
-        {
-            image: phoneIcon,
-            text: "(11) 4828-5250",
-            alt: "Phone Icon"
-        },
-        {
-            image: pinIcon,
-            text: "R. Domingos Benvenuto, 89 - Centro, Ribeirão Pires" +
-                " - SP, 09400-070",
-            alt: "Location Pin Icon"
-        },
-        {
-            image: whatsappIcon,
-            text: "(11) 95062-8623",
-            alt: "Whatsapp Icon"
-        },
-        {
-            image: instagramIcon,
-            text: "@notekcontabilidade",
-            alt: "Instagram Icon"
-        },
-        {
-            image: facebookIcon,
-            text: "fb.com/nortekcontabil.com.br",
-            alt: "Facebook Icon"
-        },
-    ]
-    const generateContatoInfo = contatoInfoContent.map((value, index) =>
+    const generateContatoInfo = contato.contatoInfoContent.map((value, index) =>
         <ContatoInfo 
             key={index}
             image={value.image} 

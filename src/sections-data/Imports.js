@@ -4,6 +4,7 @@ import * as navbar from "./NavBarData";
 import * as entreContato from "./EntreEmContatoData";
 import * as noticiasRow from "./NoticiasRowData";
 import * as sobre from "./SobreContentData";
+import * as contato from "./ContatoSocialData";
 
 export {
     servicos,
@@ -11,5 +12,6 @@ export {
     navbar,
     entreContato,
     noticiasRow,
-    sobre
+    sobre,
+    contato
 };
