@@ -1,8 +1,7 @@
 import "./NoticiasRow.css";
 import {
-    linksContent,
-    cardsContent
-} from "../sections-data/NoticiasRowData.js"
+    noticiasRow
+} from "../sections-data/Imports"
 import {
     NoticiaLink,
     BlogCard
@@ -11,7 +10,7 @@ import Button from "react-bootstrap/Button";
 
 function NoticiasRow(props) {
 
-    const generateLinks = linksContent.map((value, index) =>
+    const generateLinks = noticiasRow.linksContent.map((value, index) =>
         <NoticiaLink 
             key={index}
             titulo={value.titulo} 
@@ -19,7 +18,7 @@ function NoticiasRow(props) {
             link={value.link} 
         />
     )
-    const generateCards = cardsContent.map((value, index) => 
+    const generateCards = noticiasRow.cardsContent.map((value, index) => 
         <BlogCard 
             key={index}
             img={value.img} 

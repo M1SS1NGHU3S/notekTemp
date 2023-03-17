@@ -2,6 +2,9 @@ import {
     officeCalcImg,
     cleanOfficeImg
 } from "../img/Imports";
+import {
+    NoticiaLink,
+} from "../components/Imports";
 
 const linksContent = [
     {
@@ -37,7 +40,17 @@ const cardsContent = [
     }
 ];
 
+const generateLinks = linksContent.map((value, index) =>
+    <NoticiaLink 
+        key={index}
+        titulo={value.titulo} 
+        data={value.data} 
+        link={value.link} 
+    />
+);
+
 export {
     cardsContent,
-    linksContent
+    linksContent,
+    generateLinks
 };

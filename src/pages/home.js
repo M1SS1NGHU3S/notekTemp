@@ -3,7 +3,7 @@ import {
     MockUp,
     SobreMudanca,
     ServicosHome,
-    // NoticiasRow,
+    NoticiasRow,
 } from "../sections/Imports"
 
 function Home() {
@@ -18,7 +18,7 @@ function Home() {
             />     
             <SobreMudanca isHome={true} />
             <ServicosHome />
-            {/* <NoticiasRow isHome={true} /> */}
+            <NoticiasRow isHome={true} />
         </>
     );
 }

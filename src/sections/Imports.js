@@ -8,6 +8,7 @@ import SobreFormacao from "./SobreFormacao";
 import SobreMudanca from "./SobreMudanca";
 import SobreRegiao from "./SobreRegiao";
 import ServicosFull from "./ServicosFull";
+import BlogPage from "./BlogPage";
 
 export {
     ContatoSocial,
@@ -19,5 +20,6 @@ export {
     SobreFormacao,
     SobreMudanca,
     SobreRegiao,
-    ServicosFull
+    ServicosFull,
+    BlogPage
 };
