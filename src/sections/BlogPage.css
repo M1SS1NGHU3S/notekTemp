@@ -1,3 +1,13 @@
 .blog-header--noticias-title {
     font-weight: 500;
 }
+
+.blog-header {
+    display: grid;
+    grid-template-columns: 907.2px 304.84px;
+    column-gap: 84.96px;
+}
+
+.blog-header--img {
+    width: 907.2px;
+}
