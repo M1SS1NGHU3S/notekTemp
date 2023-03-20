@@ -33,7 +33,7 @@ import mudancaBg from "./sobre-mudanca-bg.png";
 import targetImg from "./target-dart.png";
 import whatsappIcon from "./whatsapp-icon.png";
 import womanTalkingImg from "./woman-talking.png";
-import blogExample from "./blog-example.png";
+import blogExample from "./blog-example.jpg";
 
 export {
     bigLogo,

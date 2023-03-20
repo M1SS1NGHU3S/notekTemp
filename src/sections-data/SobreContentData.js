@@ -14,7 +14,7 @@ const baseText = [
     ],
     [
         "Transparência, ética e comprometimento é a nossa base para " +
-        "estrutura a base do seu negócio!",
+        "estruturar a base do seu negócio!",
         "Contabilidade Inteligente é poder contar conosco sempre que " +
         "precisar."
     ]

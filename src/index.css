@@ -81,6 +81,10 @@ h3 {
     line-height: 30px;
 }
 
+.blue-btn:active {
+    color: #ffffff!important;
+}
+
 .column {
     float: left;
     height: fit-content;
