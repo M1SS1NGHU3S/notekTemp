@@ -8,33 +8,44 @@ import {
 } from "../components/Imports";
 import {
     blogExample
-} from "../img/Imports"
+} from "../img/Imports";
 
 function BlogPage(props) {
     return (
         <div className="container blog-container">
             <BlogHeader />
             <BlogContent />
+            <BlogRecentes />
         </div>
     );
 }
 
-function BlogHeader() {
-    const generateLinks = noticiasRow.linksContent.map((value, index) =>
-        <NoticiaLink 
-            key={index}
-            titulo={value.titulo} 
-            data={value.data} 
-            link={value.link} 
-        />
-    );
+const generateLinks = noticiasRow.linksContent.map((value, index) =>
+    <NoticiaLink 
+        key={index}
+        titulo={value.titulo} 
+        data={value.data} 
+        link={value.link} 
+    />
+);
 
+const generateCards = noticiasRow.cardsContent.map((value, index) =>
+    <BlogCard 
+        key={index}
+        img={value.img}
+        titulo={value.titulo}
+        altText={value.altText}
+        isBlog={true}
+    />
+);
+
+function BlogHeader() {
     return (
         <section className="blog-header">
             <img className="blog-header--img" src={blogExample} alt="person writing in a gray ambient" />
 
             <div className="blog-header--noticias">
-                <h3 className="blog--recentes-title">
+                <h3 className="blog-recentes--title">
                     Notícias recentes
                 </h3>
                 {generateLinks}
@@ -44,16 +55,6 @@ function BlogHeader() {
 }
 
 function BlogContent() {
-    const generateCards = noticiasRow.cardsContent.map((value, index) =>
-        <BlogCard 
-            key={index}
-            img={value.img}
-            titulo={value.titulo}
-            altText={value.altText}
-            isBlog={true}
-        />
-    )
-
     return (
         <section className="blog-content">
             <div className="blog-content--left">
@@ -100,8 +101,22 @@ function BlogContent() {
                 </p>
             </div>
             <div className="blog-content--right">
-                <h3 className="blog--recentes-title">Artigos Recentes</h3>
+                <h3 className="blog-recentes--title">Artigos Recentes</h3>
                 {generateCards}
+            </div>
+        </section>
+    );
+}
+
+function BlogRecentes() {
+    return (
+        <section className="blog-recentes">
+            <h3 className="blog-recentes--title">Recentemente Adicionados</h3>
+            <div className="blog-recentes--content">
+                {generateCards}
+                <div className="blog-recentes--noticias">
+                    {generateLinks}
+                </div>
             </div>
         </section>
     );

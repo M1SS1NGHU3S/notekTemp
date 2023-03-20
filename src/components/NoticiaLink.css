@@ -1,5 +1,6 @@
 .noticias-link {
-    margin-block: 20px;
+    display: flex;
+    justify-content: center;
 }
 
 .noticias-link--date {
@@ -8,12 +9,6 @@
     color: #ffffff;
     display: inline;
     padding: 5px 20px;
-}
-
-@media (max-width: 992px) {
-    .noticias-link {
-        margin: 0;
-    }
 }
 
 @media (max-width: 768px) {
