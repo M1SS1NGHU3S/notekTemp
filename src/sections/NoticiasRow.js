@@ -21,6 +21,7 @@ function NoticiasRow(props) {
     const generateCards = props.blogList.map((value) => 
         <BlogCard 
             key={value["Id"]}
+            blogId={value["Id"]}
             img={value["Imagem_Path"]} 
             titulo={value["Titulo"]} 
             desc={value["Descricao"]} 

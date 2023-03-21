@@ -28,6 +28,14 @@ app.get("/blogs", (req, res) => {
     });
 });
 
+app.get("/blogs/:blogId", (req, res) => {
+    const sqlSelect = `SELECT * FROM blog WHERE Id = ${req.params["blogId"]}`;
+    db.query(sqlSelect, (err, result) => {
+        if (err) console.log(err);
+        res.send(result);
+    });
+});
+
 app.get("/noticias", (req, res) => {
     const sqlSelect = "SELECT * FROM noticia";
     db.query(sqlSelect, (err, result) => {
