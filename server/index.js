@@ -20,10 +20,19 @@ app.use(express.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
 app.get("/blogs", (req, res) => {
-    const sqlSelect = "SELECT * FROM BLOG";
+    const sqlSelect = "SELECT * FROM blog";
     db.query(sqlSelect, (err, result) => {
         if (err) console.log(err);
         
+        res.send(result);
+    });
+});
+
+app.get("/noticias", (req, res) => {
+    const sqlSelect = "SELECT * FROM noticia";
+    db.query(sqlSelect, (err, result) => {
+        if (err) console.log(err);
+
         res.send(result);
     });
 });

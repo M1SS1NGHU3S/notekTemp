@@ -5,7 +5,12 @@
 .noticias-row--content {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: right;
+    column-gap: 40px;
+}
+
+.noticias-row--column {
+    width: 413.33px;
 }
 
 .noticias-row--links {

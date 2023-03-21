@@ -1,9 +1,4 @@
 import "./NoticiasRow.css";
-import {useState, useEffect} from "react";
-import Axios from "axios";
-import {
-    noticiasRow
-} from "../sections-data/Imports"
 import {
     NoticiaLink,
     BlogCard
@@ -11,32 +6,27 @@ import {
 import Button from "react-bootstrap/Button";
 
 function NoticiasRow(props) {
+    const generateLinks = props.noticiaList.map((value) => {
+        const dateArray = value["Criado_Em"].split("-");
+        return (
+            <NoticiaLink 
+                key={value["Id"]}
+                titulo={value["Titulo"]} 
+                data={dateArray[2].split("T")[0] + "/" + dateArray[1]} 
+                link={value["Link"]} 
+            />
+        );
+    });
 
-    const generateLinks = noticiasRow.linksContent.map((value, index) =>
-        <NoticiaLink 
-            key={index}
-            titulo={value.titulo} 
-            data={value.data} 
-            link={value.link} 
-        />
-    )
-    const generateCards = noticiasRow.cardsContent.map((value, index) => 
+    const generateCards = props.blogList.map((value) => 
         <BlogCard 
-            key={index}
-            img={value.img} 
-            titulo={value.titulo} 
-            desc={value.desc} 
-            altText={value.altText} 
+            key={value["Id"]}
+            img={value["Imagem_Path"]} 
+            titulo={value["Titulo"]} 
+            desc={value["Descricao"]} 
+            altText={value["Imagem_Desc"]} 
         />
     );
-
-    const [blogList, setBlogList] = useState([]);
-
-    useEffect(() => {
-        Axios.get("http://localhost:3001/blogs").then((response) => {
-            setBlogList(response.data);
-        });
-    }, []);
 
     return (
         <section className="noticias-row">
@@ -44,15 +34,7 @@ function NoticiasRow(props) {
                 <h2 className="section-title">Notícias</h2>
 
                 <div className="noticias-row--content">
-                    {blogList.map((value) => 
-                        <BlogCard 
-                            key={value["Id"]}
-                            img={value["Imagem"]} 
-                            titulo={value["Titulo"]} 
-                            desc={value["Texto"].slice(0, 100) + "..."} 
-                            altText={value["Imagem_desc"]} 
-                        />
-                    )}
+                    {generateCards}
 
                     <div className="noticias-row--links noticias-row--column">
                         {generateLinks}
