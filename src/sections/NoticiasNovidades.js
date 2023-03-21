@@ -2,9 +2,13 @@ import "./NoticiasNovidades.css";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 
-function NoticiasNovidades() {
+function NoticiasNovidades(props) {
+    const lastRowStyle = {
+        marginBottom: "100px"
+    }
+
     return (
-        <section className="noticias-novidades">
+        <section className="noticias-novidades" style={props.lastRow && lastRowStyle}>
             <div className="noticias-novidades--container container">
                 <div 
                     className="noticias-novidades--column 
