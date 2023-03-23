@@ -17,7 +17,7 @@ function BlogCard(props) {
 
     return (
         <div className={`blog-card noticias-row--column ${props.isBlog && "blog-card--recentes"}`} style={props.isBlog && isBlogCardStyle}>
-            <img className="blog-card--img"  style={props.isBlog && isBlogImgStyle} src={require(`../img/${props.img}`)} alt={props.alt} />
+            <img className="blog-card--img"  style={props.isBlog && isBlogImgStyle} src={props.img} alt={props.alt} />
             <div className="blog-card--content card-content" style={props.isBlog && isBlogContentStyle}>
                 <Link to={`/noticias/${props.blogId}`} className="blog-card--link">
                     <h3 className="blog-card--title">{props.titulo}</h3>

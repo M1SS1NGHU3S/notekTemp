@@ -1,131 +1,97 @@
 import "./BlogPage.css";
 import {
-    noticiasRow
-} from "../sections-data/Imports";
-import {
     NoticiaLink,
     BlogCard
 } from "../components/Imports";
-import Axios from "axios";
-import {useState, useEffect} from "react";
+import {useEffect, useState} from "react";
 
 function BlogPage(props) {
-    const [blogImagem, setBlogImagem] = useState("");
-
-    useEffect(() => {
-        Axios.get(`http://localhost:3001/blogs/${props.blogId}`).then((response) => {
-            const blogContent = response.data[0];
-
-            setBlogImagem(blogContent["Imagem_Path"]);
-        });
-    }, [props.blogId]);
+    const generateNoticias = props.noticiasList.map((value) => {
+        const dateArray = value["Criado_Em"].split("-");
+        return (
+            <NoticiaLink 
+                key={value["Id"]}
+                titulo={value["Titulo"]}
+                data={dateArray[2].split("T")[0] + "/" + dateArray[1]}
+                link={value["Link"]}
+            />
+        );
+    });
+    const generateBlogs = props.blogsList.map((value) => 
+        <BlogCard 
+            key={value["Id"]}
+            blogId={value["Id"]}
+            img={value["Imagem_Path"]} 
+            titulo={value["Titulo"]} 
+            altText={value["Imagem_Desc"]} 
+            isBlog={true}
+        />
+    );
 
     return (
         <div className="container blog-container">
+
             <BlogHeader
-                imgPath={blogImagem}
+                imgPath={props.blogContent["Imagem_Path"]}
+                noticiasList={generateNoticias}
             />
-            {/* <BlogContent />
-            <BlogRecentes /> */}
+            <BlogContent
+                blogsList={generateBlogs}
+                titulo={props.blogContent["Titulo"]}
+                conteudo={props.blogContent["Texto_Html"]}
+            />
+            <BlogRecentes
+                noticiasList={generateNoticias}
+                blogsList={generateBlogs}
+            />
         </div>
     );
 }
 
-const generateLinks = noticiasRow.linksContent.map((value, index) =>
-    <NoticiaLink 
-        key={index}
-        titulo={value.titulo} 
-        data={value.data} 
-        link={value.link} 
-    />
-);
-
-// const generateCards = noticiasRow.cardsContent.map((value, index) =>
-//     <BlogCard 
-//         key={index}
-//         img={value.img}
-//         titulo={value.titulo}
-//         altText={value.altText}
-//         isBlog={true}
-//     />
-// );
-
 function BlogHeader(props) {
+    const [blogImage, setBlogImage] = useState("");
+
+    useEffect(() => {
+        if (props.imgPath) setBlogImage(props.imgPath);
+    }, [props.imgPath]);
+
     return (
         <section className="blog-header">
-            <img className="blog-header--img" src={require(`../img/${props.imgPath}`)} alt="person writing in a gray ambient" />
+            <img className="blog-header--img" src={blogImage} alt="person writing in a gray ambient" />
             <div className="blog-header--noticias">
                 <h3 className="blog-recentes--title">
                     Notícias recentes
                 </h3>
-                {generateLinks}
+                {props.noticiasList}
             </div>
         </section>
     );
 }
 
-function BlogContent() {
+function BlogContent(props) {
     return (
         <section className="blog-content">
             <div className="blog-content--left">
-                <h2 className="blog-content--title">Título do Blog</h2>
+                <h2 className="blog-content--title">{props.titulo}</h2>
                 <hr className="blog-content--hr" />
-
-                <p className="blog-content--paragraph">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing 
-                    elit. Maecenas ac metus a turpis iaculis mattis. 
-                    Class aptent taciti sociosqu ad litora torquent 
-                    per conubia nostra, per inceptos himenaeos. Vivamus 
-                    sem magna, porttitor in mattis id, ultricies non 
-                    lacus. Suspendisse vitae eleifend neque, a commodo 
-                    dolor. Fusce dapibus justo ut neque accumsan 
-                    lobortis. Maecenas tempor sapien nisl, ut iaculis leo 
-                    posuere ac. Nam dictum magna et ligula dapibus, vel 
-                    pharetra nisi interdum. Proin efficitur, nulla eget 
-                    feugiat interdum, velit mi porttitor augue, in 
-                    laoreet lorem justo id ipsum.
-                </p>
-                <p className="blog-content--paragraph">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing 
-                    elit. Suspendisse feugiat fermentum neque sed 
-                    volutpat. Praesent scelerisque enim ac mauris 
-                    ultricies laoreet. Morbi dapibus metus erat, quis 
-                    varius risus consequat ut. Praesent non risus 
-                    convallis tellus elementum fringilla et vel mi. Ut 
-                    laoreet diam pulvinar dapibus rhoncus. Duis feugiat 
-                    sollicitudin sapien, sed sodales mauris rhoncus in. 
-                    Suspendisse eget ultricies felis. Curabitur eu tellus 
-                    eget risus eleifend euismod. Vivamus nibh massa, 
-                    tristique nec ligula eu, accumsan gravida urna. 
-                    Donec sit amet ligula nec urna pretium malesuada.
-                </p>
-                <p className="blog-content--paragraph">
-                    Aliquam tellus purus, cursus nec dapibus eget, 
-                    vehicula eget nibh. Proin faucibus sit amet ante non 
-                    condimentum. Aliquam a molestie lorem, at pharetra 
-                    arcu. Lorem ipsum dolor sit amet, consectetur 
-                    adipiscing elit. Curabitur nec mauris diam. Donec et 
-                    justo massa. Proin est eros, finibus sit amet mi vel, 
-                    aliquam sagittis sem. Nam malesuada nisi nec dui 
-                    cursus sollicitudin. 
-                </p>
+                <div className="blog-content--left--conteudo" dangerouslySetInnerHTML={{__html: props.conteudo}}></div>
             </div>
             <div className="blog-content--right">
                 <h3 className="blog-recentes--title">Artigos Recentes</h3>
-                {/* {generateCards} */}
+                { props.blogsList }
             </div>
         </section>
     );
 }
 
-function BlogRecentes() {
+function BlogRecentes(props) {
     return (
         <section className="blog-recentes">
             <h3 className="blog-recentes--title">Recentemente Adicionados</h3>
             <div className="blog-recentes--content">
-                {/* {generateCards} */}
+                {props.blogsList}
                 <div className="blog-recentes--noticias">
-                    {generateLinks}
+                    {props.noticiasList}
                 </div>
             </div>
         </section>
