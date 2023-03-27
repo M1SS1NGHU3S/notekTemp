@@ -30,21 +30,28 @@ function Noticias() {
         if (totalRows === 1) {
             returnHtml.push(
                 <NoticiasRow
+                    key={0}
                     blogList={blogList}
                     noticiaList={noticiaList}
                 />,
-                <NoticiasNovidades lastRow={true} />
+                <NoticiasNovidades 
+                    key={totalRows + 1}
+                    lastRow={true} 
+                />
             ); 
         } else {
             for (let i = 0; i < totalRows; i++) {
                 if (i === Math.ceil(totalRows / 2)) {
                     returnHtml.push(
-                        <NoticiasNovidades />
+                        <NoticiasNovidades 
+                            key={totalRows + 1}
+                        />
                     );
                 }
 
                 returnHtml.push(
                     <NoticiasRow 
+                        key={i}
                         blogList={remainingCards > 1 ? blogList.slice(remainingCards - 2, remainingCards) : blogList.slice(0, remainingCards)}
                         noticiaList={remainingNoticias > 3 ? noticiaList.slice(remainingNoticias - 4, remainingNoticias) : remainingNoticias.slice(0, remainingNoticias)}
                     />

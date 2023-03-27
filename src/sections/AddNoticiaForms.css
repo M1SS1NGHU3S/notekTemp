@@ -2,15 +2,6 @@
     padding: 50px 0 100px;
 }
 
-.noticia-forms--group > input {
-    border: solid 1px;
-    border-radius: 20px;
-}
-
-.noticia-forms--group {
-    margin-block: 20px;
-}
-
 .noticia-forms--row1 {
     display: grid;
     grid-template-columns: 879.2px 376.8px;

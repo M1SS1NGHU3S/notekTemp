@@ -42,6 +42,10 @@ const router = createBrowserRouter([
             {
                 path: "admin/add-noticia",
                 element: <pages.AddNoticia />
+            },
+            {
+                path: "admin/add-blog",
+                element: <pages.AddBlog />
             }
         ]
     }

@@ -1,0 +1,19 @@
+.add-blog--textarea {
+    border-width: 15px;
+}
+
+.ql-toolbar {
+    border-width: 1px 1px 0 1px!important;
+    border-style: solid!important;
+    border-color: #000000!important;
+    border-radius: 20px 20px 0 0!important;
+}
+
+.ql-container {
+    border-width: 1px!important;
+    border-style: solid!important;
+    border-color: #000000!important;
+    border-top-color: #ccc!important;
+    border-top-width: 1px!important;
+    border-radius: 0 0 20px 20px!important;
+}

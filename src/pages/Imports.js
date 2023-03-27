@@ -7,6 +7,7 @@ import Servicos from "./servicos";
 import Sobre from "./sobre";
 import Blog from "./blog";
 import AddNoticia from "./add-noticia";
+import AddBlog from "./add-blog";
 
 export {
     Home, 
@@ -17,5 +18,6 @@ export {
     Servicos,
     Sobre,
     Blog,
-    AddNoticia
+    AddNoticia,
+    AddBlog
 };

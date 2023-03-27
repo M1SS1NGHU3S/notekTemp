@@ -17,6 +17,13 @@
     padding-bottom: 100px;
 }
 
+.blog-content--left--conteudo > p > a {
+    font-weight: 400;
+    font-size: 20px;
+    color: blue;
+    text-decoration: underline;
+}
+
 .blog-header--noticias {
     display: grid;
     grid-template-columns: auto;
@@ -27,6 +34,8 @@
 
 .blog-header--img {
     width: 816.4px;
+    height: 550px;
+    object-fit: cover;
     border-radius: 20px;
 }
 

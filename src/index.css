@@ -69,6 +69,15 @@ h3 {
     padding: 20px;
 }
 
+.admin-forms--group > input {
+    border: solid 1px;
+    border-radius: 20px;
+}
+
+.admin-forms--group {
+    margin-block: 20px;
+}
+
 .blue-btn {
     background-color: #01AEF0;
     padding: 8px 60px;

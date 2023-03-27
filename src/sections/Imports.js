@@ -10,6 +10,7 @@ import SobreRegiao from "./SobreRegiao";
 import ServicosFull from "./ServicosFull";
 import BlogPage from "./BlogPage";
 import AddNoticiaForms from "./AddNoticiaForms";
+import AddBlogForms from "./AddBlogForms";
 
 export {
     ContatoSocial,
@@ -23,5 +24,6 @@ export {
     SobreRegiao,
     ServicosFull,
     BlogPage,
-    AddNoticiaForms
+    AddNoticiaForms,
+    AddBlogForms
 };
