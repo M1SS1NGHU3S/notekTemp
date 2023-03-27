@@ -44,3 +44,16 @@ app.get("/noticias", (req, res) => {
         res.send(result);
     });
 });
+
+app.post("/noticias/add", (req, res) => {
+    const noticiaTitle = req.body.noticiaTitle;
+    const noticiaLink = req.body.noticiaLink;
+    const noticiaDate = req.body.noticiaDate;
+
+    const sqlInsert = "INSERT INTO noticia (Titulo, Criado_Em, Link) VALUES (?,?,?)";
+    db.query(sqlInsert, [noticiaTitle, noticiaDate, noticiaLink], (err, result) => {
+        if (err) console.log(err);
+
+        res.send(result);
+    })
+});

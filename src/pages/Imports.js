@@ -6,6 +6,7 @@ import Noticias from "./noticias";
 import Servicos from "./servicos";
 import Sobre from "./sobre";
 import Blog from "./blog";
+import AddNoticia from "./add-noticia";
 
 export {
     Home, 
@@ -15,5 +16,6 @@ export {
     Noticias,
     Servicos,
     Sobre,
-    Blog
+    Blog,
+    AddNoticia
 };

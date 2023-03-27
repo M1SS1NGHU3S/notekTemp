@@ -13,7 +13,7 @@ function Blog() {
         console.log("in useEffect");
         Axios.get("http://localhost:3001/blogs").then((response) => {
             setBlogsList(response.data);
-        })
+        });
         Axios.get(`http://localhost:3001/blogs/${blogId.id}`).then((response) => {
             setBlogContent(response.data);
         });
