@@ -70,7 +70,16 @@ app.get("/noticias", (req, res) => {
     });
 });
 
-app.post("/noticias/add", (req, res) => {
+app.get("/noticias/:noticiaId", (req, res) => {
+    const sqlSelect = "SELECT * FROM noticia WHERE Id=?";
+    db.query(sqlSelect, req.params["noticiaId"], (err, result) => {
+        if (err) console.log(err);
+
+        res.send(result);
+    })
+});
+
+app.post("/noticias-add", (req, res) => {
     const noticiaTitle = req.body.noticiaTitle;
     const noticiaLink = req.body.noticiaLink;
     const noticiaDate = req.body.noticiaDate;
@@ -83,7 +92,7 @@ app.post("/noticias/add", (req, res) => {
     })
 });
 
-app.delete("/noticias/delete/:noticiaId", (req, res) => {
+app.delete("/noticias-delete/:noticiaId", (req, res) => {
     const noticiaId = req.params["noticiaId"];
     const sqlDelete = "DELETE FROM noticia WHERE Id=?";
     db.query(sqlDelete, noticiaId, (err, result) => {
@@ -92,3 +101,4 @@ app.delete("/noticias/delete/:noticiaId", (req, res) => {
         res.send(result);
     })
 });
+

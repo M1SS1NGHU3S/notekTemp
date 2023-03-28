@@ -1,12 +1,18 @@
 import "./NoticiasTable.css";
 import Button from "react-bootstrap/Button";
 import Axios from "axios";
+import {useNavigate} from "react-router-dom";
 
 function NoticiasTable(props) {
+    const navigate = useNavigate();
+
     const deleteRow = function (id) {
         if(window.confirm("Você tem certeza que quer deletar essa notícia?")) {
-            Axios.delete(`http://localhost:3001/noticias/delete/${id}`).then(() => window.location.reload());
+            Axios.delete(`http://localhost:3001/noticias-delete/${id}`).then(() => window.location.reload());
         }
+    };
+    const updateRedirect = function (id) {
+        navigate(`/admin/add-noticia/${id}`);
     };
 
     const generateRows = props.noticiasList.map((value) =>
@@ -15,7 +21,7 @@ function NoticiasTable(props) {
             <td>{value["Titulo"]}</td>
             <td>{value["Criado_Em"].split("T")[0]}</td>
             <td>
-                <Button variant="info" className="crud-table--update">
+                <Button onClick={() => updateRedirect(value["Id"])} variant="info" className="crud-table--update">
                     Atualizar
                 </Button>
             </td>

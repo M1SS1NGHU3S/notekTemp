@@ -40,11 +40,11 @@ const router = createBrowserRouter([
                 element: <pages.Blog />
             },
             {
-                path: "admin/add-noticia",
+                path: "admin/add-noticia/:noticiaId?",
                 element: <pages.AddNoticia />
             },
             {
-                path: "admin/add-blog",
+                path: "admin/add-blog/:blogId?",
                 element: <pages.AddBlog />
             },
             {
