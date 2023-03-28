@@ -14,15 +14,13 @@ function Home() {
 
     useEffect(() => {
         Axios.get("http://localhost:3001/blogs").then((response) => {
-            setBlogList(response.data);
+            setBlogList(response.data.length > 1 ? response.data.slice(0, 2) : response.data);
         });
         Axios.get("http://localhost:3001/noticias").then((response) => {
-            setNoticiaList(response.data);
+            setNoticiaList(response.data.length > 5 ? response.data.slice(0, 5) : response.data);
         });
-    }, []);
 
-    const partialBlogList = blogList.length > 1 ? blogList.slice(2) : blogList;
-    const partialNoticiaList = noticiaList.length > 5 ? noticiaList.slice(5) : noticiaList;
+    }, []);
 
     return (
         <>
@@ -37,8 +35,8 @@ function Home() {
             <ServicosHome />
             <NoticiasRow 
                 isHome={true} 
-                blogList={partialBlogList} 
-                noticiaList={partialNoticiaList}
+                blogList={blogList} 
+                noticiaList={noticiaList}
             />
         </>
     );

@@ -36,6 +36,31 @@ app.get("/blogs/:blogId", (req, res) => {
     });
 });
 
+app.post("/blogs-add", (req, res) => {
+    const blogTitle = req.body.blogTitle;
+    const blogDescription = req.body.blogDescription;
+    const blogImageUrl = req.body.blogImageUrl;
+    const blogImageDesc = req.body.blogImageDesc;
+    const blogTextHtml = req.body.blogTextHtml;
+    const blogDate = req.body.blogDate;
+
+    const sqlInsert = "INSERT INTO blog (Titulo, Descricao, Texto_Html, Imagem_Path, Imagem_Desc, Criado_Em) VALUES (?,?,?,?,?,?)";
+    db.query(sqlInsert, [blogTitle, blogDescription, blogTextHtml, blogImageUrl, blogImageDesc, blogDate], (err, result) => {
+        if (err) console.log(err);
+
+        res.send(result);
+    });
+});
+
+app.delete("/blogs-delete/:blogId", (req, res) => {
+    const sqlDelete = `DELETE FROM blog WHERE Id=${req.params["blogId"]}`;
+    db.query(sqlDelete, (err, result) => {
+        if (err) console.log(err);
+
+        res.send(result);
+    })
+});
+
 app.get("/noticias", (req, res) => {
     const sqlSelect = "SELECT * FROM noticia ORDER BY Criado_Em DESC";
     db.query(sqlSelect, (err, result) => {
@@ -58,18 +83,12 @@ app.post("/noticias/add", (req, res) => {
     })
 });
 
-app.post("/blogs-add", (req, res) => {
-    const blogTitle = req.body.blogTitle;
-    const blogDescription = req.body.blogDescription;
-    const blogImageUrl = req.body.blogImageUrl;
-    const blogImageDesc = req.body.blogImageDesc;
-    const blogTextHtml = req.body.blogTextHtml;
-    const blogDate = req.body.blogDate;
-
-    const sqlInsert = "INSERT INTO blog (Titulo, Descricao, Texto_Html, Imagem_Path, Imagem_Desc, Criado_Em) VALUES (?,?,?,?,?,?)";
-    db.query(sqlInsert, [blogTitle, blogDescription, blogTextHtml, blogImageUrl, blogImageDesc, blogDate], (err, result) => {
+app.delete("/noticias/delete/:noticiaId", (req, res) => {
+    const noticiaId = req.params["noticiaId"];
+    const sqlDelete = "DELETE FROM noticia WHERE Id=?";
+    db.query(sqlDelete, noticiaId, (err, result) => {
         if (err) console.log(err);
-
+        
         res.send(result);
-    });
-})
+    })
+});

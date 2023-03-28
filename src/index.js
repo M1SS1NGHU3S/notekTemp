@@ -46,6 +46,10 @@ const router = createBrowserRouter([
             {
                 path: "admin/add-blog",
                 element: <pages.AddBlog />
+            },
+            {
+                path: "admin/start",
+                element: <pages.AdminStart />
             }
         ]
     }

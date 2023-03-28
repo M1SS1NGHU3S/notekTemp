@@ -11,6 +11,8 @@ import ServicosFull from "./ServicosFull";
 import BlogPage from "./BlogPage";
 import AddNoticiaForms from "./AddNoticiaForms";
 import AddBlogForms from "./AddBlogForms";
+import NoticiasTable from "./NoticiasTable";
+import BlogsTable from "./BlogsTable";
 
 export {
     ContatoSocial,
@@ -25,5 +27,7 @@ export {
     ServicosFull,
     BlogPage,
     AddNoticiaForms,
-    AddBlogForms
+    AddBlogForms,
+    NoticiasTable,
+    BlogsTable
 };

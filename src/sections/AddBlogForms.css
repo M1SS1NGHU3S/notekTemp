@@ -1,3 +1,7 @@
+.add-blog {
+    padding: 50px 0 100px 0;
+}
+
 .add-blog--textarea {
     border-width: 15px;
 }
