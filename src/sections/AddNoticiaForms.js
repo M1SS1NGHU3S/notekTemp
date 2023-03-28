@@ -2,14 +2,19 @@ import "./AddNoticiaForms.css";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import Axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 function AddNoticiaForms() {
+    const navigate = useNavigate();
+
     const onSubmit = (e) => {
         Axios.post("http://localhost:3001/noticias/add", {
             noticiaTitle: e.target.noticiaTitulo.value,
             noticiaLink: e.target.noticiaLink.value,
             noticiaDate: e.target.noticiaData.value
         }).then(() => alert("Notícia adicionada com sucesso!!"));
+
+        navigate("/admin/start");
     };
 
     return (

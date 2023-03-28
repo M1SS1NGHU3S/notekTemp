@@ -5,11 +5,14 @@ import { useState } from "react";
 import ReactQuill from "react-quill";
 import "react-quill/dist/quill.snow.css";
 import Axios from "axios";
+import { useNavigate } from "react-router-dom";
 
 
 function AddBlogForms() {
     const [textoHtml, setTextoHtml] = useState('');
     const currentDate = (new Date()).toISOString().split('T')[0];
+
+    const navigate = useNavigate();
     
     const onSubmit = (e) => {
         Axios.post("http://localhost:3001/blogs-add", {
@@ -20,6 +23,8 @@ function AddBlogForms() {
             blogTextHtml: textoHtml,
             blogDate: currentDate
         }).then(() => alert("Notícia adicionada com sucesso!!"));
+
+        navigate("/admin/start");
     }
 
     return (

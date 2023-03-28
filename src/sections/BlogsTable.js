@@ -1,7 +1,14 @@
 import "./BlogsTable.css"
 import Button from "react-bootstrap/Button";
+import Axios from "axios";
 
 function BlogsTable(props) {
+    const deleteRow = function (id) {
+        if(window.confirm("Você tem certeza que quer deletar essa notícia?")) {
+            Axios.delete(`http://localhost:3001/blogs-delete/${id}`).then(() => window.location.reload());
+        }
+    };
+    
     const generateRows = props.blogsList.map((value) =>
         <tr key={value["Id"]}>
             <td>{value["Id"]}</td>
@@ -13,7 +20,7 @@ function BlogsTable(props) {
                 </Button>
             </td>
             <td>
-                <Button variant="danger" className="crud-table--delete">
+                <Button onClick={() => deleteRow(value["Id"])} variant="danger" className="crud-table--delete">
                     Deletar
                 </Button>
             </td>
@@ -37,7 +44,7 @@ function BlogsTable(props) {
                     {generateRows}
                 </tbody>
             </table>
-            <Button variant="info" className="crud-table--create">
+            <Button href="/admin/add-blog" variant="info" className="crud-table--create">
                 Criar Blog
             </Button>
         </section>

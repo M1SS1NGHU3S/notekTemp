@@ -44,7 +44,7 @@ function NoticiasTable(props) {
                     {generateRows}
                 </tbody>
             </table>
-            <Button variant="info" className="crud-table--create">
+            <Button href="/admin/add-noticia" variant="info" className="crud-table--create">
                 Criar Notícia
             </Button>
         </section>

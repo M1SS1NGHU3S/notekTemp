@@ -53,8 +53,8 @@ app.post("/blogs-add", (req, res) => {
 });
 
 app.delete("/blogs-delete/:blogId", (req, res) => {
-    const sqlDelete = `DELETE FROM blog WHERE Id=${req.params["blogId"]}`;
-    db.query(sqlDelete, (err, result) => {
+    const sqlDelete = "DELETE FROM blog WHERE Id=?";
+    db.query(sqlDelete, req.params["blogId"], (err, result) => {
         if (err) console.log(err);
 
         res.send(result);
