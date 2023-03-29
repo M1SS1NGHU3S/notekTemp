@@ -43,6 +43,11 @@ h3 {
     margin: 0;
 }
 
+.login-error-text {
+    color: red;
+    font-weight: 500;
+}
+
 .notek-container {
     max-width: 1300px;
     height: inherit;

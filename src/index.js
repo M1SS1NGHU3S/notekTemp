@@ -50,10 +50,14 @@ const router = createBrowserRouter([
             {
                 path: "admin/start",
                 element: <pages.AdminStart />
+            },
+            {
+                path: "admin/login",
+                element: <pages.AdminLogin />
             }
         ]
     }
-])
+]);
 
 ReactDOM.createRoot(document.getElementById('root')).render(
     <React.StrictMode>

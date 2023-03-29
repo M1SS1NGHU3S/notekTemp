@@ -13,6 +13,7 @@ import AddNoticiaForms from "./AddNoticiaForms";
 import AddBlogForms from "./AddBlogForms";
 import NoticiasTable from "./NoticiasTable";
 import BlogsTable from "./BlogsTable";
+import LoginForms from "./LoginForms";
 
 export {
     ContatoSocial,
@@ -29,5 +30,6 @@ export {
     AddNoticiaForms,
     AddBlogForms,
     NoticiasTable,
-    BlogsTable
+    BlogsTable,
+    LoginForms
 };

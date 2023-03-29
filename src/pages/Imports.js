@@ -9,6 +9,7 @@ import Blog from "./blog";
 import AddNoticia from "./add-noticia";
 import AddBlog from "./add-blog";
 import AdminStart from "./admin-start";
+import AdminLogin from "./admin-login";
 
 export {
     Home, 
@@ -21,5 +22,6 @@ export {
     Blog,
     AddNoticia,
     AddBlog,
-    AdminStart
+    AdminStart,
+    AdminLogin
 };

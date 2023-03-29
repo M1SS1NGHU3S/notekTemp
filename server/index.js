@@ -2,11 +2,15 @@ const express = require('express');
 const mysql = require('mysql');
 const cors = require('cors');
 const bodyParser = require('body-parser');
+const cookieParser = require('cookie-parser');
+const session = require('express-session');
 
 const app = express();
 app.listen(3001, () => {
     console.log("running on port 3001");
 });
+
+const bcrypt = require('bcrypt');
 
 const db = mysql.createPool({
     host: "localhost",
@@ -15,9 +19,52 @@ const db = mysql.createPool({
     database: "notek"
 });
 
-app.use(cors());
+app.use(cors({
+    origin: true,
+    credentials: true
+}));
+app.use(cookieParser());
 app.use(express.json());
 app.use(bodyParser.urlencoded({extended: true}));
+app.use(session({
+    key: "userId",
+    secret: "Xs2s3#fR}$d~-$Nc",
+    resave: false,
+    saveUninitialized: false,
+    cookie: {
+        expires: 60 * 30,
+    }
+}));
+
+
+app.post("/usuarios", (req, res) => {
+    const usuarioName = req.body.usuarioName;
+    const password = req.body.password;
+
+    const sqlSelect = "SELECT (Senha) FROM usuario WHERE Nome=?";
+    db.query(sqlSelect, usuarioName,
+        (err, result) => {
+            if (err) res.send(err);
+    
+            bcrypt.compare(password, result[0]["Senha"], (err, response) => {
+                if (response) {
+                    req.session.user = result;
+                    res.send(true);
+                } 
+                else res.send(false);
+            });
+        }
+    );
+});
+
+app.get("/usuarios", (req, res) => {
+    if (req.session.user) {
+        res.send({loggedIn: true})
+    } 
+    else {
+        res.send({loggedIn: false})
+    }
+});
 
 app.get("/blogs", (req, res) => {
     const sqlSelect = "SELECT * FROM blog ORDER BY Criado_Em DESC";
