@@ -1,23 +1,38 @@
 import { mockupNoticiasImg } from "../img/Imports";
 import {useState, useEffect} from "react";
-import Axios from "axios";
 import {
     MockUp,
     NoticiasRow,
     NoticiasNovidades
 } from "../sections/Imports";
+import axios from "axios";
 
 function Noticias() {
     const [blogList, setBlogList] = useState([]);
     const [noticiaList, setNoticiaList] = useState([]);
 
     useEffect(() => {
-        Axios.get("http://localhost:3001/blogs").then((response) => {
-            setBlogList(response.data);
-        });
-        Axios.get("http://localhost:3001/noticias").then((response) => {
-            setNoticiaList(response.data);
-        });
+        async function getBlogs() {
+            const blogsReturn = await axios({
+                method: "get",
+                url: "http://localhost:3001/blogs"
+            });
+    
+            const tempBlogs = await blogsReturn.data;
+            setBlogList(tempBlogs);
+        }
+        async function getNoticias() {
+            const noticiasReturn = await axios({
+                method: "get",
+                url: "http://localhost:3001/noticias"
+            });
+
+            const tempNoticias = await noticiasReturn.data;
+            setNoticiaList(tempNoticias);
+        }
+
+        getBlogs();
+        getNoticias();
     }, []);
 
     
@@ -53,7 +68,7 @@ function Noticias() {
                     <NoticiasRow 
                         key={i}
                         blogList={remainingCards > 1 ? blogList.slice(remainingCards - 2, remainingCards) : blogList.slice(0, remainingCards)}
-                        noticiaList={remainingNoticias > 3 ? noticiaList.slice(remainingNoticias - 4, remainingNoticias) : remainingNoticias.slice(0, remainingNoticias)}
+                        noticiaList={remainingNoticias > 3 ? noticiaList.slice(remainingNoticias - 4, remainingNoticias) : noticiaList.slice(0, remainingNoticias)}
                     />
                 );
                 remainingCards -= 2;
@@ -73,10 +88,6 @@ function Noticias() {
                 buttonText="Leia Mais"
                 bgImage={mockupNoticiasImg}
             /> 
-            {/* <NoticiasRow />
-            <NoticiasNovidades />  
-            <NoticiasRow />
-            <NoticiasRow /> */}
             {generateNoticiasRow()}
         </>
     );

@@ -3,7 +3,6 @@ import {
     NoticiaLink,
     BlogCard
 } from "../components/Imports";
-import { useEffect } from "react";
 import Button from "react-bootstrap/Button";
 
 function NoticiasRow(props) {
@@ -29,10 +28,6 @@ function NoticiasRow(props) {
             altText={value["Imagem_Desc"]} 
         />
     );
-
-    useEffect(() => {
-        console.log(props.blogList);
-    })
 
     return (
         <section className="noticias-row">

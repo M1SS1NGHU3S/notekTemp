@@ -61,6 +61,26 @@ app.delete("/blogs-delete/:blogId", (req, res) => {
     })
 });
 
+app.put("/blogs-update", (req, res) => {
+    const blogId = req.body.blogId;
+    const blogTitulo = req.body.blogTitulo;
+    const blogDescricao = req.body.blogDescricao;
+    const blogConteudo = req.body.blogConteudo;
+    const blogImagem = req.body.blogImagem;
+    const imagemDescricao = req.body.imagemDescricao;
+
+    const sqlUpdate = "UPDATE blog SET Titulo=?, Descricao=?, Texto_Html=?, Imagem_Path=?, Imagem_Desc=? WHERE Id=?";
+    db.query(
+        sqlUpdate,
+        [blogTitulo, blogDescricao, blogConteudo, blogImagem, imagemDescricao, blogId],
+        (err, result) => {
+            if (err) console.log(err);
+
+            res.send(result);
+        }
+    )
+});
+
 app.get("/noticias", (req, res) => {
     const sqlSelect = "SELECT * FROM noticia ORDER BY Criado_Em DESC";
     db.query(sqlSelect, (err, result) => {
@@ -102,3 +122,20 @@ app.delete("/noticias-delete/:noticiaId", (req, res) => {
     })
 });
 
+app.put("/noticias-update", (req, res) => {
+    const noticiaId = req.body.noticiaId;
+    const noticiaTitulo = req.body.noticiaTitulo;
+    const noticiaData = req.body.noticiaData;
+    const noticiaLink = req.body.noticiaLink;
+
+    const sqlUpdate = "UPDATE noticia SET Titulo=?, Criado_Em=?, Link=? WHERE Id=?";
+    db.query(
+        sqlUpdate, 
+        [noticiaTitulo, noticiaData, noticiaLink, noticiaId],
+        (err, result) => {
+            if (err) console.log(err);
+
+            res.send(result);
+        }
+    );
+});

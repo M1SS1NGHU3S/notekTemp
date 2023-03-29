@@ -24,36 +24,70 @@ function AddNoticiaForms() {
         }
     }, [noticiaId])
 
-    const onSubmit = (e) => {
-        Axios.post("http://localhost:3001/noticias-add", {
-            noticiaTitle: e.target.noticiaTitulo.value,
-            noticiaLink: e.target.noticiaLink.value,
-            noticiaDate: e.target.noticiaData.value
-        }).then(() => alert("Notícia adicionada com sucesso!!"));
-
+    const onSubmit = () => {
+        if (noticiaId) {
+            Axios.put("http://localhost:3001/noticias-update", {
+                noticiaId: noticiaId,
+                noticiaTitulo: noticiaTitulo,
+                noticiaData: noticiaDate,
+                noticiaLink: noticiaLink
+            }).then(() => alert("Notícia atualizada com sucesso"));
+        }
+        else {
+            Axios.post("http://localhost:3001/noticias-add", {
+                noticiaTitle: noticiaTitulo,
+                noticiaLink: noticiaLink,
+                noticiaDate: noticiaDate
+            }).then(() => alert("Notícia adicionada com sucesso!!"));
+        }
+        
         navigate("/admin/start");
     };
 
     return (
         <section className="noticia-forms">
             <div className="container noticia-forms--container">
-                <Form onSubmit={onSubmit}>
+                <Form>
                     <div className="noticia-forms--row1">
                         <Form.Group className="admin-forms--group">
                             <Form.Label><h3>Título da Notícia</h3></Form.Label>
-                            <Form.Control value={noticiaTitulo} type="text" name="noticiaTitulo" required />
+                            <Form.Control 
+                                defaultValue={noticiaTitulo} 
+                                onChange={(e) => {
+                                    setNoticiaTitulo(e.target.value);
+                                }}
+                                type="text" 
+                                name="noticiaTitulo" 
+                                required 
+                            />
                         </Form.Group>
                         <Form.Group className="admin-forms--group">
                             <Form.Label><h3>Data da Notícia</h3></Form.Label>
-                            <Form.Control value={noticiaDate} type="date" name="noticiaData" required />
+                            <Form.Control 
+                                defaultValue={noticiaDate} 
+                                onChange={(e) => {
+                                    setNoticiaDate(e.target.value);
+                                }}
+                                type="date" 
+                                name="noticiaData"
+                                required 
+                            />
                         </Form.Group>
                     </div>
 
                     <Form.Group className="admin-forms--group">
                         <Form.Label><h3>Link da Notícia</h3></Form.Label>
-                        <Form.Control value={noticiaLink} type="url" name="noticiaLink" required />
+                        <Form.Control 
+                            defaultValue={noticiaLink} 
+                            onChange={(e) => {
+                                setNoticiaLink(e.target.value);
+                            }}
+                            type="url" 
+                            name="noticiaLink" 
+                            required 
+                        />
                     </Form.Group>
-                    <Button variant="info" className="blue-btn noticia-forms--btn" type="submit">
+                    <Button onClick={onSubmit} variant="info" className="blue-btn noticia-forms--btn" type="button">
                         Enviar
                     </Button>
                 </Form>
