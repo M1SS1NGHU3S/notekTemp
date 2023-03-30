@@ -2,32 +2,40 @@ import "./LoginForms.css";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import {useState, useEffect} from "react"
+import { useNavigate } from "react-router-dom";
 import Axios from "axios";
-import {useNavigate} from "react-router-dom";
 
 function LoginForms() {
     const navigate = useNavigate();
-    Axios.defaults.withCredentials = true;
 
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
     const [loginText, setLoginText] = useState('');
 
+    Axios.defaults.withCredentials = true;
     useEffect(() => {
         Axios.get("http://localhost:3001/usuarios")
             .then((response) => {
-                console.log(response);
-            })
-    }, []);
+                if (response.data["isLogged"] === true) {
+                    navigate("/admin/start");
+                }
+                else {
+                    console.log("not logged");
+                }
+            });
+    }, [navigate]);
 
     const onSubmit = () => {
         Axios.post("http://localhost:3001/usuarios", {
             usuarioName: username,
             password: password
         }).then((result) => {
-            if (result.data) alert("Deu certo");
+            if (result.data) {
+                window.location.reload();
+            }
             else setLoginText("Senha incorreta");
         }).catch((err) => setLoginText("Usuário incorreto"));
+
     };
   
     return (

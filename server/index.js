@@ -2,6 +2,7 @@ const express = require('express');
 const mysql = require('mysql');
 const cors = require('cors');
 const bodyParser = require('body-parser');
+
 const cookieParser = require('cookie-parser');
 const session = require('express-session');
 
@@ -20,22 +21,22 @@ const db = mysql.createPool({
 });
 
 app.use(cors({
-    origin: true,
-    credentials: true
+    credentials: true,
+    origin: "http://localhost:3000",
+    methods: ["GET, POST"]
 }));
-app.use(cookieParser());
 app.use(express.json());
 app.use(bodyParser.urlencoded({extended: true}));
+
 app.use(session({
-    key: "userId",
-    secret: "Xs2s3#fR}$d~-$Nc",
+    key: "isLogged",
+    secret: "secretsecret",
     resave: false,
     saveUninitialized: false,
     cookie: {
-        expires: 60 * 30,
-    }
+        maxAge: 30000,
+    },
 }));
-
 
 app.post("/usuarios", (req, res) => {
     const usuarioName = req.body.usuarioName;
@@ -48,7 +49,11 @@ app.post("/usuarios", (req, res) => {
     
             bcrypt.compare(password, result[0]["Senha"], (err, response) => {
                 if (response) {
-                    req.session.user = result;
+                    req.session.user = {
+                        isLogged: true,
+                    };
+                    req.session.save();
+
                     res.send(true);
                 } 
                 else res.send(false);
@@ -58,13 +63,8 @@ app.post("/usuarios", (req, res) => {
 });
 
 app.get("/usuarios", (req, res) => {
-    if (req.session.user) {
-        res.send({loggedIn: true})
-    } 
-    else {
-        res.send({loggedIn: false})
-    }
-});
+    res.send(req.session.user);
+})
 
 app.get("/blogs", (req, res) => {
     const sqlSelect = "SELECT * FROM blog ORDER BY Criado_Em DESC";
