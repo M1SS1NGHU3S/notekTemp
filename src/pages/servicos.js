@@ -7,7 +7,7 @@ import {
 function Servicos() {
     const titleText = ["O escritório ", 
         <strong key="mockup-bold">
-            NOTEK Acessoria Empresarial em Contabilidade
+            NOTEK Assessoria Empresarial em Contabilidade
         </strong>, 
         ", presta serviços nas seguintes áreas:"]
 

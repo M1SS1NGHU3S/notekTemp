@@ -28,33 +28,33 @@ const router = createBrowserRouter([
                 element: <pages.Servicos />
             },
             {
-                path: "noticias",
-                element: <pages.Noticias />
-            },
-            {
-                path: "sobre",
+                path: "/sobre",
                 element: <pages.Sobre />
             },
-            {
-                path: "noticias/:id",
-                element: <pages.Blog />
-            },
-            {
-                path: "admin/add-noticia/:noticiaId?",
-                element: <pages.AddNoticia />
-            },
-            {
-                path: "admin/add-blog/:blogId?",
-                element: <pages.AddBlog />
-            },
-            {
-                path: "admin/start",
-                element: <pages.AdminStart />
-            },
-            {
-                path: "admin/login",
-                element: <pages.AdminLogin />
-            }
+            // {
+            //     path: "noticias",
+            //     element: <pages.Noticias />
+            // },
+            // {
+            //     path: "noticias/:id",
+            //     element: <pages.Blog />
+            // },
+            // {
+            //     path: "admin/add-noticia/:noticiaId?",
+            //     element: <pages.AddNoticia />
+            // },
+            // {
+            //     path: "admin/add-blog/:blogId?",
+            //     element: <pages.AddBlog />
+            // },
+            // {
+            //     path: "admin/start",
+            //     element: <pages.AdminStart />
+            // },
+            // {
+            //     path: "admin/login",
+            //     element: <pages.AdminLogin />
+            // }
         ]
     }
 ]);
