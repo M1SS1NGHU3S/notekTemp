@@ -13,7 +13,7 @@ const linksContent = [
     {
         title: "Contato",
         link: "/contato"
-    },
+    }
 ];
 const generateNavLinks = linksContent.map((value, index) =>
     <Nav.Link

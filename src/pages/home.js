@@ -2,7 +2,7 @@ import { mockupHomeImg } from "../img/Imports";
 import {
     MockUp,
     SobreMudanca,
-    ServicosHome,
+    ServicosHome
 } from "../sections/Imports"
 
 function Home() {
