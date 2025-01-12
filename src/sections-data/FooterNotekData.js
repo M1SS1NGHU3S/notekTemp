@@ -89,10 +89,6 @@ const navLinksContent = [
         nome: "Sobre",
         link: "/sobre"
     },
-    // {
-    //     nome: "Notícias",
-    //     link: "/noticias"
-    // },
     {
         nome: "Contato",
         link: "/contato"
