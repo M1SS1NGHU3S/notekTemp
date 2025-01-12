@@ -10,14 +10,10 @@ const linksContent = [
         title: "Sobre",
         link: "/sobre"
     },
-    // {
-    //     title: "Notícias",
-    //     link: "/noticias"
-    // },
     {
         title: "Contato",
         link: "/contato"
-    },
+    }
 ];
 const generateNavLinks = linksContent.map((value, index) =>
     <Nav.Link
