@@ -10,13 +10,6 @@ import { useEffect } from "react";
 function App() {
 	const location = useLocation();
 
-	window.rwbp = {
-		email:'cris@notekcontabil.com.br',
-		phone:'5511950618623',
-		message:'Olá, seja bem vindo! Como posso te ajudar ?',
-		lang:'pt-BR'
-	}
-
 	useEffect(() => {
 		const script1 = document.createElement('script');
 
